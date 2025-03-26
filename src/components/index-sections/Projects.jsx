@@ -1,0 +1,41 @@
+import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import ProjectsIcon from "../../images/project.svg";
+import ProjectLink from "../entry-links/ProjectLink";
+
+const Projects = () => {
+	const data = useStaticQuery(graphql`
+		query {
+			allMdx(sort: { frontmatter: { date: DESC } }) {
+				nodes {
+					frontmatter {
+						type
+						slug
+						title
+						subtitle
+						icon
+						date(formatString: "MMMM DD, YYYY")
+					}
+				}
+			}
+		}
+	`);
+
+	const Projects = data.allMdx.nodes
+		.filter((entry) => entry.frontmatter.type === "project")
+		.map((entry) => <ProjectLink project={entry} />);
+
+	return (
+		<section className="index-section projects">
+			<h3 className="index-section__heading">
+				<img className="index-section__icon" src={ProjectsIcon} />
+				Projects
+			</h3>
+			<div className="index-section__content projects-grid">
+				{Projects}
+			</div>
+		</section>
+	);
+};
+
+export default Projects;

@@ -1,0 +1,367 @@
+@import url(reset.scss);
+@import url(../../static/assets/fonts/inter/inter.css);
+
+// variables
+
+$base-unit: 24px;
+$column-width: 600px;
+$border-radius: 3px;
+
+$sans-font: "Inter", -apple-system, BlinkMacSystemFont, avenir next, avenir,
+	helvetica neue, roboto, noto, helvetica, arial, sans-serif;
+$body-size: 12px;
+
+$body-color: rgb(0, 0, 0);
+$body-color-dm: rgb(221, 221, 221);
+
+$gray-color: rgba(0, 0, 0, 0.333);
+$gray-color-dm: rgba(221, 221, 221, 0.333);
+
+$link-color: rgb(0, 30, 255);
+
+$new-label-bg: rgb(255, 102, 0);
+$new-label-color: rgb(255, 255, 255);
+
+$background-color: rgb(255, 255, 255);
+$background-color-dm: rgb(31, 31, 31);
+
+$header-background: rgba(255, 255, 255, 0.8);
+$header-background-dm: rgba(31, 31, 31, 0.8);
+
+$entry-background: rgba(0, 0, 0, 0.05);
+$entry-background-dm: rgba(221, 221, 221, 0.05);
+
+$gray-line-color: rgba(0, 0, 0, 0.1);
+$gray-line-color-dm: rgba(221, 221, 221, 0.1);
+
+$break-1: $column-width + 5 * $base-unit;
+$break-2: 600px;
+
+// styles
+
+*,
+*::before,
+*::after {
+	-webkit-transition: all 0.25s; /* For Safari 3.0 to 6.0 */
+	transition: all 0.25s;
+}
+
+body {
+	background-color: $background-color;
+	color: $body-color;
+	font-family: $sans-font;
+	font-size: $body-size;
+	line-height: $base-unit;
+	// text-wrap: balance;
+
+	@media (prefers-color-scheme: dark) {
+		background-color: $background-color-dm;
+		color: $body-color-dm;
+	}
+}
+
+a {
+	text-decoration: underline solid transparent;
+}
+
+a:hover {
+	text-decoration: underline solid currentColor;
+}
+
+.all-link {
+	background-color: $entry-background;
+	border-radius: $border-radius;
+	grid-column: span 3;
+	padding: 0.5 * $base-unit;
+	text-align: center;
+
+	@media (prefers-color-scheme: dark) {
+		background-color: $entry-background-dm;
+	}
+}
+
+p {
+	+ p {
+		margin-top: 0.5 * $base-unit;
+	}
+}
+
+// structure
+
+.page {
+	margin: 0 auto;
+	max-width: $column-width + (3 * $base-unit);
+	padding: 0 $base-unit;
+}
+
+.page--index {
+}
+
+.index-section {
+	margin: 2 * $base-unit 0;
+}
+
+.index-section__heading {
+	display: flex;
+	gap: 0.5 * $base-unit;
+	margin-bottom: 0.5 * $base-unit;
+}
+
+// header
+
+.header {
+	// backdrop-filter: blur(10px);
+	// background-color: $header-background;
+	display: flex;
+	gap: 0 0.5 * $base-unit;
+	// grid-template-columns: auto 1fr;
+	margin: $base-unit 0;
+	// padding: 0.5 * $base-unit $base-unit;
+	// position: sticky;
+	// top: 0;
+
+	@media (prefers-color-scheme: dark) {
+		// background-color: $header-background-dm;
+	}
+}
+
+.header__site-logo {
+	border-radius: $border-radius;
+	grid-row: span 2;
+	overflow: hidden;
+	width: 2 * $base-unit;
+
+	display: none;
+}
+
+.header__site-subtitle {
+	color: $gray-color;
+
+	@media (prefers-color-scheme: dark) {
+		color: $gray-color-dm;
+	}
+}
+
+// footer
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+	margin: $base-unit 0;
+}
+
+// about
+
+.social-links {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	margin-top: 0.5 * $base-unit;
+	width: fit-content;
+}
+
+.social-link {
+	display: grid;
+	gap: 0.5 * $base-unit;
+	grid-column: span 2;
+	grid-template-columns: subgrid;
+	text-decoration: none;
+	width: fit-content;
+}
+
+.social-link:hover {
+	text-decoration: none;
+
+	.social-link__text::after {
+		opacity: 1;
+	}
+}
+
+.social-link__icon {
+	align-items: center;
+	display: flex;
+	height: $base-unit;
+	justify-content: center;
+	width: 0.5 * $base-unit;
+}
+
+.social-link__text::after {
+	content: "\00A0\2197";
+	opacity: 0;
+}
+
+// projects
+
+.projects-grid {
+	align-items: center;
+	display: grid;
+	gap: 0.5 * $base-unit;
+	grid-template-columns: 1fr 1fr;
+}
+
+.project-link {
+	align-items: center;
+	display: grid;
+	gap: 0 0.5 * $base-unit;
+	grid-template-columns: auto 1fr;
+	text-decoration: none;
+	width: fit-content;
+}
+
+.project-link:hover {
+	text-decoration: none;
+
+	.project-link__title::after {
+		opacity: 1;
+	}
+}
+
+.project-link__icon {
+	border-radius: $border-radius;
+	grid-row: span 2;
+	height: 2 * $base-unit;
+	overflow: hidden;
+	width: 2 * $base-unit;
+
+	img {
+		height: 100%;
+		object-fit: cover;
+		width: 100%;
+	}
+}
+
+.project-link__title::after {
+	content: "\00A0\2197";
+	opacity: 0;
+}
+
+.project-link__subtitle {
+	color: $gray-color;
+
+	@media (prefers-color-scheme: dark) {
+		color: $gray-color-dm;
+	}
+}
+
+// photos
+
+.photos-grid {
+	display: grid;
+	gap: 0.5 * $base-unit;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.photo-link {
+	aspect-ratio: 4/3;
+	border-radius: $border-radius;
+	overflow: hidden;
+
+	img {
+		height: 100%;
+		object-fit: cover;
+		width: 100%;
+	}
+}
+
+// essays
+
+.essays-grid {
+	display: grid;
+	gap: 0.5 * $base-unit;
+}
+
+.essay-link {
+	align-items: center;
+	display: grid;
+	gap: 0 0.5 * $base-unit;
+	grid-template-columns: auto 1fr;
+	text-decoration: none;
+	width: fit-content;
+}
+
+.essay-link:hover {
+	text-decoration: none;
+
+	.essay-link__title::after {
+		opacity: 1;
+	}
+}
+
+.essay-link__icon {
+	border-radius: $border-radius;
+	grid-row: span 2;
+	height: 2 * $base-unit;
+	overflow: hidden;
+	width: 2 * $base-unit;
+
+	img {
+		height: 100%;
+		object-fit: cover;
+		width: 100%;
+	}
+}
+
+.essay-link__title::after {
+	content: "\00A0\2192";
+	opacity: 0;
+}
+
+.essay-link__subtitle {
+	color: $gray-color;
+
+	@media (prefers-color-scheme: dark) {
+		color: $gray-color-dm;
+	}
+}
+
+// travel
+
+.travel .index-section__content {
+	aspect-ratio: 4/3;
+	border-radius: $border-radius;
+	overflow: hidden;
+}
+
+#map {
+	height: 100%;
+}
+
+.map__marker {
+	background-color: rgba(255, 255, 255, 1);
+	border-radius: $border-radius;
+	// color: rgba(255, 255, 255, 1);
+	-webkit-filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.2));
+	filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.2));
+	-ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=2, Color='#444')";
+	filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=2, Color='#444')";
+	height: fit-content !important;
+	position: relative;
+	text-wrap: nowrap;
+	width: fit-content !important;
+
+	a {
+		color: $body-color !important;
+		display: block;
+		padding: 0.25 * $base-unit;
+	}
+}
+
+.map__marker::after {
+	background-color: $body-color;
+	border: 3px solid rgba(255, 255, 255, 1);
+	border-radius: 0.25 * $base-unit;
+	content: "";
+	height: 0.5 * $base-unit;
+	position: absolute;
+	top: -0.25 * $base-unit;
+	left: -0.25 * $base-unit;
+	width: 0.5 * $base-unit;
+}
+
+@media (prefers-color-scheme: dark) {
+	.leaflet-layer,
+	.leaflet-control-zoom-in,
+	.leaflet-control-zoom-out,
+	.leaflet-control-attribution {
+		filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
+	}
+}
