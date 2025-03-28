@@ -75,9 +75,6 @@ const Travel = () => {
 							}),
 						}
 					).addTo(map);
-					// .on("click", function (e) {
-					// 	console.log(1);
-					// });
 				});
 		}
 	});

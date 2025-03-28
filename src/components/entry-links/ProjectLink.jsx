@@ -2,6 +2,12 @@ import React from "react";
 import { Link } from "gatsby";
 
 const ProjectLink = ({ project }) => {
+	console.log(project.frontmatter.technologies);
+
+	const technologies = project.frontmatter.technologies.map((tech) => (
+		<span className={"tech " + tech.toLowerCase()}>{tech}</span>
+	));
+
 	return (
 		<Link
 			className="project-link"
@@ -15,6 +21,7 @@ const ProjectLink = ({ project }) => {
 			<h5 className="project-link__subtitle">
 				{project.frontmatter.subtitle}
 			</h5>
+			<div className="technologies">{technologies}</div>
 		</Link>
 	);
 };

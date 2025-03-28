@@ -16,6 +16,7 @@ const Essays = () => {
 						icon
 						date(formatString: "MMMM DD, YYYY")
 					}
+					excerpt(pruneLength: 300)
 				}
 			}
 		}

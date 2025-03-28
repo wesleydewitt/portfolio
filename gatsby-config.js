@@ -50,5 +50,13 @@ module.exports = {
 			},
 			__key: "travel",
 		},
+		{
+			resolve: "gatsby-source-filesystem",
+			options: {
+				name: "dailys",
+				path: "./src/_dailys/",
+			},
+			__key: "dailys",
+		},
 	],
 };

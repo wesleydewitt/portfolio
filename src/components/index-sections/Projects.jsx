@@ -14,6 +14,7 @@ const Projects = () => {
 						title
 						subtitle
 						icon
+						technologies
 						date(formatString: "MMMM DD, YYYY")
 					}
 				}
