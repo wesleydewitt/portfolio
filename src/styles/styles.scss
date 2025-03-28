@@ -643,6 +643,7 @@ p {
 .travel .index-section__content {
 	aspect-ratio: 4/3;
 	border-radius: $border-radius;
+	-webkit-mask-image: -webkit-radial-gradient(white, black);
 	overflow: hidden;
 }
 
