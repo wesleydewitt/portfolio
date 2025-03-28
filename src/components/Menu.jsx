@@ -6,7 +6,7 @@ import About from "./index-sections/About";
 const Menu = () => {
 	return (
 		<div className="menu" id="menu">
-			Menu
+			<About />
 		</div>
 	);
 };

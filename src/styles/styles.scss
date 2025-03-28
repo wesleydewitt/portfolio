@@ -26,7 +26,7 @@ $gray-color-dm: rgba(221, 221, 221, 0.333);
 
 $link-color: #0071e3;
 
-$new-label-bg: rgb(255, 165, 126);
+$new-label-bg: $link-color;
 $new-label-color: rgb(255, 255, 255);
 
 $background-color: rgb(255, 255, 255);
@@ -58,6 +58,7 @@ body {
 	color: $body-color;
 	font-family: $sans-font;
 	font-size: $body-size;
+	// font-weight: 500;
 	line-height: $base-unit;
 	// text-wrap: balance;
 
@@ -65,6 +66,15 @@ body {
 		background-color: $background-color-dm;
 		color: $body-color-dm;
 	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	// font-weight: 500;
 }
 
 a {
@@ -106,13 +116,29 @@ p {
 	}
 }
 
+.new-label {
+	background-color: $new-label-bg;
+	border-radius: 8px;
+	// box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+	color: $background-color;
+	font-size: $small-size;
+	font-weight: 500;
+	line-height: 1;
+	margin-left: 0.5 * $base-unit;
+	padding: 2px 6px;
+	// vertical-align: top;
+}
+
 // structure
 
 .main {
-	margin: 3 * $base-unit auto 0;
+	margin: 5 * $base-unit auto 0;
 	max-width: $column-width;
 	padding: 0 $base-unit;
 	position: relative;
+	@media (max-width: $break-2) {
+		margin-top: 6 * $base-unit;
+	}
 }
 
 .page--index {
@@ -157,8 +183,22 @@ p {
 
 // header
 
+.header__wrapper {
+	position: absolute;
+	top: 0;
+	width: 100vw;
+	z-index: +100000000000000000;
+}
+
 .header__wrapper.has-background {
-	background-color: $entry-background;
+	background-color: rgba(238, 238, 238, 0.666);
+	backdrop-filter: blur(18px);
+	border-bottom: 1px solid $gray-line-color;
+
+	@media (prefers-color-scheme: dark) {
+		background-color: rgba(41, 41, 41, 0.666);
+		border-bottom: 1px solid $gray-line-color-dm;
+	}
 }
 
 .header {
@@ -171,11 +211,13 @@ p {
 	margin: 0 auto;
 	max-width: $column-width;
 	padding: $base-unit $base-unit 0;
-	// position: sticky;
-	// top: 0;
 
 	@media (prefers-color-scheme: dark) {
 		// background-color: $header-background-dm;
+	}
+
+	@media (max-width: $break-2) {
+		padding-right: 1.5 * $base-unit;
 	}
 }
 
@@ -257,14 +299,17 @@ p {
 .buttons {
 	align-items: start;
 	display: flex;
-	gap: $base-unit;
-	margin-left: 0.5 * $base-unit;
+	gap: 0.5 * $base-unit;
+	// margin-left: 0.5 * $base-unit;
 
-	display: none;
+	// display: none;
 
 	button {
-		height: $base-unit;
 		// background-color: pink;
+		// height: $base-unit;
+		// background-color: pink;
+		padding: 6px;
+		margin-right: -6px;
 
 		img {
 			width: 12px;
@@ -272,26 +317,26 @@ p {
 	}
 }
 
-.menu-button {
+.search-button {
 	display: none;
+}
 
+.theme-button {
+	display: none;
+}
+
+.menu-button {
+	// display: none;
 	@media screen and (max-width: $break-1) {
-		display: block;
 	}
 }
 
 // menu
 
 .menu {
-	// box-sizing: content-box;
-	display: grid;
-	gap: 2 * $base-unit;
-	// position: absolute;
-	// top: $base-unit;
-	// right: 0.5 * $base-unit;
 	margin: 0 auto;
-	padding: $base-unit;
-	max-width: $column-width + (3 * $base-unit);
+	max-width: $column-width;
+	padding: 0 $base-unit;
 }
 
 // about
@@ -372,6 +417,8 @@ p {
 		"icon title "
 		"icon subtitle ";
 	grid-template-columns: auto 1fr;
+	padding-right: 0.5 * $base-unit;
+	position: relative;
 	text-decoration: none;
 	width: fit-content;
 }
@@ -380,7 +427,7 @@ p {
 	background-color: $entry-background;
 	border-radius: 16px;
 	margin: -0.5 * $base-unit;
-	padding: 0.5 * $base-unit (0.5 * $base-unit + 0 * 16px) 0.5 * $base-unit 0.5 *
+	padding: 0.5 * $base-unit (1 * $base-unit + 0 * 16px) 0.5 * $base-unit 0.5 *
 		$base-unit;
 	text-decoration: none;
 

@@ -24,7 +24,7 @@ const Projects = () => {
 
 	const Projects = data.allMdx.nodes
 		.filter((entry) => entry.frontmatter.type === "project")
-		.map((entry) => <ProjectLink project={entry} />);
+		.map((entry) => <ProjectLink project={entry} isNew={true} />);
 
 	return (
 		<section className="index-section projects">

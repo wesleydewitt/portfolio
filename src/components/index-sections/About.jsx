@@ -24,10 +24,10 @@ const About = () => {
 	);
 	return (
 		<section className="index-section about">
-			<h3 className="index-section__heading">
+			{/* <h3 className="index-section__heading">
 				<img className="index-section__icon" src={AboutIcon} />
 				About
-			</h3>
+			</h3> */}
 			<div className="index-section__content">
 				{siteDescription}
 				<div className="social-links">
