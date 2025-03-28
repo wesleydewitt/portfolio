@@ -417,7 +417,7 @@ p {
 		"icon title "
 		"icon subtitle ";
 	grid-template-columns: auto 1fr;
-	padding-right: 0.5 * $base-unit;
+	padding-right: 0.75 * $base-unit;
 	position: relative;
 	text-decoration: none;
 	width: fit-content;
@@ -427,8 +427,8 @@ p {
 	background-color: $entry-background;
 	border-radius: 16px;
 	margin: -0.5 * $base-unit;
-	padding: 0.5 * $base-unit (1 * $base-unit + 0 * 16px) 0.5 * $base-unit 0.5 *
-		$base-unit;
+	padding: 0.5 * $base-unit (0.75 * $base-unit + 0 * 16px) 0.5 * $base-unit
+		0.5 * $base-unit;
 	text-decoration: none;
 
 	@media (prefers-color-scheme: dark) {
