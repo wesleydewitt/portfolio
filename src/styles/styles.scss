@@ -60,6 +60,7 @@ body {
 	font-size: $body-size;
 	// font-weight: 500;
 	line-height: $base-unit;
+	text-align: justify;
 	// text-wrap: balance;
 
 	@media (prefers-color-scheme: dark) {
@@ -389,7 +390,6 @@ p {
 	// align-items: center;
 	display: grid;
 	gap: 0.5 * $base-unit;
-	grid-column: span 2;
 	grid-template-columns: auto 1fr;
 	text-decoration: none;
 	width: fit-content;

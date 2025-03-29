@@ -12,7 +12,7 @@ import Dailys from "../components/index-sections/Dailys";
 const IndexPage = () => {
 	return (
 		<IndexLayout>
-			<About />
+			{/* <About /> */}
 			<Projects />
 			<Essays />
 			<Travel />

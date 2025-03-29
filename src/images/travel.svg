@@ -2,6 +2,7 @@
      <style>
         rect, path {
             stroke: black;
+            stroke-width: 1.125px;
         }
         @media (prefers-color-scheme: dark) {
             rect, path { stroke: rgb(221, 221, 221); }

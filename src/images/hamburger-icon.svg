@@ -1,7 +1,8 @@
 <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
     <style>
-        path, circle {
+        line {
             line: black;
+            stroke-width: 1.125px;
         }
         @media (prefers-color-scheme: dark) {
             line { stroke: rgb(221, 221, 221); }
