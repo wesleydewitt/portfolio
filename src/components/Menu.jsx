@@ -8,7 +8,7 @@ const Menu = () => {
 	return (
 		<div className="menu" id="menu">
 			<Nav />
-			<About />
+			{/* <About /> */}
 		</div>
 	);
 };
