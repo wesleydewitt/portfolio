@@ -2,6 +2,7 @@
     <style>
         path, circle {
             stroke: black;
+            stroke-width: 1.125px
         }
         @media (prefers-color-scheme: dark) {
             path, circle { stroke: rgb(221, 221, 221); }

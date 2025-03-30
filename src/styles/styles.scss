@@ -7,7 +7,7 @@
 // variables
 
 $base-unit: 24px;
-$column-width: 576px + (3 * $base-unit);
+$column-width: 576px + (4 * $base-unit);
 $border-radius: 4px;
 
 $sans-font: "Inter", -apple-system, BlinkMacSystemFont, avenir next, avenir,
@@ -60,7 +60,7 @@ body {
 	font-size: $body-size;
 	// font-weight: 500;
 	line-height: $base-unit;
-	text-align: justify;
+	// text-align: justify;
 	// text-wrap: balance;
 
 	@media (prefers-color-scheme: dark) {
@@ -174,7 +174,7 @@ p {
 	margin-bottom: $base-unit;
 
 	img {
-		// width: 12px;
+		width: 12px;
 	}
 }
 
@@ -199,14 +199,6 @@ p {
 	@media (prefers-color-scheme: dark) {
 		background-color: rgba(41, 41, 41, 0.5);
 		border-bottom: 1px solid $gray-line-color-dm;
-	}
-
-	.header {
-		border-bottom: 1px solid $gray-line-color;
-
-		@media (prefers-color-scheme: dark) {
-			border-bottom: 1px solid #1b1b1b;
-		}
 	}
 }
 
@@ -324,12 +316,12 @@ p {
 }
 
 .nav {
-	border-top: 1px solid rgb(255, 255, 255);
+	border-top: 1px solid $gray-line-color;
 	padding: $base-unit 0;
 
 	@media (prefers-color-scheme: dark) {
 		border-top: 1px solid $gray-line-color-dm;
-		border-bottom: 1px solid #1b1b1b;
+		// border-bottom: 1px solid #1b1b1b;
 	}
 
 	@media screen and (max-width: $break-1) {
@@ -366,18 +358,25 @@ p {
 // about
 
 .about {
-	// border-top: 1px solid rgb(255, 255, 255);
-	// margin: 0;
-	// padding: $base-unit 0;
+	display: grid;
+	gap: $base-unit 2 * $base-unit;
+	grid-template-columns: 1fr 1fr;
 
-	@media (prefers-color-scheme: dark) {
-		// border-top: 1px solid $gray-line-color-dm;
+	.index-section__heading {
+		margin: 0;
 	}
+}
 
-	.index-section__content {
-		// margin: 0 auto;
-		// max-width: $column-width;
-		// padding: 0 $base-unit;
+.about__photo {
+	background-color: $entry-background;
+	border-radius: $border-radius;
+	grid-row: span 2;
+	overflow: hidden;
+
+	img {
+		height: 100%;
+		object-fit: cover;
+		width: 100%;
 	}
 }
 
@@ -439,7 +438,7 @@ p {
 .projects-grid {
 	align-items: center;
 	display: grid;
-	gap: $base-unit;
+	gap: $base-unit 2 * $base-unit;
 	grid-template-columns: 1fr 1fr;
 
 	@media screen and (max-width: $break-2) {

@@ -2,6 +2,7 @@
     <style>
         line, rect {
             stroke: black;
+            stroke-width: 1.125px
         }
         @media (prefers-color-scheme: dark) {
             line, rect { 

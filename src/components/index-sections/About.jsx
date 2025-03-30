@@ -1,6 +1,6 @@
 import React from "react";
 import AboutIcon from "../../images/about.svg";
-import EmailIcon from "../../images/email.svg";
+import EmailIcon from "../../images/email-icon.svg";
 import GithubIcon from "../../images/github-mark.svg";
 import XIcon from "../../images/x-mark.svg";
 import { Link } from "gatsby";
@@ -10,25 +10,23 @@ const About = () => {
 		<div className="site-description">
 			<p>
 				This is the web journal of Wesley De Witt, a coder and writer
-				from Indianapolis, Indiana. It is intended to be a repository of
-				creative output that is available but asocial in the sense that
-				it is insulated from modern social networks.
-			</p>
-			<p>
-				Here, in addition to project links and photos, you may find
-				essays on topics in culture, politics, and technology, as well
-				as travel writing from around Indiana and the Midwestern United
-				States.
+				from Indianapolis, Indiana. Here, in addition to project links
+				and photos, you may find essays on topics in culture, politics,
+				and technology, as well as travel writing from around Indiana
+				and the Midwestern United States.
 			</p>
 		</div>
 	);
 	return (
 		<section className="index-section about">
-			{/* <h3 className="index-section__heading">
+			<h3 className="index-section__heading">
 				<img className="index-section__icon" src={AboutIcon} />
 				About
-			</h3> */}
-			<div className="index-section__content">
+			</h3>
+			<div className="about__photo">
+				<img src="/assets/photos/1.jpg" />
+			</div>
+			<div className="index-section__content index-section__content--about-grid">
 				{siteDescription}
 				<div className="social-links">
 					<Link className="social-link" to="/">

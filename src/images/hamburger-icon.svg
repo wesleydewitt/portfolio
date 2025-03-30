@@ -2,7 +2,8 @@
     <style>
         line {
             line: black;
-            stroke-width: 1.125px;
+            stroke-width: 1.125px
+
         }
         @media (prefers-color-scheme: dark) {
             line { stroke: rgb(221, 221, 221); }
