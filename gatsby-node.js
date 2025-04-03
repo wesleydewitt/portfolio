@@ -6,23 +6,59 @@ const essayTemplate = path.resolve(`./src/templates/essay.jsx`);
 const travelTemplate = path.resolve(`./src/templates/travel.jsx`);
 const dailyTemplate = path.resolve(`./src/templates/daily.jsx`);
 
+const translateNumberMonthIntoSpelledOutMonth = (monthNumber) => {
+	if (monthNumber === 1) {
+		return "January";
+	} else if (monthNumber === 2) {
+		return "February";
+	} else if (monthNumber === 3) {
+		return "March";
+	} else if (monthNumber === 4) {
+		return "April";
+	} else if (monthNumber === 5) {
+		return "May";
+	} else if (monthNumber === 6) {
+		return "June";
+	} else if (monthNumber === 7) {
+		return "July";
+	} else if (monthNumber === 8) {
+		return "August";
+	} else if (monthNumber === 9) {
+		return "September";
+	} else if (monthNumber === 10) {
+		return "October";
+	} else if (monthNumber === 11) {
+		return "November";
+	} else if (monthNumber === 12) {
+		return "December";
+	} else return null;
+};
+
 exports.onCreateNode = ({ node, actions }) => {
 	const { createNodeField } = actions;
 
 	if (node.internal.type === "Mdx") {
-		const date = new Date(Date.parse(node.frontmatter.date));
-		const dateUTC = date.toLocaleString("en-US", { timeZone: "UTC" });
-		const dateFormatted = new Date(Date.parse(dateUTC));
+		const dateUtc = new Date(Date.parse(node.frontmatter.date));
+		const date = dateUtc.toLocaleString("en-US", { timeZone: "UTC" });
+		const dateFormatted = new Date(Date.parse(date));
 
 		const year = dateFormatted.getFullYear();
 		const month = dateFormatted.getMonth() + 1;
 		const year_month = `${year}-${month}`;
+		const month_spelled_out = `${translateNumberMonthIntoSpelledOutMonth(
+			month
+		)}`;
 		const day = dateFormatted.getDate();
 
 		if (node.frontmatter.type === "daily") {
 			createNodeField({ node, name: "year", value: year });
 			createNodeField({ node, name: "month", value: month });
 			createNodeField({ node, name: "year-month", value: year_month });
+			createNodeField({
+				node,
+				name: "month-spelled-out",
+				value: month_spelled_out,
+			});
 			createNodeField({ node, name: "day", value: day });
 		}
 	}

@@ -18,6 +18,7 @@ const Dailys = () => {
 							year
 							month
 							day
+							month_spelled_out
 						}
 					}
 					fieldValue
@@ -26,16 +27,25 @@ const Dailys = () => {
 		}
 	`);
 
-	console.log(data);
-
 	const months = data.allMdx.group;
 
 	const Dailys = months.map((month) => (
 		<div className="month">
-			<div className="month__heading">{month.fieldValue}</div>
-			{month.nodes.map((entry) => (
-				<DailyLink daily={entry} />
-			))}
+			{month.nodes.map((entry) => {
+				if (entry === month.nodes[0]) {
+					return (
+						<>
+							<h6 className="month__heading">
+								{entry.fields.month_spelled_out}{" "}
+								{entry.fields.year}
+							</h6>
+							<DailyLink daily={entry} />
+						</>
+					);
+				} else {
+					return <DailyLink daily={entry} />;
+				}
+			})}
 		</div>
 	));
 

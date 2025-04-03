@@ -16,7 +16,7 @@ $body-size: 12px;
 $small-size: 10px;
 
 $serif-font: "Heldane Text", serif;
-$serif-size: 14px;
+$serif-size: 16px;
 
 $body-color: rgb(0, 0, 0);
 $body-color-dm: rgb(221, 221, 221);
@@ -58,7 +58,7 @@ body {
 	color: $body-color;
 	font-family: $sans-font;
 	font-size: $body-size;
-	// font-weight: 500;
+	font-weight: 500;
 	line-height: $base-unit;
 	// text-align: justify;
 	// text-wrap: balance;
@@ -187,7 +187,7 @@ p {
 .header__wrapper {
 	position: absolute;
 	top: 0;
-	width: 100vw;
+	width: 100%;
 	z-index: +100000000000000000;
 }
 
@@ -202,13 +202,13 @@ p {
 	}
 }
 
-.header {
+.header__top-line {
 	display: grid;
 	grid-template-areas: "logo titles buttons";
-	grid-template-columns:
-		1fr minmax(0, ($column-width - 6 * $base-unit))
-		1fr;
+	grid-template-columns: 1fr auto 1fr;
 	gap: 0 $base-unit;
+	margin: 0 auto;
+	max-width: $column-width;
 	padding: $base-unit;
 	// width: 100vw;
 
@@ -226,7 +226,7 @@ p {
 	// flex-grow: 1;
 	flex-shrink: 0;
 	grid-row: span 2;
-	justify-content: end;
+	// justify-content: end;
 
 	img {
 		border-radius: $border-radius;
@@ -275,6 +275,7 @@ p {
 	display: flex;
 	flex-shrink: 0;
 	gap: 0.5 * $base-unit;
+	justify-content: end;
 	// margin-left: 0.5 * $base-unit;
 	// margin-right: -0.5 * $base-unit;
 	transform: translate(6px, 0px);
@@ -607,7 +608,7 @@ p {
 		background: linear-gradient(
 			90deg,
 			rgba(238, 238, 238, 0),
-			rgba(238, 238, 238, 1) 50%,
+			rgba(238, 238, 238, 1) 80%,
 			rgba(238, 238, 238, 1)
 		);
 
@@ -615,7 +616,7 @@ p {
 			background: linear-gradient(
 				90deg,
 				rgba(44, 44, 44, 0),
-				rgba(44, 44, 44, 1) 50%,
+				rgba(44, 44, 44, 1) 80%,
 				rgba(44, 44, 44, 1)
 			);
 		}
@@ -638,6 +639,7 @@ p {
 }
 
 .essay-link__title {
+	// font-weight: 700;
 }
 
 .essay-link__excerpt {
@@ -656,7 +658,7 @@ p {
 	background: linear-gradient(
 		90deg,
 		rgba(255, 255, 255, 0),
-		rgba(255, 255, 255, 1) 50%,
+		rgba(255, 255, 255, 1) 80%,
 		rgba(255, 255, 255, 1)
 	);
 	height: $base-unit;
@@ -669,7 +671,7 @@ p {
 		background: linear-gradient(
 			90deg,
 			rgba(31, 31, 31, 0),
-			rgba(31, 31, 31, 1) 50%,
+			rgba(31, 31, 31, 1) 80%,
 			rgba(31, 31, 31, 1)
 		);
 	}
@@ -691,12 +693,13 @@ p {
 
 .map__marker {
 	background-color: rgba(255, 255, 255, 1);
+	border: 1px solid $gray-line-color;
 	border-radius: $border-radius;
 	// color: rgba(255, 255, 255, 1);
-	-webkit-filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.2));
-	filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.2));
-	-ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=0, Color='#444')";
-	filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=0, Color='#444')";
+	// -webkit-filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.2));
+	// filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.2));
+	// -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=0, Color='#444')";
+	// filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=0, Color='#444')";
 	height: fit-content !important;
 	position: absolute;
 	top: $base-unit;
@@ -704,10 +707,19 @@ p {
 	// transform: translate(-$base-unit, -100%);
 	width: fit-content !important;
 
+	@media (prefers-color-scheme: dark) {
+		background-color: $entry-background-dm;
+		border: 1px solid $gray-line-color-dm;
+	}
+
 	a {
 		color: $body-color !important;
 		display: block;
 		padding: 0.25 * $base-unit 0.333 * $base-unit;
+
+		@media (prefers-color-scheme: dark) {
+			color: $body-color-dm !important;
+		}
 	}
 }
 
@@ -735,6 +747,12 @@ p {
 	}
 }
 
+// dailys
+
+.month {
+	margin: $base-unit 0;
+}
+
 // essay page
 
 .essay__cover-image {
@@ -745,13 +763,16 @@ p {
 .essay__title {
 	// font-family: $serif-font;
 	font-size: 20px;
-	font-weight: 300;
+	font-weight: 700;
 	line-height: 1.5;
 	// margin-bottom: 2 * $base-unit;
 }
 
 .essay__subtitle {
 	color: $gray-color;
+	font-size: 20px;
+	// font-style: oblique;
+	line-height: 1.5;
 	margin: 0.5 * $base-unit 0;
 
 	@media (prefers-color-scheme: dark) {
@@ -786,15 +807,15 @@ p {
 }
 
 .essay__body {
-	font-family: $serif-font;
-	font-size: $serif-size;
+	// font-family: $serif-font;
+	// font-size: $serif-size;
 }
 
 .essay__body p:first-of-type::first-letter {
 	font-family: $sans-font;
 	float: left;
 	font-size: 2 * $base-unit;
-	font-weight: 100;
+	font-weight: 200;
 	line-height: 2 * $base-unit;
 	margin-right: 3px;
 
