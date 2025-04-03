@@ -11,9 +11,6 @@ const Nav = () => {
 				<Link activeClassName="active" to="/feed">
 					Feed
 				</Link>
-				<Link activeClassName="active" to="/feed">
-					Newsletter
-				</Link>
 				<Link activeClassName="active" to="/about">
 					About
 				</Link>

@@ -80,6 +80,10 @@ h6 {
 	color: $body-color;
 	// font-weight: 500;
 
+	@media (prefers-color-scheme: dark) {
+		color: $body-color-dm;
+	}
+
 	a {
 		color: inherit;
 	}
@@ -140,7 +144,7 @@ p {
 // structure
 
 .main {
-	margin: 5 * $base-unit auto 0;
+	margin: 6 * $base-unit auto 0;
 	max-width: $column-width;
 	padding: 0 $base-unit;
 	position: relative;
@@ -221,7 +225,7 @@ p {
 
 .header__top-line {
 	display: flex;
-	gap: 0 $base-unit;
+	gap: 0 0.5 * $base-unit;
 	margin: 0 auto;
 	max-width: $column-width;
 	padding: 2 * $base-unit $base-unit;
@@ -245,7 +249,7 @@ p {
 
 	img {
 		border-radius: $border-radius;
-		width: $base-unit;
+		width: 2 * $base-unit;
 	}
 
 	@media screen and (max-width: $break-1) {
@@ -255,10 +259,10 @@ p {
 }
 
 .header__titles {
-	display: flex;
+	// display: flex;
 	flex-grow: 1;
 	// flex-wrap: wrap;
-	gap: 0 0.5 * $base-unit;
+	// gap: 0 0.5 * $base-unit;
 	// justify-content: center;
 	// text-align: center;
 	// text-wrap: nowrap;
@@ -344,7 +348,7 @@ p {
 	// padding: $base-unit 0;
 
 	@media (prefers-color-scheme: dark) {
-		border-top: 1.5px solid $gray-line-color-dm;
+		// border-top: 1.5px solid $gray-line-color-dm;
 		// border-bottom: 1px solid #1b1b1b;
 	}
 
@@ -372,8 +376,8 @@ p {
 		padding: 0 0.5 * $base-unit;
 
 		@media (prefers-color-scheme: dark) {
-			background-color: $body-color-dm;
-			color: $body-color;
+			// background-color: $body-color-dm;
+			// color: $body-color;
 		}
 	}
 }

@@ -44,7 +44,7 @@ const Header = ({ showNav }) => {
 						</h2>
 					</div>
 
-					<Nav />
+					{/* <Nav /> */}
 
 					<div className="buttons">
 						<button className="search-button">
