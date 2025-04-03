@@ -12,8 +12,8 @@ const About = () => {
 				This is the web journal of Wesley De Witt, a coder and writer
 				from Indianapolis, Indiana. Here, in addition to project links
 				and photos, you may find essays on topics in culture, politics,
-				and technology, as well as travel writing from around Indiana
-				and the Midwestern United States.
+				and technology as well as travel writing from around Indiana and
+				the Midwestern United States.
 			</p>
 		</div>
 	);
@@ -23,10 +23,10 @@ const About = () => {
 				<img className="index-section__icon" src={AboutIcon} />
 				About
 			</h3>
-			<div className="about__photo">
-				<img src="/assets/photos/1.jpg" />
-			</div>
 			<div className="index-section__content index-section__content--about-grid">
+				<div className="about__photo">
+					<img src="/assets/photos/1.jpg" />
+				</div>
 				{siteDescription}
 				<div className="social-links">
 					<Link className="social-link" to="/">

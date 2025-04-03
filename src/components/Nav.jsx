@@ -12,19 +12,10 @@ const Nav = () => {
 					Feed
 				</Link>
 				<Link activeClassName="active" to="/feed">
-					Projects
-				</Link>
-				<Link activeClassName="active" to="/feed">
-					Essays
-				</Link>
-				<Link activeClassName="active" to="/feed">
-					Photos
-				</Link>
-				<Link activeClassName="active" to="/feed">
-					Travel
-				</Link>
-				<Link activeClassName="active" to="/feed">
 					Newsletter
+				</Link>
+				<Link activeClassName="active" to="/about">
+					About
 				</Link>
 			</div>
 		</nav>

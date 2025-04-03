@@ -25,6 +25,8 @@ const Header = ({ showNav }) => {
 		setIsVisible(!isVisible);
 	};
 
+	// const showMenuButton = false;
+
 	return (
 		<div className="header__wrapper" id="header__wrapper">
 			<header className="header" id="header">
@@ -42,7 +44,7 @@ const Header = ({ showNav }) => {
 						</h2>
 					</div>
 
-					{/* {showNav ? <Nav /> : null} */}
+					<Nav />
 
 					<div className="buttons">
 						<button className="search-button">
