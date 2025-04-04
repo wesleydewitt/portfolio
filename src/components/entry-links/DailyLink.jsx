@@ -13,8 +13,8 @@ const DailyLink = ({ daily }) => {
 
 	return (
 		<Link className="daily-link" to={dailyUrl}>
-			<h4 className="daily-link__title">{daily.frontmatter.title}</h4>
-			<div className="daily-link__date">{daily.frontmatter.date}</div>
+			<h4 className="daily-link__title">{daily.frontmatter.date}</h4>
+			{/* <div className="daily-link__date">{daily.frontmatter.date}</div> */}
 		</Link>
 	);
 };

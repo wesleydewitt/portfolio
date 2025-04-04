@@ -45,11 +45,14 @@ const Travel = () => {
 				zoomControl: false,
 			}).setView([39.768, -86.158], 6);
 
-			L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-				maxZoom: 19,
-				attribution:
-					'&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-			}).addTo(map);
+			L.tileLayer(
+				"https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png",
+				{
+					maxZoom: 19,
+					attribution:
+						'&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+				}
+			).addTo(map);
 
 			const Travels = data.allMdx.nodes
 				.filter((entry) => entry.frontmatter.type === "travel")
