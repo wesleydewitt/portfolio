@@ -6,7 +6,7 @@
 
         }
         @media (prefers-color-scheme: dark) {
-            line { stroke: rgb(221, 221, 221); }
+            line { stroke: rgb(0, 113, 227); }
         }
     </style>
 <line y1="0.5" x2="12" y2="0.5" stroke="black"/>

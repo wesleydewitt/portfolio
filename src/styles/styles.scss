@@ -7,9 +7,9 @@
 // variables
 
 $base-unit: 24px;
-$column-width: 576px + (4 * $base-unit);
+$column-width: 576px + (3 * $base-unit);
 $column-width: 840px + (4 * $base-unit);
-$border-radius: 4px;
+$border-radius: 6px;
 
 $sans-font: "Inter", -apple-system, BlinkMacSystemFont, avenir next, avenir,
 	helvetica neue, roboto, noto, helvetica, arial, sans-serif;
@@ -26,18 +26,18 @@ $body-color-dm: rgb(221, 221, 221);
 $gray-color: rgba(0, 0, 0, 0.333);
 $gray-color-dm: rgba(221, 221, 221, 0.333);
 
-$link-color: rgb(0, 113, 227);
+$link-color: rgb(0, 128, 255);
 
 $new-label-bg: $link-color;
 $new-label-color: rgb(255, 255, 255);
 
 $background-color: rgb(255, 255, 255);
-$background-color-dm: rgb(31, 31, 31);
+$background-color-dm: rgb(17, 17, 17);
 
 $header-background: rgba(255, 255, 255, 0.8);
 $header-background-dm: rgba(238, 238, 238, 0.8);
 
-$entry-background: rgb(238, 238, 238);
+$entry-background: #f8f8f8;
 $entry-background-dm: rgb(44, 44, 44);
 
 $gray-line-color: rgba(0, 0, 0, 0.05);
@@ -98,6 +98,12 @@ a:hover {
 	text-decoration: underline solid currentColor;
 }
 
+button {
+	display: flex;
+	gap: 0.5 * $base-unit;
+	line-height: 1;
+}
+
 .all-link {
 	background-color: $entry-background;
 	border-radius: $border-radius;
@@ -144,7 +150,7 @@ p {
 // structure
 
 .main {
-	margin: 6 * $base-unit auto 0;
+	margin: 3 * $base-unit auto 0;
 	max-width: $column-width;
 	padding: 0 $base-unit;
 	position: relative;
@@ -168,11 +174,11 @@ p {
 .index-section {
 	display: grid;
 	border-top: 1.5px solid $gray-line-color;
-	// gap: 0 $base-unit;
+	gap: $base-unit 2 * $base-unit;
 	grid-column: span 3;
 	grid-template-columns: subgrid;
 	// margin: 3 * $base-unit 0;
-	padding: 2 * $base-unit 0;
+	padding: 3 * $base-unit 0;
 
 	@media (prefers-color-scheme: dark) {
 		border-top: 1.5px solid $gray-line-color-dm;
@@ -180,7 +186,7 @@ p {
 
 	@media (max-width: $break-1) {
 		display: block;
-		padding: $base-unit 0;
+		// padding: $base-unit 0;
 	}
 }
 
@@ -193,7 +199,7 @@ p {
 	margin-bottom: $base-unit;
 
 	img {
-		width: 18px;
+		width: 14px;
 
 		display: none;
 	}
@@ -225,10 +231,10 @@ p {
 
 .header__top-line {
 	display: flex;
-	gap: 0 0.5 * $base-unit;
+	gap: 0 $base-unit;
 	margin: 0 auto;
 	max-width: $column-width;
-	padding: 2 * $base-unit $base-unit;
+	padding: $base-unit $base-unit;
 	// width: 100vw;
 
 	// background-color: blue;
@@ -249,7 +255,7 @@ p {
 
 	img {
 		border-radius: $border-radius;
-		width: 2 * $base-unit;
+		width: $base-unit;
 	}
 
 	@media screen and (max-width: $break-1) {
@@ -259,10 +265,10 @@ p {
 }
 
 .header__titles {
-	// display: flex;
+	display: flex;
 	flex-grow: 1;
 	// flex-wrap: wrap;
-	// gap: 0 0.5 * $base-unit;
+	gap: 0 0.5 * $base-unit;
 	// justify-content: center;
 	// text-align: center;
 	// text-wrap: nowrap;
@@ -289,6 +295,17 @@ p {
 	}
 }
 
+.availability {
+	background-color: $entry-background;
+	border-radius: $border-radius;
+	color: $gray-color;
+	font-size: $small-size;
+	letter-spacing: 0.1em;
+	line-height: $base-unit;
+	padding: 0 0.5 * $base-unit;
+	text-transform: uppercase;
+}
+
 .buttons {
 	// background-color: pink;
 	align-items: center;
@@ -300,7 +317,7 @@ p {
 	// margin-right: -0.5 * $base-unit;
 	// transform: translate(6px, 0px);
 
-	display: none;
+	// display: none;
 
 	@media (max-width: $break-1) {
 		display: flex;
@@ -310,9 +327,10 @@ p {
 		// background-color: $link-color;
 		border: 1.5px solid $link-color;
 		border-radius: $border-radius;
+		color: $link-color;
 		// height: $base-unit;
 		// background-color: pink;
-		padding: 5.25px;
+		padding: 5.25px 0.5 * $base-unit;
 		// margin-right: -6px;
 
 		img {
@@ -353,7 +371,7 @@ p {
 	}
 
 	@media screen and (max-width: $break-1) {
-		display: none;
+		// display: none;
 	}
 
 	a {
@@ -387,7 +405,7 @@ p {
 	display: flex;
 	// flex-direction: column;
 	// gap: 0.25 * $base-unit;
-	gap: 1px;
+	gap: 0.5 * $base-unit;
 	justify-content: space-between;
 	// margin: 0 auto;
 	// max-width: $column-width;
@@ -404,14 +422,17 @@ p {
 	.index-section__heading {
 		// margin: 0;
 	}
+
+	.index-section__content {
+		grid-row: span 2;
+	}
 }
 
 .about__photo {
-	aspect-ratio: 4/3;
+	aspect-ratio: 1/1;
 	background-color: $entry-background;
 	border-radius: $border-radius;
-	display: none;
-	grid-row: span 2;
+	// grid-row: span 2;
 	overflow: hidden;
 
 	img {
@@ -422,8 +443,20 @@ p {
 }
 
 .social-links {
-	margin-top: $base-unit;
-	width: fit-content;
+	align-self: start;
+	background-color: $entry-background;
+	border-radius: $border-radius;
+	// margin-top: $base-unit;
+	padding: 0.5 * $base-unit 0.75 * $base-unit;
+	// width: fit-content;
+}
+
+.social-links__heading {
+	color: $gray-color;
+	font-size: $small-size;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	margin-bottom: 0.5 * $base-unit;
 }
 
 .social-link {
@@ -518,7 +551,7 @@ p {
 	}
 
 	@media (prefers-color-scheme: dark) {
-		background-color: $entry-background-dm;
+		// background-color: $entry-background-dm;
 	}
 }
 
@@ -537,7 +570,7 @@ p {
 }
 
 .project-link__title {
-	color: $link-color;
+	// color: $link-color;
 	// font-family: $serif-font;
 	// font-size: $serif-size;
 	// font-style: italic;
@@ -658,7 +691,7 @@ p {
 	}
 
 	@media (prefers-color-scheme: dark) {
-		background-color: $entry-background-dm;
+		// background-color: $link-color;
 	}
 
 	.essay-link__excerpt::before {
@@ -686,7 +719,7 @@ p {
 }
 
 .essay-link__title {
-	color: $link-color;
+	// color: $link-color;
 	// font-weight: 700;
 }
 
@@ -705,9 +738,9 @@ p {
 	content: "";
 	background: linear-gradient(
 		90deg,
-		rgba(0, 113, 227, 0),
-		rgba(0, 113, 227, 1) 80%,
-		rgba(0, 113, 227, 1)
+		rgba(0, 128, 255, 0),
+		rgba(0, 128, 255, 1) 80%,
+		rgba(0, 128, 255, 1)
 	);
 	height: $base-unit;
 	width: 100%;
@@ -735,9 +768,9 @@ p {
 	@media (prefers-color-scheme: dark) {
 		background: linear-gradient(
 			90deg,
-			rgba(31, 31, 31, 0),
-			rgba(31, 31, 31, 1) 80%,
-			rgba(31, 31, 31, 1)
+			rgba(17, 17, 17, 0),
+			rgba(17, 17, 17, 1) 80%,
+			rgba(17, 17, 17, 1)
 		);
 	}
 }

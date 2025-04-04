@@ -44,9 +44,11 @@ const Header = ({ showNav }) => {
 						</h2>
 					</div>
 
+					{/* <div className="availability">Availability</div> */}
+
 					{/* <Nav /> */}
 
-					<div className="buttons">
+					{/* <div className="buttons">
 						<button className="search-button">
 							<img src={searchIcon} />
 						</button>
@@ -60,13 +62,14 @@ const Header = ({ showNav }) => {
 							id="menu-button"
 							onClick={toggleVisibility}
 						>
+							Menu
 							{isVisible ? (
 								<img src={closeIcon} />
 							) : (
 								<img src={hamburgerIcon} />
 							)}
 						</button>
-					</div>
+					</div> */}
 				</div>
 			</header>
 
