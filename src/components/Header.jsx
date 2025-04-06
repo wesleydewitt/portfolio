@@ -11,71 +11,73 @@ import Menu from "./Menu";
 import Nav from "./Nav";
 
 const Header = ({ showNav }) => {
-	const [isVisible, setIsVisible] = useState(false);
-	const [isDarkTheme, setIsDarkTheme] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
+    const [isDarkTheme, setIsDarkTheme] = useState(false);
 
-	const toggleTheme = () => {
-		document.body.classList.toggle("dark-mode");
-	};
+    const toggleTheme = () => {
+        document.body.classList.toggle("dark-mode");
+    };
 
-	const toggleVisibility = () => {
-		document
-			.getElementById("header__wrapper")
-			.classList.toggle("has-background");
-		setIsVisible(!isVisible);
-	};
+    const toggleVisibility = () => {
+        document
+            .getElementById("header__wrapper")
+            .classList.toggle("has-background");
+        setIsVisible(!isVisible);
+    };
 
-	// const showMenuButton = false;
+    // const showMenuButton = false;
 
-	return (
-		<div className="header__wrapper" id="header__wrapper">
-			<header className="header" id="header">
-				<div className="header__top-line">
-					<Link className="header__site-logo" to="/">
-						<img src={logo} />
-					</Link>
+    return (
+        <div className="header__wrapper" id="header__wrapper">
+            <header className="header" id="header">
+                <div className="header__top-line">
+                    <Link className="header__site-logo" to="/">
+                        <img src={logo} />
+                    </Link>
 
-					<div className="header__titles">
-						<h1 className="header__site-title">
-							<Link to="/">{siteMetadata.title}</Link>
-						</h1>
-						<h2 className="header__site-subtitle">
-							{siteMetadata.subtitle}
-						</h2>
-					</div>
+                    <div className="header__titles">
+                        <h1 className="header__site-title">
+                            <Link to="/">{siteMetadata.title}</Link>
+                        </h1>
+                        <h2 className="header__site-subtitle">
+                            {siteMetadata.subtitle}
+                        </h2>
+                    </div>
 
-					{/* <div className="availability">Availability</div> */}
+                    {/* <div className="availability">Availability</div> */}
 
-					{/* <Nav /> */}
+                    {/* <Nav /> */}
 
-					{/* <div className="buttons">
-						<button className="search-button">
-							<img src={searchIcon} />
-						</button>
+                    <div className="buttons">
+                        <button className="search-button">
+                            <span className="button__text">Search</span>
+                            <img src={searchIcon} />
+                        </button>
 
-						<button className="theme-button">
-							<img src={moonIcon} />
-						</button>
+                        <button className="theme-button">
+                            <span className="button__text">Theme</span>
+                            <img src={moonIcon} />
+                        </button>
 
-						<button
-							className="menu-button"
-							id="menu-button"
-							onClick={toggleVisibility}
-						>
-							Menu
-							{isVisible ? (
-								<img src={closeIcon} />
-							) : (
-								<img src={hamburgerIcon} />
-							)}
-						</button>
-					</div> */}
-				</div>
-			</header>
+                        <button
+                            className="menu-button"
+                            id="menu-button"
+                            onClick={toggleVisibility}
+                        >
+                            <span className="button__text">Menu</span>
+                            {isVisible ? (
+                                <img src={closeIcon} />
+                            ) : (
+                                <img src={hamburgerIcon} />
+                            )}
+                        </button>
+                    </div>
+                </div>
+            </header>
 
-			{isVisible ? <Menu /> : null}
-		</div>
-	);
+            {isVisible ? <Menu /> : null}
+        </div>
+    );
 };
 
 export default Header;

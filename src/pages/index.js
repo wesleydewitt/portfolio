@@ -8,27 +8,34 @@ import Travel from "../components/index-sections/Travel";
 import About from "../components/index-sections/About";
 import Photos from "../components/index-sections/Photos";
 import Dailys from "../components/index-sections/Dailys";
+import Reviews from "../components/index-sections/Reviews";
 
 const IndexPage = () => {
-	return (
-		<IndexLayout>
-			<About />
-			<Projects />
-			<Essays />
-			<Travel />
-			<Photos />
-			<Dailys />
-		</IndexLayout>
-	);
+    return (
+        <IndexLayout>
+            <About />
+            <Projects />
+            <Essays />
+            <Travel />
+            <Photos />
+            <Reviews />
+            <Dailys />
+        </IndexLayout>
+    );
 };
 
 export default IndexPage;
 
 export const Head = () => (
-	<>
-		<title>{siteMetadata.title}</title>
-		<link rel="icon" type="image/x-icon" href={favicon} />
-	</>
+    <>
+        <title>{siteMetadata.title}</title>
+        <link rel="icon" href={favicon} />
+        <link
+            rel="mask-icon"
+            href="{{ base_path }}/images/safari-pinned-tab.svg?v=M44lzPylqQ"
+            color="#000000"
+        ></link>
+    </>
 );
 
 // export async function getServerData() {}
