@@ -1,0 +1,72 @@
+@import "../variables.scss";
+
+// essay page
+
+.essay__cover-image {
+    border-radius: $border-radius;
+    margin: 2 * $base-unit 0;
+}
+
+.essay__title {
+    // font-family: $serif-font;
+    font-size: $heading-size;
+    // font-weight: 700;
+    // line-height: 1.5;
+    // margin-bottom: 2 * $base-unit;
+}
+
+.essay__subtitle {
+    color: $gray-color;
+    font-size: $heading-size;
+    // font-style: oblique;
+    // line-height: 1.5;
+    margin: 0.5 * $base-unit 0;
+
+    @media (prefers-color-scheme: dark) {
+        color: $gray-color-dm;
+    }
+}
+
+.essay__meta {
+    color: $gray-color;
+    display: flex;
+    gap: 0.5 * $base-unit;
+    // margin-bottom: $base-unit;
+
+    // display: none;
+
+    @media (prefers-color-scheme: dark) {
+        color: $gray-color-dm;
+    }
+}
+
+.type-label--essay {
+    // color: $gray-color;
+    // margin-bottom: $base-unit;
+
+    img {
+        opacity: 0.333;
+    }
+}
+
+.type-label--essay::after {
+    content: "|";
+}
+
+.essay__body {
+    // font-family: $serif-font;
+    // font-size: $serif-size;
+}
+
+.essay__body p:first-of-type::first-letter {
+    font-family: $sans-font;
+    float: left;
+    font-size: 2 * $base-unit;
+    font-weight: 200;
+    line-height: 2 * $base-unit;
+    margin-right: 3px;
+
+    @-moz-document url-prefix() {
+        margin-top: 7px;
+    }
+}

@@ -1,0 +1,44 @@
+// variables
+
+$base-unit: 24px;
+$column-width: 576px + (3 * $base-unit);
+$column-width: 840px + (8 * $base-unit);
+$border-radius: 6px;
+$border-radius-big: 12px;
+
+$sans-font: "Inter", -apple-system, BlinkMacSystemFont, avenir next, avenir,
+    helvetica neue, roboto, noto, helvetica, arial, sans-serif;
+$body-size: 12px;
+$small-size: 10px;
+$heading-size: 18px;
+
+$serif-font: "Heldane Text", serif;
+$serif-size: 16px;
+
+$body-color: rgb(0, 0, 0);
+$body-color-dm: rgb(221, 221, 221);
+
+$gray-color: rgba(0, 0, 0, 0.333);
+$gray-color-dm: rgba(221, 221, 221, 0.333);
+
+$link-color: rgb(0, 113, 227);
+// $link-color: $body-color;
+$link-color-dm: rgb(0, 113, 227);
+
+$new-label-bg: $link-color;
+$new-label-color: rgb(255, 255, 255);
+
+$background-color: rgb(255, 255, 255);
+$background-color-dm: rgb(17, 17, 17);
+
+$header-background: rgba(255, 255, 255, 0.8);
+$header-background-dm: rgba(238, 238, 238, 0.8);
+
+$entry-background: rgb(248, 248, 248);
+$entry-background-dm: rgb(24, 24, 24);
+
+$gray-line-color: rgba(0, 0, 0, 0.1);
+$gray-line-color-dm: rgba(221, 221, 221, 0.1);
+
+$break-1: 768px;
+$break-2: 600px;

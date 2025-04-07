@@ -29,6 +29,7 @@ export default IndexPage;
 export const Head = () => (
     <>
         <title>{siteMetadata.title}</title>
+        {/* <meta name="theme-color" content="#ffffff" /> */}
         <link rel="icon" href={favicon} />
         <link
             rel="mask-icon"

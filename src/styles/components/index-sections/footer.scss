@@ -1,0 +1,19 @@
+@import "../../variables.scss";
+
+// footer
+
+.footer {
+    border-top: 1px solid $gray-line-color;
+    display: flex;
+    justify-content: space-between;
+    // margin-top: $base-unit;
+    padding: $base-unit 0;
+
+    @media (prefers-color-scheme: dark) {
+        border-top: 1px solid $gray-line-color-dm;
+    }
+}
+
+.page--index .footer {
+    grid-column: span 3;
+}

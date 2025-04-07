@@ -5,6 +5,7 @@ import EmailIcon from "../../images/email-icon.svg";
 import GithubIcon from "../../images/github-mark.svg";
 import XIcon from "../../images/x-mark.svg";
 import { Link } from "gatsby";
+import aboutStyles from "../../styles/components/index-sections/about.scss";
 
 const About = () => {
     const siteDescription = (

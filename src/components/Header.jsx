@@ -9,6 +9,7 @@ import searchIcon from "../images/search.svg";
 import About from "./index-sections/About";
 import Menu from "./Menu";
 import Nav from "./Nav";
+import headerStyles from "../styles/components/header.scss";
 
 const Header = ({ showNav }) => {
     const [isVisible, setIsVisible] = useState(false);

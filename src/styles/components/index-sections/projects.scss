@@ -1,0 +1,134 @@
+@import "../../variables.scss";
+
+// projects
+
+.projects {
+}
+
+.projects-grid {
+    align-items: center;
+    display: grid;
+    gap: $base-unit 2 * $base-unit;
+    grid-template-columns: 1fr 1fr;
+
+    @media screen and (max-width: $break-2) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.project-link {
+    align-items: center;
+    display: grid;
+    gap: 0 0.5 * $base-unit;
+    grid-template-areas:
+        "icon title "
+        "icon subtitle ";
+    grid-template-columns: auto 1fr;
+    padding-right: 0.75 * $base-unit;
+    position: relative;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.project-link:hover {
+    background-color: $link-color;
+    border-radius: 16px;
+    margin: -0.5 * $base-unit;
+    padding: 0.5 * $base-unit (0.75 * $base-unit + 0 * 16px) 0.5 * $base-unit
+        0.5 * $base-unit;
+    text-decoration: none;
+
+    * {
+        color: $background-color;
+    }
+
+    .project-link__subtitle {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    @media (prefers-color-scheme: dark) {
+        // background-color: $entry-background-dm;
+    }
+}
+
+.project-link__icon {
+    border-radius: $border-radius;
+    grid-row: span 2;
+    height: 2 * $base-unit;
+    overflow: hidden;
+    width: 2 * $base-unit;
+
+    img {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+.project-link__title {
+    // color: $link-color;
+    // font-family: $serif-font;
+    // font-size: $serif-size;
+    // font-style: italic;
+}
+
+.project-link__subtitle {
+    color: $gray-color;
+
+    @media (prefers-color-scheme: dark) {
+        color: $gray-color-dm;
+    }
+}
+
+.technologies {
+    display: flex;
+    gap: 0.5 * $base-unit;
+    grid-area: techs;
+    margin-left: 14px;
+
+    display: none;
+}
+
+.tech {
+    background-color: $entry-background;
+    border-radius: $border-radius;
+    font-size: $small-size;
+    line-height: 1;
+    padding: 0.125 * $base-unit 0.25 * $base-unit;
+
+    @media (prefers-color-scheme: dark) {
+        background-color: $entry-background-dm;
+    }
+}
+
+// .tech::before {
+// 	border-radius: 5px;
+// 	content: "";
+// 	display: block;
+// 	height: 10px;
+// 	width: 10px;
+// }
+
+// .react::before {
+// 	background-color: rgb(8, 126, 164);
+// }
+
+// .js::before {
+// 	background-color: #f7df1e;
+// }
+
+// .gatsby::before {
+// 	background-color: #542c85;
+// }
+
+// .sass::before {
+// 	background-color: rgb(191.25, 63.75, 127.5);
+// }
+
+// .tailwind::before {
+// 	background-color: oklch(0.746 0.16 232.661);
+// }
+
+// .dart::before {
+// 	background-color: #2cb7f6;
+// }

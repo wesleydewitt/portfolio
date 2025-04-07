@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import ReviewLink from "../entry-links/ReviewLink";
+import reviewsStyles from "../../styles/components/index-sections/reviews.scss";
 
 const Reviews = () => {
     const data = useStaticQuery(graphql`
@@ -12,6 +13,7 @@ const Reviews = () => {
                         slug
                         title
                         filename
+                        icon
                     }
                 }
             }
@@ -20,7 +22,8 @@ const Reviews = () => {
 
     const Reviews = data.allMdx.nodes
         .filter((entry) => entry.frontmatter.type === "review")
-        .map((entry) => <ReviewLink review={entry} />);
+        .map((entry) => <ReviewLink review={entry} />)
+        .slice(0, 4);
 
     return (
         <section className="index-section reviews">

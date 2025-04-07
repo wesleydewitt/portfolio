@@ -1,0 +1,26 @@
+@import "../../variables.scss";
+
+// dailys
+
+.dailys-grid {
+    display: grid;
+    gap: $base-unit;
+}
+
+.month {
+    display: grid;
+    gap: 0.5 * $base-unit;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.month__heading {
+    font-size: $heading-size;
+    grid-column: span 3;
+}
+
+.daily-link {
+    background-color: $entry-background;
+    border-radius: $border-radius;
+    padding: 0.5 * $base-unit 0.75 * $base-unit;
+    text-align: center;
+}

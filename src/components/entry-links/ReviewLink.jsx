@@ -8,7 +8,7 @@ const ReviewLink = ({ review }) => {
             to={review.frontmatter.type + review.frontmatter.slug}
         >
             <div className="review-link__cover">
-                <img src={"assets/reviews/" + review.frontmatter.filename} />
+                <img src={"assets/reviews/images" + review.frontmatter.icon} />
             </div>
             <h4 className="review-link__title">{review.frontmatter.title}</h4>
         </Link>

@@ -1,0 +1,35 @@
+@import "../../variables.scss";
+
+// reviews
+
+.reviews-grid {
+    display: grid;
+    gap: $base-unit;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.review-link {
+    display: block;
+}
+
+.review-link__cover {
+    align-items: center;
+    aspect-ratio: 4/3;
+    background-color: $entry-background;
+    border-radius: $border-radius;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    // padding: $base-unit;
+
+    img {
+        height: 66.666%;
+        object-fit: contain;
+        width: 66.666%;
+    }
+}
+
+.review-link__title {
+    // font-size: $small-size;
+    margin-top: 0.25 * $base-unit;
+}
