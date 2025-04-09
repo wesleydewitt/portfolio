@@ -1,7 +1,7 @@
 // variables
 
 $base-unit: 24px;
-$column-width: 600px + (8 * $base-unit);
+$column-width: 640px + (8 * $base-unit);
 // $column-width: 1200px + (8 * $base-unit);
 $border-radius: 6px;
 $border-radius-big: 12px;
@@ -19,14 +19,16 @@ $serif-size: 16px;
 
 $mono-font: "Sohne Mono";
 
-$body-color: rgba(0, 0, 0, 0.666);
-$body-color-dm: rgba(255, 255, 255, 0.666);
+$body-color: #666666;
+$body-color-dm: #888888;
 
 $heading-color: rgb(0, 0, 0);
 $heading-color-dm: rgb(255, 255, 255);
 
-$gray-color: rgba(0, 0, 0, 0.333);
-$gray-color-dm: rgba(221, 221, 221, 0.333);
+$gray-color: rgba(0, 0, 0, 0.5);
+$gray-color: $body-color;
+$gray-color-dm: rgba(221, 221, 221, 0.5);
+$gray-color-dm: $body-color;
 
 $link-color: rgb(0, 113, 227);
 // $link-color: $body-color;
@@ -41,10 +43,10 @@ $background-color-dm: rgb(17, 17, 17);
 $header-background: rgba(255, 255, 255, 0.8);
 $header-background-dm: rgba(238, 238, 238, 0.8);
 
-$entry-background: rgb(248, 248, 248);
-$entry-background-darker: rgb(238, 238, 238);
-$entry-background-dm: rgb(24, 24, 24);
-$entry-background-darker-dm: rgb(34, 34, 34);
+$entry-background: #eeeeee;
+$entry-background-darker: #e8e8e8;
+$entry-background-dm: #222222;
+$entry-background-darker-dm: #282828;
 
 $gray-line-color: rgba(0, 0, 0, 0.1);
 $gray-line-color-dm: rgba(221, 221, 221, 0.1);

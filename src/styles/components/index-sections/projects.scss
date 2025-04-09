@@ -89,6 +89,7 @@
 
 .project-link__subtitle {
     color: $gray-color;
+    font-weight: inherit;
 
     @media (prefers-color-scheme: dark) {
         color: $gray-color-dm;

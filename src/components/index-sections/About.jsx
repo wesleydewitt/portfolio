@@ -37,41 +37,49 @@ const About = () => {
     );
     return (
         <section className="index-section about">
-            {/* <h3 className="index-section__heading">
-                <img className="index-section__icon" src={AboutIcon} />
-                Hello
-            </h3> */}
-
             <div className="index-section__content index-section__content--about-grid">
-                <div className="about__photo">
-                    <img src={AboutPhoto} />
-                </div>
+                <h3 className="index-section__heading">
+                    <img className="index-section__icon" src={AboutIcon} />
+                    About
+                </h3>
 
                 {siteDescription}
             </div>
 
+            <div className="about__photo">
+                <img src={AboutPhoto} />
+            </div>
+
             <div className="social-links">
-                <div className="social-links__heading">Links</div>
-                <Link className="social-link" to="/">
-                    <div className="social-link__icon">
-                        <img src={EmailIcon} />
-                    </div>
-                    <div className="social-link__text">
-                        hello@wesleydewitt.com
-                    </div>
-                </Link>
-                <Link className="social-link" to="/">
-                    <div className="social-link__icon">
-                        <img src={GithubIcon} />
-                    </div>
-                    <div className="social-link__text">wesleydewitt</div>
-                </Link>
-                <Link className="social-link" to="/">
-                    <div className="social-link__icon">
-                        <img src={XIcon} />
-                    </div>
-                    <div className="social-link__text">@wesleydewitt</div>
-                </Link>
+                <div className="social-links__links">
+                    <Link className="social-link" to="/">
+                        <div className="social-link__icon">
+                            <img src={EmailIcon} />
+                        </div>
+                        <div className="social-links__heading">Email</div>
+                        <div className="social-link__text">
+                            hello@wesleydewitt.com
+                        </div>
+                    </Link>
+                    <Link className="social-link" to="/">
+                        <div className="social-link__icon">
+                            <img src={GithubIcon} />
+                        </div>
+                        <div className="social-links__heading">Github</div>
+                        <div className="social-link__text">
+                            github.com/wesleydewitt
+                        </div>
+                    </Link>
+                    <Link className="social-link" to="/">
+                        <div className="social-link__icon">
+                            <img src={XIcon} />
+                        </div>
+                        <div className="social-links__heading">Twitter</div>
+                        <div className="social-link__text">
+                            twitter.com/@wesleydewitt
+                        </div>
+                    </Link>
+                </div>
             </div>
         </section>
     );

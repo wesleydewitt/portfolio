@@ -85,6 +85,7 @@
 
 .essay-link__excerpt {
     color: $gray-color;
+    font-weight: inherit;
     max-height: 2 * $base-unit;
     overflow: hidden;
     position: relative;

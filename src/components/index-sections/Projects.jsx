@@ -25,8 +25,8 @@ const Projects = () => {
 
     const Projects = data.allMdx.nodes
         .filter((entry) => entry.frontmatter.type === "project")
-        .map((entry) => <ProjectLink project={entry} isNew={true} />)
-        .slice(0, 6);
+        .map((entry) => <ProjectLink project={entry} isNew={true} />);
+    // .slice(0, 6);
 
     return (
         <section className="index-section projects">

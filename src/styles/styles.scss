@@ -38,7 +38,7 @@ h4,
 h5,
 h6 {
     color: $heading-color;
-    // font-weight: 500;
+    font-weight: 500;
 
     @media (prefers-color-scheme: dark) {
         color: $heading-color-dm;
@@ -159,24 +159,11 @@ p {
     // "subheading content content";
     // grid-template-columns: 1fr 1fr 1fr;
     // grid-template-rows: auto 1fr;
-    margin: 3 * $base-unit 0;
+    margin: 4 * $base-unit 0;
     // padding: 2 * $base-unit 0;
     // background-color: $entry-background;
     // border-radius: $border-radius;
     // padding: 2 * $base-unit;
-
-    @media (max-width: $break-1) {
-        border-radius: 0;
-        margin-left: -3 * $base-unit;
-        margin-right: -3 * $base-unit;
-        padding: 3 * $base-unit 3 * $base-unit !important;
-    }
-
-    @media (max-width: $break-2) {
-        margin-left: -1 * $base-unit;
-        margin-right: -1 * $base-unit;
-        padding: $base-unit !important;
-    }
 
     @media (prefers-color-scheme: dark) {
         // background-color: $entry-background-dm;
@@ -208,9 +195,10 @@ p {
 
 .index-section__subheading {
     color: $gray-color;
+    font-weight: inherit;
     grid-area: subheading;
     // margin-left: $base-unit;
-    margin-bottom: 1.5 * $base-unit;
+    margin-bottom: 2 * $base-unit;
 
     // display: none;
 

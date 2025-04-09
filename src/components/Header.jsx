@@ -45,11 +45,18 @@ const Header = ({ showNav }) => {
                         </h2>
                     </div>
 
+                    <div className="theme-buttons">
+                        <button className="theme-buttons__button theme-buttons__button--active">
+                            Light
+                        </button>
+                        <button className="theme-buttons__button">Dark</button>
+                    </div>
+
                     {/* <div className="availability">Availability</div> */}
 
                     {/* <Nav /> */}
 
-                    <div className="buttons">
+                    {/* <div className="buttons">
                         <button className="search-button">
                             <span className="button__text">Search</span>
                             <img src={searchIcon} />
@@ -72,7 +79,7 @@ const Header = ({ showNav }) => {
                                 <img src={hamburgerIcon} />
                             )}
                         </button>
-                    </div>
+                    </div> */}
                 </div>
             </header>
 
