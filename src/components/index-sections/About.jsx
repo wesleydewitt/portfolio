@@ -31,24 +31,23 @@ const About = () => {
             <p>
                 If you have found this, then you are a seeker rather than a
                 passive cosumer of internet content, a crucial difference in
-                attitude.
+                attitude. Please, stay a while and enjoy what you find here.
             </p>
-
-            <p>Please, stay a while and enjoy what you find here.</p>
         </div>
     );
     return (
         <section className="index-section about">
-            <div className="index-section__content index-section__content--about-grid">
-                <h3 className="index-section__heading">
-                    <img className="index-section__icon" src={AboutIcon} />
-                    Hello
-                </h3>
-                {siteDescription}
-            </div>
+            {/* <h3 className="index-section__heading">
+                <img className="index-section__icon" src={AboutIcon} />
+                Hello
+            </h3> */}
 
-            <div className="about__photo">
-                <img src={AboutPhoto} />
+            <div className="index-section__content index-section__content--about-grid">
+                <div className="about__photo">
+                    <img src={AboutPhoto} />
+                </div>
+
+                {siteDescription}
             </div>
 
             <div className="social-links">

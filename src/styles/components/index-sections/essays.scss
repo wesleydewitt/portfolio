@@ -6,11 +6,16 @@
     display: grid;
     gap: $base-unit;
     // grid-template-columns: 1fr 1fr;
+
+    @media (prefers-color-scheme: dark) {
+        // background-color: $entry-background-dm;
+    }
 }
 
 .essay-link {
     align-items: center;
     display: grid;
+    border-radius: $border-radius;
     gap: 0 0.5 * $base-unit;
     grid-template-columns: auto 1fr;
     // height: fit-content;
@@ -20,13 +25,17 @@
 
 .essay-link:hover {
     background-color: $link-color;
-    border-radius: 16px;
+    border-radius: $border-radius;
     padding: 0.5 * $base-unit;
     margin: -0.5 * $base-unit;
     text-decoration: none;
 
     * {
         color: $background-color;
+    }
+
+    .essay-link__title::after {
+        opacity: 1;
     }
 
     .essay-link__excerpt {
@@ -64,6 +73,14 @@
 .essay-link__title {
     // color: $link-color;
     // font-weight: 700;
+}
+
+.essay-link__title::after {
+    color: rgb(255, 255, 255);
+    content: "\2197";
+    float: right;
+    margin-right: 0.25 * $base-unit;
+    opacity: 0;
 }
 
 .essay-link__excerpt {

@@ -6,6 +6,10 @@
     display: grid;
     gap: $base-unit;
     grid-template-columns: repeat(2, 1fr);
+
+    @media (prefers-color-scheme: dark) {
+        // background-color: $entry-background-dm;
+    }
 }
 
 .review-link {
@@ -21,6 +25,10 @@
     justify-content: center;
     overflow: hidden;
     // padding: $base-unit;
+
+    @media (prefers-color-scheme: dark) {
+        background-color: $entry-background-dm;
+    }
 
     img {
         height: 66.666%;

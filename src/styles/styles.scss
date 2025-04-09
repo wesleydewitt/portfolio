@@ -1,9 +1,9 @@
-@import url(reset.scss);
+@import "reset";
 @import "variables";
-@import url(font-face/heldane-text.scss);
-@import url(font-face/untitled-sans.scss);
-@import url(font-face/sohne-mono.scss);
-@import url(../../static/assets/fonts/inter/inter.css);
+@import "font-face/heldane-text.scss";
+@import "font-face/untitled-sans.scss";
+@import "font-face/sohne-mono.scss";
+@import "../../static/assets/fonts/inter/inter.css";
 
 // styles
 
@@ -37,11 +37,11 @@ h3,
 h4,
 h5,
 h6 {
-    color: $body-color;
+    color: $heading-color;
     // font-weight: 500;
 
     @media (prefers-color-scheme: dark) {
-        color: $body-color-dm;
+        color: $heading-color-dm;
     }
 
     a {
@@ -69,16 +69,18 @@ button {
 }
 
 .all-link {
-    // background-color: $entry-background;
-    border: 1.5px solid $link-color;
+    background-color: $entry-background;
+    // border: 1.5px solid $link-color;
     border-radius: $border-radius;
+    color: inherit;
     grid-column: 1/-1;
+    // margin-top: $base-unit;
     padding: 0.5 * $base-unit;
     text-align: center;
 
     @media (prefers-color-scheme: dark) {
-        // background-color: $entry-background-dm;
-        border: 1.5px solid $link-color-dm;
+        background-color: $entry-background-dm;
+        // border: 1.5px solid $link-color-dm;
     }
 }
 
@@ -124,14 +126,14 @@ p {
 }
 
 .main {
-    margin: 0 auto 0;
+    margin: 5 * $base-unit auto 0;
     max-width: $column-width;
-    padding: 6 * $base-unit 3 * $base-unit 0;
-    position: relative;
+    padding: 0 * $base-unit 3 * $base-unit 0;
+    // position: relative;
 
     @media (max-width: $break-2) {
         // margin: 6.5 * $base-unit auto 0;
-        padding: 6 * $base-unit $base-unit 0;
+        padding: 0 * $base-unit $base-unit 0;
     }
 }
 
@@ -139,7 +141,8 @@ p {
     .main {
         // background-color: pink;
         // display: grid;
-        // gap: 0 * $base-unit 2 * $base-unit;
+        // gap: 2 * $base-unit;
+        // grid-template-columns: 1fr 1fr;
 
         @media screen and (max-width: $break-1) {
             // display: block;
@@ -148,46 +151,78 @@ p {
 }
 
 .index-section {
-    // align-items: start;
-    display: grid;
-    border-top: 1px solid $gray-line-color;
-    gap: $base-unit 2 * $base-unit;
-    grid-column: span 3;
-    // grid-template-columns: subgrid;
-    grid-template-columns: repeat(3, 1fr);
-    // margin: 3 * $base-unit 0;
-    padding: 3 * $base-unit 0;
-
-    @media (prefers-color-scheme: dark) {
-        border-top: 1px solid $gray-line-color-dm;
-    }
+    // border-top: 1px solid $gray-line-color;
+    // display: grid;
+    // gap: 0 2 * $base-unit;
+    // grid-template-areas:
+    // "heading content content"
+    // "subheading content content";
+    // grid-template-columns: 1fr 1fr 1fr;
+    // grid-template-rows: auto 1fr;
+    margin: 3 * $base-unit 0;
+    // padding: 2 * $base-unit 0;
+    // background-color: $entry-background;
+    // border-radius: $border-radius;
+    // padding: 2 * $base-unit;
 
     @media (max-width: $break-1) {
-        display: block;
-        // padding: $base-unit 0;
+        border-radius: 0;
+        margin-left: -3 * $base-unit;
+        margin-right: -3 * $base-unit;
+        padding: 3 * $base-unit 3 * $base-unit !important;
+    }
+
+    @media (max-width: $break-2) {
+        margin-left: -1 * $base-unit;
+        margin-right: -1 * $base-unit;
+        padding: $base-unit !important;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        // background-color: $entry-background-dm;
+        // border-top: 1px solid $gray-line-color-dm;
     }
 }
 
 .index-section:first-of-type {
-    border: none;
-    padding-top: 0;
+    // border: none;
+    // padding-top: 0;
 }
 
 .index-section__heading {
     align-self: start;
     display: flex;
+    // font-family: $serif-font;
     font-size: $heading-size;
-    gap: 0.75 * $base-unit;
-    line-height: 1.5;
-    margin-bottom: $base-unit;
+    // font-weight: 600;
+    gap: 0.5 * $base-unit;
+    // line-height: 1.5;
+    // margin-bottom: 0.25 * $base-unit;
 
     img {
-        width: 16px;
+        width: 12px;
 
         display: none;
     }
 }
 
+.index-section__subheading {
+    color: $gray-color;
+    grid-area: subheading;
+    // margin-left: $base-unit;
+    margin-bottom: 1.5 * $base-unit;
+
+    // display: none;
+
+    @media (prefers-color-scheme: dark) {
+        color: $gray-color-dm;
+    }
+}
+
 .index-section__content {
-    grid-column: span 2;
+    // background-color: $entry-background;
+    // border-radius: $border-radius;
+    // grid-column: span 2;
+    // grid-row: span 2;
+    // padding: 2 * $base-unit;
 }

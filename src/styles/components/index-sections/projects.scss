@@ -2,14 +2,15 @@
 
 // projects
 
-.projects {
-}
-
 .projects-grid {
     align-items: center;
     display: grid;
-    gap: $base-unit 2 * $base-unit;
+    gap: $base-unit $base-unit;
     grid-template-columns: 1fr 1fr;
+
+    @media (prefers-color-scheme: dark) {
+        // background-color: $entry-background-dm;
+    }
 
     @media screen and (max-width: $break-2) {
         grid-template-columns: 1fr;
@@ -19,6 +20,7 @@
 .project-link {
     align-items: center;
     display: grid;
+    border-radius: $border-radius;
     gap: 0 0.5 * $base-unit;
     grid-template-areas:
         "icon title "
@@ -27,19 +29,24 @@
     padding-right: 0.75 * $base-unit;
     position: relative;
     text-decoration: none;
-    width: fit-content;
+    // width: fit-content;
 }
 
 .project-link:hover {
     background-color: $link-color;
-    border-radius: 16px;
-    margin: -0.5 * $base-unit;
-    padding: 0.5 * $base-unit (0.75 * $base-unit + 0 * 16px) 0.5 * $base-unit
-        0.5 * $base-unit;
+    border-radius: $border-radius;
+    margin: (-0.5 * $base-unit) (-0.5 * $base-unit) (-0.5 * $base-unit)
+        (-0.5 * $base-unit);
+    padding: 0.5 * $base-unit (0.75 * $base-unit) 0.5 * $base-unit 0.5 *
+        $base-unit;
     text-decoration: none;
 
     * {
         color: $background-color;
+    }
+
+    .project-link__title::after {
+        opacity: 1;
     }
 
     .project-link__subtitle {
@@ -70,6 +77,14 @@
     // font-family: $serif-font;
     // font-size: $serif-size;
     // font-style: italic;
+    // font-weight: 600;
+}
+
+.project-link__title::after {
+    color: rgb(255, 255, 255);
+    content: "\2197";
+    float: right;
+    opacity: 0;
 }
 
 .project-link__subtitle {

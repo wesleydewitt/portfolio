@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
+import { Link } from "gatsby";
 import EssaysIcon from "../../images/essay.svg";
 import EssayLink from "../entry-links/EssayLink";
 import essaysStyles from "../../styles/components/index-sections/essays.scss";
@@ -33,7 +34,17 @@ const Essays = () => {
                 <img className="index-section__icon" src={EssaysIcon} />
                 Essays
             </h3>
-            <div className="index-section__content essays-grid">{Essays}</div>
+            <h4 className="index-section__subheading">
+                Medium- to long-form pieces on topics in art, culture, politics,
+                and technology
+            </h4>
+            <div className="index-section__content essays-grid">
+                {Essays}
+
+                {/* <Link className="all-link" to="/projects">
+                    All Essays
+                </Link> */}
+            </div>
         </section>
     );
 };

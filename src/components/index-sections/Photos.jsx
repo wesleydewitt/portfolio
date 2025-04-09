@@ -30,6 +30,11 @@ const Photos = () => {
                 <img className="index-section__icon" src={PhotosIcon} />
                 Photos
             </h3>
+
+            <h4 className="index-section__subheading">
+                Photo albums from various places
+            </h4>
+
             <div className="index-section__content photos-grid">
                 {Photos}
                 <Link className="all-link" to="/photos">

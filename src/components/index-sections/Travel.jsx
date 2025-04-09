@@ -89,6 +89,11 @@ const Travel = () => {
                 <img className="index-section__icon" src={TravelIcon} />
                 Travel
             </h3>
+
+            <h4 className="index-section__subheading">
+                Travel writing from around Indiana and the Midwest
+            </h4>
+
             <div className="index-section__content">
                 <div className="map" id="map"></div>
             </div>

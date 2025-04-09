@@ -31,6 +31,11 @@ const Reviews = () => {
                 {/* <img className="index-section__icon" src={PhotosIcon} /> */}
                 Reviews
             </h3>
+
+            <h4 className="index-section__subheading">
+                Reviews of books, movies, shows, products and places
+            </h4>
+
             <div className="index-section__content reviews-grid">
                 {Reviews}
                 <Link className="all-link" to="/reviews">
