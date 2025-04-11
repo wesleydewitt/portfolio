@@ -22,7 +22,7 @@ const Photos = () => {
     const Photos = data.allMdx.nodes
         .filter((entry) => entry.frontmatter.type === "photo")
         .map((entry) => <PhotoLink photo={entry} />)
-        .slice(0, 9);
+        .slice(0, 12);
 
     return (
         <section className="index-section photos">

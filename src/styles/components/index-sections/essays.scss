@@ -4,7 +4,7 @@
 
 .essays-grid {
     display: grid;
-    gap: $base-unit;
+    gap: 1.5 * $base-unit;
     // grid-template-columns: 1fr 1fr;
 
     @media (prefers-color-scheme: dark) {
@@ -116,9 +116,9 @@
     content: "";
     background: linear-gradient(
         90deg,
-        rgba(255, 255, 255, 0),
-        rgba(255, 255, 255, 1) 80%,
-        rgba(255, 255, 255, 1)
+        rgba(229, 240, 252, 0),
+        rgba(229, 240, 252, 1) 80%,
+        rgba(229, 240, 252, 1)
     );
     height: $base-unit;
     width: 100%;

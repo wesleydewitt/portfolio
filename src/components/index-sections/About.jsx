@@ -1,7 +1,7 @@
 import React from "react";
 import AboutIcon from "../../images/about.svg";
 import AboutPhoto from "../../images/logo.png";
-import EmailIcon from "../../images/email-icon.svg";
+import EmailIcon from "../icons/EmailIcon";
 import GithubIcon from "../../images/github-mark.svg";
 import XIcon from "../../images/x-mark.svg";
 import { Link } from "gatsby";
@@ -40,7 +40,7 @@ const About = () => {
             <div className="index-section__content index-section__content--about-grid">
                 <h3 className="index-section__heading">
                     <img className="index-section__icon" src={AboutIcon} />
-                    About
+                    Hello
                 </h3>
 
                 {siteDescription}
@@ -54,7 +54,7 @@ const About = () => {
                 <div className="social-links__links">
                     <Link className="social-link" to="/">
                         <div className="social-link__icon">
-                            <img src={EmailIcon} />
+                            <EmailIcon />
                         </div>
                         <div className="social-links__heading">Email</div>
                         <div className="social-link__text">
@@ -76,7 +76,7 @@ const About = () => {
                         </div>
                         <div className="social-links__heading">Twitter</div>
                         <div className="social-link__text">
-                            twitter.com/@wesleydewitt
+                            x.com/@wesleydewitt
                         </div>
                     </Link>
                 </div>

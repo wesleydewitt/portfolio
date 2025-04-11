@@ -4,8 +4,8 @@
 
 .reviews-grid {
     display: grid;
-    gap: $base-unit;
-    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5 * $base-unit;
+    grid-template-columns: repeat(3, 1fr);
 
     @media (prefers-color-scheme: dark) {
         // background-color: $entry-background-dm;
@@ -38,6 +38,8 @@
 }
 
 .review-link__title {
+    color: $body-color;
     // font-size: $small-size;
-    margin-top: 0.25 * $base-unit;
+    font-weight: inherit;
+    margin-top: 0.125 * $base-unit;
 }

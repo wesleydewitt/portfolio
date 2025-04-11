@@ -1,0 +1,21 @@
+import React from "react";
+
+const MoonIcon = () => {
+    return (
+        <svg
+            className="moon-icon-svg"
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M11.1332 8.8989C10.1217 10.4559 8.31633 11.5 6.24776 11.5C3.0541 11.5 0.5 9.01869 0.5 6C0.5 2.98131 3.0541 0.5 6.24776 0.5C6.42362 0.5 6.59755 0.507547 6.76922 0.522306C6.12749 1.38834 5.74776 2.4506 5.74776 3.6C5.74776 6.50919 8.16706 8.84111 11.1332 8.8989Z"
+                stroke="black"
+            />
+        </svg>
+    );
+};
+
+export default MoonIcon;

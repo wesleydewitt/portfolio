@@ -16,9 +16,9 @@ const IndexPage = () => {
             <About />
             <Projects />
             <Essays />
+            <Reviews />
             <Travel />
             <Photos />
-            <Reviews />
             <Dailys />
         </IndexLayout>
     );

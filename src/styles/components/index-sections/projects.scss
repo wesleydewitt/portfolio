@@ -5,8 +5,8 @@
 .projects-grid {
     align-items: center;
     display: grid;
-    gap: $base-unit $base-unit;
-    grid-template-columns: 1fr 1fr;
+    gap: 1.5 * $base-unit;
+    // grid-template-columns: 1fr 1fr;
 
     @media (prefers-color-scheme: dark) {
         // background-color: $entry-background-dm;
@@ -23,17 +23,22 @@
     border-radius: $border-radius;
     gap: 0 0.5 * $base-unit;
     grid-template-areas:
-        "icon title "
-        "icon subtitle ";
-    grid-template-columns: auto 1fr;
-    padding-right: 0.75 * $base-unit;
+        "icon title techs"
+        "icon subtitle techs";
+    grid-template-columns: auto 1fr auto;
+    padding-right: 0.25 * $base-unit;
     position: relative;
     text-decoration: none;
     // width: fit-content;
+
+    + .project-link {
+        // border-top: 1px solid $gray-line-color;
+        // padding-top: 1.5 * $base-unit;
+    }
 }
 
 .project-link:hover {
-    background-color: $link-color;
+    background-color: $entry-background;
     border-radius: $border-radius;
     margin: (-0.5 * $base-unit) (-0.5 * $base-unit) (-0.5 * $base-unit)
         (-0.5 * $base-unit);
@@ -42,7 +47,7 @@
     text-decoration: none;
 
     * {
-        color: $background-color;
+        // color: $background-color;
     }
 
     .project-link__title::after {
@@ -50,11 +55,11 @@
     }
 
     .project-link__subtitle {
-        color: rgba(255, 255, 255, 0.5);
+        // color: rgba(255, 255, 255, 0.5);
     }
 
     @media (prefers-color-scheme: dark) {
-        // background-color: $entry-background-dm;
+        background-color: $entry-background-dm;
     }
 }
 
@@ -98,53 +103,57 @@
 
 .technologies {
     display: flex;
-    gap: 0.5 * $base-unit;
+    gap: 0.75 * $base-unit;
     grid-area: techs;
     margin-left: 14px;
 
-    display: none;
+    // display: none;
 }
 
 .tech {
     background-color: $entry-background;
     border-radius: $border-radius;
+    color: $body-color;
+    display: flex;
+    font-family: $mono-font;
     font-size: $small-size;
+    gap: 0.25 * $base-unit;
+    letter-spacing: 0.1em;
     line-height: 1;
     padding: 0.125 * $base-unit 0.25 * $base-unit;
+    // text-transform: uppercase;
 
     @media (prefers-color-scheme: dark) {
-        background-color: $entry-background-dm;
+        // background-color: $entry-background-dm;
+        // color: $body-color-dm;
     }
 }
 
-// .tech::before {
-// 	border-radius: 5px;
-// 	content: "";
-// 	display: block;
-// 	height: 10px;
-// 	width: 10px;
+// .react {
+//     background-color: rgb(8, 126, 164);
+//     color: rgb(255, 255, 255);
 // }
 
-// .react::before {
-// 	background-color: rgb(8, 126, 164);
+// .js {
+//     background-color: #f7df1e;
 // }
 
-// .js::before {
-// 	background-color: #f7df1e;
+// .gatsby {
+//     background-color: #542c85;
+//     color: rgb(255, 255, 255);
 // }
 
-// .gatsby::before {
-// 	background-color: #542c85;
+// .sass {
+//     background-color: rgb(191.25, 63.75, 127.5);
+//     color: rgb(255, 255, 255);
 // }
 
-// .sass::before {
-// 	background-color: rgb(191.25, 63.75, 127.5);
+// .tailwind {
+//     background-color: oklch(0.746 0.16 232.661);
+//     color: rgb(255, 255, 255);
 // }
 
-// .tailwind::before {
-// 	background-color: oklch(0.746 0.16 232.661);
-// }
-
-// .dart::before {
-// 	background-color: #2cb7f6;
+// .dart {
+//     background-color: #2cb7f6;
+//     color: rgb(255, 255, 255);
 // }

@@ -35,8 +35,7 @@ const Projects = () => {
                 Projects
             </h3>
             <h4 className="index-section__subheading">
-                Websites, apps, and tools designed and written with precision
-                and minimalism in mind
+                Apps and websites designed and written with minimalism in mind
             </h4>
             <div className="index-section__content projects-grid">
                 {Projects}

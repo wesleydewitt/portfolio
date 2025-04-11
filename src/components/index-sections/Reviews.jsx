@@ -22,8 +22,8 @@ const Reviews = () => {
 
     const Reviews = data.allMdx.nodes
         .filter((entry) => entry.frontmatter.type === "review")
-        .map((entry) => <ReviewLink review={entry} />)
-        .slice(0, 4);
+        .map((entry) => <ReviewLink review={entry} />);
+    // .slice(0, 4);
 
     return (
         <section className="index-section reviews">
@@ -38,9 +38,10 @@ const Reviews = () => {
 
             <div className="index-section__content reviews-grid">
                 {Reviews}
-                <Link className="all-link" to="/reviews">
+
+                {/* <Link className="all-link" to="/reviews">
                     All Reviews
-                </Link>
+                </Link> */}
             </div>
         </section>
     );

@@ -4,12 +4,14 @@ import { siteMetadata } from "../../gatsby-config";
 import logo from "../images/logo.png";
 import hamburgerIcon from "../images/hamburger-icon.svg";
 import closeIcon from "../images/close-icon.svg";
-import moonIcon from "../images/moon.svg";
+import moonIcon from "../images/moon-icon.svg";
 import searchIcon from "../images/search.svg";
 import About from "./index-sections/About";
 import Menu from "./Menu";
 import Nav from "./Nav";
 import headerStyles from "../styles/components/header.scss";
+import MoonIcon from "./icons/MoonIcon";
+import SunIcon from "./icons/SunIcon";
 
 const Header = ({ showNav }) => {
     const [isVisible, setIsVisible] = useState(false);
@@ -47,9 +49,11 @@ const Header = ({ showNav }) => {
 
                     <div className="theme-buttons">
                         <button className="theme-buttons__button theme-buttons__button--active">
-                            Light
+                            <SunIcon />
                         </button>
-                        <button className="theme-buttons__button">Dark</button>
+                        <button className="theme-buttons__button">
+                            <MoonIcon />
+                        </button>
                     </div>
 
                     {/* <div className="availability">Availability</div> */}

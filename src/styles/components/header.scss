@@ -2,6 +2,7 @@
 
 // header
 .header__wrapper {
+    border-bottom: 1px solid $gray-line-color;
     position: absolute;
     top: 0;
     width: 100%;
@@ -9,18 +10,17 @@
 
     @media (prefers-color-scheme: dark) {
         // background-color: rgba(41,/ 41, 41, 0.5);
-        // border-bottom: 1px solid $gray-line-color-dm;
+        border-bottom: 1px solid $gray-line-color-dm;
     }
 }
 
 .header__wrapper.has-background {
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(24px);
-    border-bottom: 1px solid $gray-line-color;
 
     @media (prefers-color-scheme: dark) {
         background-color: rgba(17, 17, 17, 0.8);
-        border-bottom: 1px solid $gray-line-color-dm;
+        // border-bottom: 1px solid $gray-line-color-dm;
     }
 }
 
@@ -28,11 +28,11 @@
     align-items: center;
     display: grid;
     gap: 0 $base-unit;
-    grid-template-columns: auto auto 1fr;
+    grid-template-columns: auto 1fr;
     justify-items: start;
     margin: 0 auto;
     max-width: $column-width;
-    padding: $base-unit 3 * $base-unit;
+    padding: 1.5 * $base-unit 3 * $base-unit;
     // width: 100vw;
 
     // background-color: blue;
@@ -52,7 +52,7 @@
     // grid-row: span 2;
     // justify-content: end;
 
-    // display: none;
+    display: none;
 
     img {
         border-radius: 12px;
@@ -86,29 +86,26 @@
 }
 
 .header__site-title {
-    // display: inline-block;
-    // font-weight: 600;
-    // margin-right: 0.5 * $base-unit;
 }
 
 .header__site-subtitle {
-    color: inherit;
+    color: $gray-color;
     // display: inline-block;
     // font-style: italic;
     font-weight: inherit;
 
     @media (prefers-color-scheme: dark) {
-        // color: $gray-color-dm;
+        color: $gray-color-dm;
     }
 }
 
 .theme-buttons {
     background-color: $entry-background;
-    border-radius: 8px;
+    border-radius: 4px;
     display: flex;
     font-size: $small-size;
     justify-self: end;
-    padding: 3px;
+    padding: 2px;
 
     @media (prefers-color-scheme: dark) {
         background-color: $entry-background-dm;
@@ -127,13 +124,17 @@
 }
 
 .theme-buttons__button--active {
-    background-color: $background-color;
+    background-color: $background-color !important;
     color: $heading-color;
 
     @media (prefers-color-scheme: dark) {
-        background-color: $background-color-dm;
+        background-color: $background-color-dm !important;
         color: $heading-color-dm;
     }
+}
+
+.moon-icon-svg {
+    width: 10px;
 }
 
 .availability {
@@ -167,9 +168,9 @@
 
     button {
         align-items: center;
-        // background-color: $link-color;
+        // background-color: $entry-background;
         // border: 1.5px solid $link-color;
-        border-radius: $border-radius-big;
+        border-radius: $border-radius;
         color: $link-color;
         display: flex;
         // font-size: $small-size;
@@ -178,7 +179,7 @@
         // height: $base-unit;
         justify-content: center;
         // background-color: pink;
-        // padding: 6px 0;
+        padding: 4px 12px;
         // margin-right: -6px;
 
         @media (prefers-color-scheme: dark) {
@@ -192,7 +193,7 @@
 
         img {
             // height: 10px;
-            width: 12px;
+            width: 10px;
         }
     }
 
