@@ -1,0 +1,13 @@
+@import "../../variables.scss";
+
+.github-icon-svg {
+    // background-color: pink;
+    // display: block;
+    fill: $body-color;
+    // height: fit-content;
+    width: 12px;
+
+    @media (prefers-color-scheme: dark) {
+        fill: $body-color-dm;
+    }
+}

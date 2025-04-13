@@ -1,0 +1,21 @@
+import React from "react";
+
+const SearchIcon = () => {
+    return (
+        <svg
+            width="11"
+            height="11"
+            viewBox="0 0 11 11"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <circle cx="4" cy="4" r="3.5" stroke-linecap="round" />
+            <path
+                d="M9.5 9.49999C7.11718 7.11718 6.37486 6.37486 6.51669 6.51669"
+                stroke-linecap="square"
+            />
+        </svg>
+    );
+};
+
+export default SearchIcon;

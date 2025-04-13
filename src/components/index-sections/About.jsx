@@ -2,8 +2,8 @@ import React from "react";
 import AboutIcon from "../../images/about.svg";
 import AboutPhoto from "../../images/logo.png";
 import EmailIcon from "../icons/EmailIcon";
-import GithubIcon from "../../images/github-mark.svg";
-import XIcon from "../../images/x-mark.svg";
+import GithubIcon from "../icons/GithubIcon";
+import XIcon from "../icons/XIcon";
 import { Link } from "gatsby";
 import aboutStyles from "../../styles/components/index-sections/about.scss";
 
@@ -63,7 +63,7 @@ const About = () => {
                     </Link>
                     <Link className="social-link" to="/">
                         <div className="social-link__icon">
-                            <img src={GithubIcon} />
+                            <GithubIcon />
                         </div>
                         <div className="social-links__heading">Github</div>
                         <div className="social-link__text">
@@ -72,7 +72,7 @@ const About = () => {
                     </Link>
                     <Link className="social-link" to="/">
                         <div className="social-link__icon">
-                            <img src={XIcon} />
+                            <XIcon />
                         </div>
                         <div className="social-links__heading">Twitter</div>
                         <div className="social-link__text">

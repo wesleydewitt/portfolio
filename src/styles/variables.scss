@@ -3,7 +3,7 @@
 $base-unit: 24px;
 $column-width: 720px + (8 * $base-unit);
 // $column-width: 840px + (8 * $base-unit);
-$border-radius: 2px;
+$border-radius: 3px;
 $border-radius-big: 12px;
 
 $sans-font: "Inter", -apple-system, BlinkMacSystemFont, avenir next, avenir,
@@ -37,14 +37,15 @@ $gray-color-dm: #666666;
 // $gray-color-dm: $body-color-dm;
 
 $link-color: rgb(0, 113, 227);
-$link-color: $body-color;
+// $link-color: $body-color;
 $link-color-dm: rgb(0, 113, 227);
 $link-color-dm: $body-color-dm;
 
 $new-label-bg: $link-color;
 $new-label-color: rgb(255, 255, 255);
 
-$background-color: rgb(229, 240, 252);
+$background-color: rgb(255, 255, 255);
+$background-color-RGB: 229, 240, 252;
 $background-color-dm: rgb(17, 17, 17);
 
 $header-background: rgba(255, 255, 255, 0.8);

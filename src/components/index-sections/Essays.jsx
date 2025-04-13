@@ -35,8 +35,8 @@ const Essays = () => {
                 Essays
             </h3>
             <h4 className="index-section__subheading">
-                Medium- to long-form pieces on topics in art, culture, politics,
-                and technology
+                Medium- to long-form pieces on topics in culture, politics, and
+                technology
             </h4>
             <div className="index-section__content essays-grid">
                 {Essays}

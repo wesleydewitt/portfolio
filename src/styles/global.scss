@@ -18,7 +18,7 @@ body {
     font-family: $sans-font;
     font-size: $body-size;
     // letter-spacing: 0.025em;
-    line-height: $base-unit;
+    line-height: 2;
     font-weight: 300;
     // text-align: justify;
     // text-wrap: balance;
@@ -29,8 +29,9 @@ body {
     }
 }
 
-img {
-    filter: sepia(100%) hue-rotate(170deg) saturate(50%);
+img,
+#map img {
+    filter: saturate(00%);
     // opacity: 0.9;
 }
 
@@ -84,6 +85,14 @@ button {
     @media (prefers-color-scheme: dark) {
         background-color: $entry-background-dm;
         // border: 1.5px solid $link-color-dm;
+    }
+}
+
+svg {
+    stroke: $body-color !important;
+
+    @media (prefers-color-scheme: dark) {
+        stroke: $body-color-dm !important;
     }
 }
 

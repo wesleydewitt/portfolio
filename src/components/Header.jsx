@@ -12,22 +12,11 @@ import Nav from "./Nav";
 import headerStyles from "../styles/components/header.scss";
 import MoonIcon from "./icons/MoonIcon";
 import SunIcon from "./icons/SunIcon";
+import SearchButton from "./buttons/SearchButton";
+import ThemeButton from "./buttons/ThemeButton";
+import MenuButton from "./buttons/MenuButton";
 
 const Header = ({ showNav }) => {
-    const [isVisible, setIsVisible] = useState(false);
-    const [isDarkTheme, setIsDarkTheme] = useState(false);
-
-    const toggleTheme = () => {
-        document.body.classList.toggle("dark-mode");
-    };
-
-    const toggleVisibility = () => {
-        document
-            .getElementById("header__wrapper")
-            .classList.toggle("has-background");
-        setIsVisible(!isVisible);
-    };
-
     // const showMenuButton = false;
 
     return (
@@ -47,47 +36,19 @@ const Header = ({ showNav }) => {
                         </h2>
                     </div>
 
-                    <div className="theme-buttons">
-                        <button className="theme-buttons__button theme-buttons__button--active">
-                            <SunIcon />
-                        </button>
-                        <button className="theme-buttons__button">
-                            <MoonIcon />
-                        </button>
+                    <div className="buttons">
+                        <SearchButton />
+
+                        <ThemeButton />
+
+                        <MenuButton />
                     </div>
-
-                    {/* <div className="availability">Availability</div> */}
-
-                    {/* <Nav /> */}
-
-                    {/* <div className="buttons">
-                        <button className="search-button">
-                            <span className="button__text">Search</span>
-                            <img src={searchIcon} />
-                        </button>
-
-                        <button className="theme-button">
-                            <span className="button__text">Theme</span>
-                            <img src={moonIcon} />
-                        </button>
-
-                        <button
-                            className="menu-button"
-                            id="menu-button"
-                            onClick={toggleVisibility}
-                        >
-                            <span className="button__text">Menu</span>
-                            {isVisible ? (
-                                <img src={closeIcon} />
-                            ) : (
-                                <img src={hamburgerIcon} />
-                            )}
-                        </button>
-                    </div> */}
                 </div>
+
+                {/* <Nav /> */}
             </header>
 
-            {isVisible ? <Menu /> : null}
+            {/* {isVisible ? <Menu /> : null} */}
         </div>
     );
 };

@@ -78,7 +78,7 @@
 }
 
 .social-links__heading {
-    color: $gray-color;
+    // color: $gray-color;
     // gap: 0 !important;
     // font-size: $small-size;
     // text-transform: uppercase;
@@ -88,7 +88,7 @@
     // display: none;
 
     @media (prefers-color-scheme: dark) {
-        color: $gray-color-dm;
+        // color: $gray-color-dm;
     }
 }
 
@@ -102,6 +102,7 @@
     // background-color: $entry-background;
     border: 1px solid $gray-line-color;
     border-radius: $border-radius;
+    color: $body-color;
     display: grid;
     gap: 0 0.5 * $base-unit;
     grid-template-columns: auto 1fr;
@@ -113,6 +114,10 @@
     @media (prefers-color-scheme: dark) {
         // background-color: $entry-background-dm;
         border: 1px solid $gray-line-color-dm;
+        color: $body-color-dm;
+    }
+
+    svg {
     }
 }
 

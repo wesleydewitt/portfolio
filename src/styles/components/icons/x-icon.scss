@@ -1,0 +1,12 @@
+@import "../../variables.scss";
+
+.x-icon-svg {
+    // background-color: pink;
+    fill: $body-color;
+    height: fit-content;
+    width: 12px;
+
+    @media (prefers-color-scheme: dark) {
+        fill: $body-color-dm;
+    }
+}

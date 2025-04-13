@@ -115,10 +115,10 @@
     border-radius: $border-radius;
     color: $body-color;
     display: flex;
-    font-family: $mono-font;
+    // font-family: $mono-font;
     font-size: $small-size;
     gap: 0.25 * $base-unit;
-    letter-spacing: 0.1em;
+    // letter-spacing: 0.1em;
     line-height: 1;
     padding: 0.125 * $base-unit 0.25 * $base-unit;
     // text-transform: uppercase;

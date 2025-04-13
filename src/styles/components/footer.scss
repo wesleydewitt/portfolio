@@ -5,9 +5,10 @@
 .footer {
     border-top: 1px solid $gray-line-color;
     display: flex;
+    gap: $base-unit;
     justify-content: space-between;
     // margin-top: $base-unit;
-    padding: $base-unit 0;
+    padding: 1.5 * $base-unit 0;
 
     @media (prefers-color-scheme: dark) {
         border-top: 1px solid $gray-line-color-dm;
@@ -16,4 +17,19 @@
 
 .page--index .footer {
     // grid-column: span 3;
+}
+
+.footer__copyright {
+    flex-grow: 1;
+}
+
+.footer__top-link {
+    background-color: $entry-background;
+    border-radius: $border-radius;
+    color: inherit;
+    display: flex;
+    gap: 0.5 * $base-unit;
+    font-size: $small-size;
+    line-height: 1;
+    padding: 7px 12px;
 }
