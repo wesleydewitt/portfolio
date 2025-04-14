@@ -1,11 +1,11 @@
 @import "reset";
 @import "variables";
-@import "font-face/tiempos-fine.scss";
-@import "font-face/american-grotesk.scss";
-@import "font-face/heldane-text.scss";
+// @import "font-face/tiempos-fine.scss";
+// @import "font-face/american-grotesk.scss";
+// @import "font-face/heldane-text.scss";
 @import "font-face/heldane-display.scss";
-@import "font-face/untitled-sans.scss";
-@import "font-face/sohne-mono.scss";
+// @import "font-face/untitled-sans.scss";
+// @import "font-face/sohne-mono.scss";
 @import "../../static/assets/fonts/inter/inter.css";
 
 // styles
@@ -68,8 +68,33 @@ a:hover {
 
 button {
     display: flex;
+    background-color: $entry-background;
+    border-radius: $border-radius;
+    font-size: $small-size;
     gap: 0.5 * $base-unit;
+    justify-content: space-between;
     line-height: 1;
+    padding: 6px 12px !important;
+
+    @media (prefers-color-scheme: dark) {
+        background-color: $entry-background-dm;
+    }
+}
+
+.button__text {
+    // display: none !important;
+}
+
+.button__icon {
+    align-items: center;
+    display: flex;
+    height: 12px;
+    justify-content: center;
+    width: 12px;
+
+    svg {
+        display: block;
+    }
 }
 
 .all-link {
@@ -138,7 +163,7 @@ p {
 }
 
 .main {
-    margin: 7 * $base-unit auto 0;
+    margin: 3 * $base-unit auto 0;
     max-width: $column-width;
     padding: 0 * $base-unit 3 * $base-unit 0;
     // position: relative;
@@ -180,6 +205,10 @@ p {
         // background-color: $entry-background-dm;
         border-top: 1px solid $gray-line-color-dm;
     }
+
+    @media (max-width: $break-2) {
+        display: block;
+    }
 }
 
 .index-section:first-of-type {
@@ -187,22 +216,40 @@ p {
     padding-top: 0;
 }
 
+.availability + .index-section {
+    // border: none;
+}
+
 .index-section__heading {
+    align-items: baseline;
     align-self: start;
     display: flex;
-    font-family: $serif-heading-font;
-    font-size: $serif-heading-size;
-    font-weight: 500;
-    gap: 0.5 * $base-unit;
+    // font-family: $serif-heading-font;
+    font-size: $heading-size;
+    gap: 0.333 * $base-unit;
     grid-area: heading;
-    letter-spacing: 0.05em;
+    // letter-spacing: 0.05em;
     line-height: 1.333;
-    margin-bottom: 0.25 * $base-unit;
+    margin-bottom: $base-unit;
 
     img {
         width: 12px;
 
         display: none;
+    }
+}
+
+.count {
+    color: $gray-color;
+    font-family: $sans-font;
+    font-size: $heading-size;
+    font-weight: 300;
+    // vertical-align: baseline;
+
+    // display: none;
+
+    @media (prefers-color-scheme: dark) {
+        color: $gray-color-dm;
     }
 }
 

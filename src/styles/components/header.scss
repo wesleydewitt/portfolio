@@ -28,7 +28,7 @@
     align-items: start;
     display: grid;
     gap: 0 $base-unit;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: 1fr auto;
     justify-items: start;
     margin: 0 auto;
     max-width: $column-width;
@@ -45,17 +45,17 @@
 }
 
 .header__site-logo {
-    // align-items: center;
-    // display: flex;
-    // flex-grow: 1;
-    // flex-shrink: 0;
-    // grid-row: span 2;
-    // justify-content: end;
+    background-color: $entry-background;
+    border-radius: $border-radius;
+    overflow: hidden;
 
-    // display: none;
+    display: none;
+
+    @media (prefers-color-scheme: dark) {
+        background-color: $entry-background-dm;
+    }
 
     img {
-        border-radius: $border-radius;
         width: $base-unit;
     }
 
@@ -89,13 +89,13 @@
 }
 
 .header__site-subtitle {
-    color: $gray-color;
+    color: $body-color;
     // display: inline-block;
     // font-style: italic;
     font-weight: inherit;
 
     @media (prefers-color-scheme: dark) {
-        color: $gray-color-dm;
+        color: $body-color-dm;
     }
 }
 
@@ -121,16 +121,16 @@
         align-items: center;
         background-color: $entry-background;
         // border: 1.5px solid $link-color;
-        border-radius: 2px;
+        // border-radius: 2px;
         // color: $link-color;
-        display: flex;
-        font-size: $small-size;
+        // display: flex;
+        // font-size: $small-size;
         // flex-direction: row-reverse;
         // gap: 0.5 * $base-unit;
         // height: $base-unit;
-        justify-content: space-between;
+        // justify-content: space-between;
         // background-color: pink;
-        padding: 7px 12px;
+        // padding: 7px 12px;
         // margin-right: -6px;
 
         @media (prefers-color-scheme: dark) {
@@ -158,16 +158,18 @@
 
 .search-button {
     width: 120px;
+
+    display: none;
 }
 
 .theme-button {
     // background-color: $entry-background;
-    border-radius: 3px;
+    // border-radius: 3px;
     // display: flex;
     // font-size: $small-size;
     gap: 0;
     // justify-self: end;
-    padding: 3px !important;
+    padding: 2px !important;
 
     @media (prefers-color-scheme: dark) {
         // background-color: $entry-background-dm;
@@ -176,9 +178,9 @@
 
 .theme-button span {
     // background-color: pink !important;
-    border-radius: 1px;
-    display: block;
-    padding: 3px 12px !important;
+    border-radius: 2px;
+    display: flex;
+    padding: 4px 12px !important;
     // text-transform: uppercase;
 
     @media (prefers-color-scheme: dark) {

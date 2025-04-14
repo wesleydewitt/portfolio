@@ -5,7 +5,7 @@
 .projects-grid {
     align-items: center;
     display: grid;
-    gap: 1.5 * $base-unit;
+    gap: 0.5 * $base-unit;
     // grid-template-columns: 1fr 1fr;
 
     @media (prefers-color-scheme: dark) {
@@ -23,44 +23,26 @@
     border-radius: $border-radius;
     gap: 0 0.5 * $base-unit;
     grid-template-areas:
-        "icon title techs"
-        "icon subtitle techs";
-    grid-template-columns: auto 1fr auto;
-    padding-right: 0.25 * $base-unit;
+        "title techs"
+        "subtitle techs";
+    grid-template-columns: 1fr auto;
+    // padding-right: 0.25 * $base-unit;
     position: relative;
     text-decoration: none;
     // width: fit-content;
 
     + .project-link {
-        // border-top: 1px solid $gray-line-color;
-        // padding-top: 1.5 * $base-unit;
+        border-top: 1px solid $gray-line-color;
+        padding-top: 0.5 * $base-unit;
+
+        @media (prefers-color-scheme: dark) {
+            border-top: 1px solid $gray-line-color-dm;
+        }
     }
 }
 
 .project-link:hover {
-    background-color: $entry-background;
-    border-radius: $border-radius;
-    margin: (-0.5 * $base-unit) (-0.5 * $base-unit) (-0.5 * $base-unit)
-        (-0.5 * $base-unit);
-    padding: 0.5 * $base-unit (0.75 * $base-unit) 0.5 * $base-unit 0.5 *
-        $base-unit;
     text-decoration: none;
-
-    * {
-        // color: $background-color;
-    }
-
-    .project-link__title::after {
-        opacity: 1;
-    }
-
-    .project-link__subtitle {
-        // color: rgba(255, 255, 255, 0.5);
-    }
-
-    @media (prefers-color-scheme: dark) {
-        background-color: $entry-background-dm;
-    }
 }
 
 .project-link__icon {
@@ -69,6 +51,8 @@
     height: 2 * $base-unit;
     overflow: hidden;
     width: 2 * $base-unit;
+
+    display: none;
 
     img {
         height: 100%;
@@ -103,7 +87,7 @@
 
 .technologies {
     display: flex;
-    gap: 0.75 * $base-unit;
+    gap: 0.5 * $base-unit;
     grid-area: techs;
     margin-left: 14px;
 
@@ -111,21 +95,21 @@
 }
 
 .tech {
-    background-color: $entry-background;
-    border-radius: $border-radius;
-    color: $body-color;
-    display: flex;
+    // background-color: $entry-background;
+    // border-radius: $border-radius;
+    color: $gray-color;
+    display: block;
     // font-family: $mono-font;
     font-size: $small-size;
-    gap: 0.25 * $base-unit;
+    // gap: 0.25 * $base-unit;
     // letter-spacing: 0.1em;
     line-height: 1;
-    padding: 0.125 * $base-unit 0.25 * $base-unit;
+    // padding: 0.125 * $base-unit 0.25 * $base-unit;
     // text-transform: uppercase;
 
     @media (prefers-color-scheme: dark) {
         // background-color: $entry-background-dm;
-        // color: $body-color-dm;
+        color: $gray-color-dm;
     }
 }
 

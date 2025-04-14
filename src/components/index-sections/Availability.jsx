@@ -1,0 +1,22 @@
+import React from "react";
+import { Link } from "gatsby";
+import availabilityStyles from "../../styles/components/index-sections/availability.scss";
+import SocialLinks from "../SocialLinks";
+
+const About = () => {
+    return (
+        <section className="index-section availability">
+            <h3 className="index-section__heading">Available for hire</h3>
+            <h4 className="index-section__subheading">
+                I am currently available for employment as well as freelance
+                work. If you have an opportunity for which you feel I would be a
+                good fit, please feel free to reach out.
+            </h4>
+            <div className="index-section__content">
+                <SocialLinks />
+            </div>
+        </section>
+    );
+};
+
+export default About;

@@ -7,7 +7,7 @@
     display: flex;
     gap: $base-unit;
     justify-content: space-between;
-    // margin-top: $base-unit;
+    // margin-top: 3 * $base-unit;
     padding: 1.5 * $base-unit 0;
 
     @media (prefers-color-scheme: dark) {
@@ -32,4 +32,8 @@
     font-size: $small-size;
     line-height: 1;
     padding: 7px 12px;
+
+    @media (prefers-color-scheme: dark) {
+        background-color: $entry-background-dm;
+    }
 }

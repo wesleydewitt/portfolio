@@ -8,7 +8,10 @@ import essaysStyles from "../../styles/components/index-sections/essays.scss";
 const Essays = () => {
     const data = useStaticQuery(graphql`
         query {
-            allMdx(sort: { frontmatter: { date: DESC } }) {
+            allMdx(
+                filter: { frontmatter: { type: { eq: "essay" } } }
+                sort: { frontmatter: { date: DESC } }
+            ) {
                 nodes {
                     frontmatter {
                         type
@@ -18,26 +21,28 @@ const Essays = () => {
                         icon
                         date(formatString: "MMMM DD, YYYY")
                     }
-                    excerpt(pruneLength: 300)
+                    excerpt(pruneLength: 500)
                 }
+                totalCount
             }
         }
     `);
 
-    const Essays = data.allMdx.nodes
-        .filter((entry) => entry.frontmatter.type === "essay")
-        .map((entry) => <EssayLink essay={entry} />);
+    const totalCount = data.allMdx.totalCount;
+
+    const Essays = data.allMdx.nodes.map((entry) => (
+        <EssayLink essay={entry} />
+    ));
 
     return (
         <section className="index-section essays">
             <h3 className="index-section__heading">
                 <img className="index-section__icon" src={EssaysIcon} />
-                Essays
+                Essays <span className="count">{totalCount}</span>
             </h3>
-            <h4 className="index-section__subheading">
-                Medium- to long-form pieces on topics in culture, politics, and
-                technology
-            </h4>
+            {/* <h4 className="index-section__subheading">
+                Medium- to long-form pieces on topics in culture and technology
+            </h4> */}
             <div className="index-section__content essays-grid">
                 {Essays}
 

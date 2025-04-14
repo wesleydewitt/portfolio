@@ -7,7 +7,10 @@ import projectsStyles from "../../styles/components/index-sections/projects.scss
 const Projects = () => {
     const data = useStaticQuery(graphql`
         query {
-            allMdx(sort: { frontmatter: { date: DESC } }) {
+            allMdx(
+                filter: { frontmatter: { type: { eq: "project" } } }
+                sort: { frontmatter: { date: DESC } }
+            ) {
                 nodes {
                     frontmatter {
                         type
@@ -19,24 +22,27 @@ const Projects = () => {
                         date(formatString: "MMMM DD, YYYY")
                     }
                 }
+                totalCount
             }
         }
     `);
 
-    const Projects = data.allMdx.nodes
-        .filter((entry) => entry.frontmatter.type === "project")
-        .map((entry) => <ProjectLink project={entry} isNew={true} />);
+    const totalCount = data.allMdx.totalCount;
+
+    const Projects = data.allMdx.nodes.map((entry) => (
+        <ProjectLink project={entry} isNew={true} />
+    ));
     // .slice(0, 6);
 
     return (
         <section className="index-section projects">
             <h3 className="index-section__heading">
                 <img className="index-section__icon" src={ProjectsIcon} />
-                Projects
+                Projects <span className="count">{totalCount}</span>
             </h3>
-            <h4 className="index-section__subheading">
+            {/* <h4 className="index-section__subheading">
                 Apps and websites designed and written with minimalism in mind
-            </h4>
+            </h4> */}
             <div className="index-section__content projects-grid">
                 {Projects}
 

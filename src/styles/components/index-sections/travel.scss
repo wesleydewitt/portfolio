@@ -7,7 +7,7 @@
 }
 
 .travel .index-section__content {
-    aspect-ratio: 16/10;
+    aspect-ratio: 4/3;
     border-radius: $border-radius;
     -webkit-mask-image: -webkit-radial-gradient(white, black);
     overflow: hidden;
@@ -24,25 +24,19 @@
 }
 
 .map__marker {
-    background-color: $link-color;
+    background-color: $body-color;
     backdrop-filter: blur(48px);
-    border: 1px solid $gray-line-color;
     border-radius: $border-radius;
     color: rgba(255, 255, 255, 1);
-    // -webkit-filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.2));
-    // filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.2));
-    // -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=0, Color='#444')";
-    // filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=0, Color='#444')";
+    font-size: $small-size;
     height: fit-content !important;
     position: absolute;
     top: $base-unit;
     text-wrap: nowrap;
-    // transform: translate(-$base-unit, -100%);
     width: fit-content !important;
 
     @media (prefers-color-scheme: dark) {
-        background-color: rgba(41, 41, 41, 0.5);
-        border: 1px solid $gray-line-color-dm;
+        background-color: $body-color-dm;
     }
 
     a {
@@ -51,7 +45,7 @@
         padding: 0.25 * $base-unit 0.333 * $base-unit;
 
         @media (prefers-color-scheme: dark) {
-            color: $body-color-dm !important;
+            color: $background-color-dm !important;
         }
     }
 }

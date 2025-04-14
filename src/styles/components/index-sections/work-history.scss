@@ -1,0 +1,61 @@
+@import "../../variables.scss";
+
+.work-history {
+    .index-section__content {
+        display: grid;
+        gap: $base-unit;
+    }
+}
+
+.work-history-item {
+    display: grid;
+    gap: 0.5 * $base-unit;
+    grid-template-columns: 1fr auto;
+
+    + .work-history-item {
+        border-top: 1px solid $gray-line-color;
+        padding-top: $base-unit;
+
+        @media (prefers-color-scheme: dark) {
+            border-top: 1px solid $gray-line-color-dm;
+        }
+    }
+}
+
+.work-history-item__job-title {
+    color: $heading-color;
+    font-weight: 500;
+
+    @media (prefers-color-scheme: dark) {
+        color: $heading-color-dm;
+    }
+}
+
+.work-history-item__employer {
+    color: $gray-color;
+
+    @media (prefers-color-scheme: dark) {
+        color: $gray-color-dm;
+    }
+}
+
+.work-history-item__content {
+    grid-column: span 2;
+    // padding-left: 0.5 * $base-unit;
+
+    ul {
+        // margin-top: 0.5 * $base-unit;
+    }
+
+    li {
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+
+    li:before {
+        content: "-";
+        display: block;
+        float: left;
+        margin-right: 0.5 * $base-unit;
+    }
+}

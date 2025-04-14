@@ -13,7 +13,10 @@ const Travel = () => {
 
     const data = useStaticQuery(graphql`
         query {
-            allMdx(sort: { frontmatter: { date: DESC } }) {
+            allMdx(
+                filter: { frontmatter: { type: { eq: "travel" } } }
+                sort: { frontmatter: { date: DESC } }
+            ) {
                 nodes {
                     frontmatter {
                         type
@@ -26,9 +29,12 @@ const Travel = () => {
                         longitude
                     }
                 }
+                totalCount
             }
         }
     `);
+
+    const totalCount = data.allMdx.totalCount;
 
     useEffect(() => {
         const mapIsEmpty = document.getElementById("map").innerHTML === "";
@@ -87,12 +93,12 @@ const Travel = () => {
         <section className="index-section travel">
             <h3 className="index-section__heading">
                 <img className="index-section__icon" src={TravelIcon} />
-                Travel
+                Travel <span className="count">{totalCount}</span>
             </h3>
 
-            <h4 className="index-section__subheading">
+            {/* <h4 className="index-section__subheading">
                 Travel writing from around Indiana and the Midwest
-            </h4>
+            </h4> */}
 
             <div className="index-section__content">
                 <div className="map" id="map"></div>

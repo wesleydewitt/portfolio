@@ -7,7 +7,7 @@ import { siteMetadata } from "../../gatsby-config";
 const IndexLayout = ({ children }) => {
     return (
         <div className="page page--index" id="page">
-            <Header showNav={true} />
+            {/* <Header showNav={true} /> */}
             <main className="main">
                 {children}
                 <Footer />

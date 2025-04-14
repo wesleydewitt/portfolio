@@ -10,7 +10,7 @@ const Footer = () => {
         <footer className="footer">
             <div className="footer__copyright">&copy; 2025 Wesley De Witt</div>
 
-            <div className="buttons">
+            {/* <div className="buttons">
                 <button className="search-button">
                     <span className="button__text">Search</span>
                     <SearchIcon />
@@ -24,7 +24,7 @@ const Footer = () => {
                         <MoonIcon />
                     </button>
                 </div>
-            </div>
+            </div> */}
 
             <Link className="footer__top-link" to="#header">
                 <span>Top</span>

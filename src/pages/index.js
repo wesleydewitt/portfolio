@@ -9,17 +9,21 @@ import About from "../components/index-sections/About";
 import Photos from "../components/index-sections/Photos";
 import Dailys from "../components/index-sections/Dailys";
 import Reviews from "../components/index-sections/Reviews";
+import Availability from "../components/index-sections/Availability";
+import WorkHistory from "../components/index-sections/WorkHistory";
 
 const IndexPage = () => {
     return (
         <IndexLayout>
             <About />
+            <Availability />
             <Projects />
-            <Essays />
-            <Reviews />
-            <Travel />
-            <Photos />
-            <Dailys />
+            <WorkHistory />
+            {/* <Essays /> */}
+            {/* <Reviews /> */}
+            {/* <Travel /> */}
+            {/* <Photos /> */}
+            {/* <Dailys /> */}
         </IndexLayout>
     );
 };

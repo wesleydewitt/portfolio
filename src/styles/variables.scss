@@ -14,14 +14,15 @@ $sans-font: "Inter", -apple-system, BlinkMacSystemFont, avenir next, avenir,
 // $sans-font: "Untitled Sans", serif;
 $body-size: 12px;
 $small-size: 10px;
-$heading-size: 24px;
+$heading-size: 18px;
 
 $serif-font: "Heldane Text", serif;
 $serif-size: 16px;
 
 $serif-heading-font: "Heldane Display", serif;
 // $serif-heading-font: "Tiempos Fine", serif;
-$serif-heading-size: 30px;
+$serif-heading-size: 24px;
+$serif-heading-size-big: 36px;
 
 $mono-font: "Sohne Mono";
 
@@ -56,7 +57,7 @@ $entry-background-darker: #e8e8e8;
 $entry-background-dm: #222222;
 $entry-background-darker-dm: #282828;
 
-$gray-line-color: rgba(0, 0, 0, 0.0666);
+$gray-line-color: rgba(0, 0, 0, 0.1);
 $gray-line-color-dm: rgba(221, 221, 221, 0.1);
 
 $break-1: 768px;

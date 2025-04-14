@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
 import { siteMetadata } from "../../gatsby-config";
-import logo from "../images/logo.png";
+import pic from "../images/pic.png";
 import hamburgerIcon from "../images/hamburger-icon.svg";
 import closeIcon from "../images/close-icon.svg";
 import moonIcon from "../images/moon-icon.svg";
@@ -24,7 +24,7 @@ const Header = ({ showNav }) => {
             <header className="header" id="header">
                 <div className="header__top-line">
                     <Link className="header__site-logo" to="/">
-                        <img src={logo} />
+                        <img src={pic} />
                     </Link>
 
                     <div className="header__titles">

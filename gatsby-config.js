@@ -66,5 +66,13 @@ module.exports = {
             },
             __key: "dailys",
         },
+        {
+            resolve: "gatsby-source-filesystem",
+            options: {
+                name: "work-hisotry",
+                path: "./src/_work-history/",
+            },
+            __key: "work-history",
+        },
     ],
 };

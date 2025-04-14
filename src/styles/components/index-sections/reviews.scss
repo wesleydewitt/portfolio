@@ -2,10 +2,15 @@
 
 // reviews
 
+.reviews {
+    .index-setion__heading {
+    }
+}
+
 .reviews-grid {
     display: grid;
     gap: 0.5 * $base-unit;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 
     @media (prefers-color-scheme: dark) {
         // background-color: $entry-background-dm;
@@ -39,7 +44,7 @@
 
 .review-link__title {
     color: $body-color;
-    // font-size: $small-size;
+    font-size: $small-size;
     font-weight: inherit;
     margin-top: 0.125 * $base-unit;
 }
