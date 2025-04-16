@@ -28,17 +28,15 @@ const About = () => {
     );
     return (
         <section className="index-section about">
-            <div className="index-section__content index-section__content--about-grid">
-                <h3 className="index-section__heading">
-                    <img className="index-section__icon" src={AboutIcon} />
-                    Hello
-                </h3>
-
-                {siteDescription}
-            </div>
-
             <div className="about__photo">
                 <img src={AboutPhoto} />
+            </div>
+            <h3 className="index-section__heading">
+                <img className="index-section__icon" src={AboutIcon} />
+                Hello
+            </h3>
+            <div className="index-section__content index-section__content--about-grid">
+                {siteDescription}
             </div>
         </section>
     );

@@ -2,10 +2,20 @@
 
 // essays
 
+.essays {
+    display: grid;
+    gap: 0 1.5 * $base-unit;
+    grid-template-areas: "heading content content";
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .index-section__content {
+        grid-area: content;
+    }
+}
+
 .essays-grid {
     display: grid;
-    gap: $base-unit;
-    // grid-template-columns: 1fr 1fr;
+    gap: 0.5 * $base-unit;
 
     @media (prefers-color-scheme: dark) {
         // background-color: $entry-background-dm;
@@ -18,7 +28,7 @@
 
     + .essay-link {
         border-top: 1px solid $gray-line-color;
-        padding-top: $base-unit;
+        padding-top: 0.5 * $base-unit;
 
         @media (prefers-color-scheme: dark) {
             border-top: 1px solid $gray-line-color-dm;
@@ -73,6 +83,24 @@
         color: $body-color-dm;
     }
 }
+
+// .essay-link__excerpt::first-letter {
+//     color: $heading-color;
+//     // font-family: $serif-heading-font;
+//     float: left;
+//     font-size: 2 * $base-unit;
+//     font-weight: 200;
+//     line-height: 2 * $base-unit;
+//     margin-right: 3px;
+
+//     @-moz-document url-prefix() {
+//         margin-top: 7px;
+//     }
+
+//     @media (prefers-color-scheme: dark) {
+//         color: $heading-color-dm;
+//     }
+// }
 
 .essay-link__excerpt::before {
     content: "";

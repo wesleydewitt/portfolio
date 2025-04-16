@@ -7,7 +7,7 @@ import { siteMetadata } from "../../gatsby-config";
 const Layout = ({ children }) => {
     return (
         <div className="page" id="page">
-            {/* <Header /> */}
+            <Header />
             <main className="main">
                 {children}
                 <Footer />

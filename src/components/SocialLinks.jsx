@@ -27,13 +27,13 @@ const SocialLinks = () => {
                         github.com/wesleydewitt
                     </div>
                 </Link>
-                <Link className="social-link" to="/">
+                {/* <Link className="social-link" to="/">
                     <div className="social-link__icon">
                         <XIcon />
                     </div>
                     <div className="social-links__heading">Twitter</div>
                     <div className="social-link__text">x.com/@wesleydewitt</div>
-                </Link>
+                </Link> */}
             </div>
         </div>
     );

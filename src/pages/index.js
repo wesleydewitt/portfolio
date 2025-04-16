@@ -18,12 +18,12 @@ const IndexPage = () => {
             <About />
             <Availability />
             <Projects />
-            <WorkHistory />
-            {/* <Essays /> */}
-            {/* <Reviews /> */}
-            {/* <Travel /> */}
+            <Essays />
+            <Reviews />
+            <Travel />
             {/* <Photos /> */}
             {/* <Dailys /> */}
+            <WorkHistory />
         </IndexLayout>
     );
 };

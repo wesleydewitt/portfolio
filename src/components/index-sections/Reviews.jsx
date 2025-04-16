@@ -14,6 +14,7 @@ const Reviews = () => {
                         title
                         filename
                         icon
+                        date(formatString: "YYYY")
                     }
                 }
             }
@@ -32,9 +33,9 @@ const Reviews = () => {
                 Reviews
             </h3>
 
-            <h4 className="index-section__subheading">
+            {/* <h4 className="index-section__subheading">
                 Reviews of books, movies, shows, products and places
-            </h4>
+            </h4> */}
 
             <div className="index-section__content reviews-grid">
                 {Reviews}

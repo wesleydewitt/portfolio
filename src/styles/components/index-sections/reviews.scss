@@ -10,7 +10,7 @@
 .reviews-grid {
     display: grid;
     gap: 0.5 * $base-unit;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
     @media (prefers-color-scheme: dark) {
         // background-color: $entry-background-dm;
@@ -18,16 +18,23 @@
 }
 
 .review-link {
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.review-link:hover {
+    text-decoration: none;
 }
 
 .review-link__cover {
     align-items: center;
-    aspect-ratio: 4/3;
+    aspect-ratio: 16/10;
     background-color: $entry-background;
     border-radius: $border-radius;
     display: flex;
+    grid-column: span 2;
     justify-content: center;
+    margin-bottom: 0.125 * $base-unit;
     overflow: hidden;
     // padding: $base-unit;
 
@@ -39,6 +46,8 @@
         height: 66.666%;
         object-fit: contain;
         width: 66.666%;
+
+        // display: none;
     }
 }
 
@@ -46,5 +55,17 @@
     color: $body-color;
     font-size: $small-size;
     font-weight: inherit;
-    margin-top: 0.125 * $base-unit;
+
+    @media (prefers-color-scheme: dark) {
+        color: $body-color-dm;
+    }
+}
+
+.review-link__year {
+    color: $gray-color;
+    font-size: $small-size;
+
+    @media (prefers-color-scheme: dark) {
+        color: $gray-color-dm;
+    }
 }

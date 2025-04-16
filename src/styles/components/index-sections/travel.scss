@@ -30,8 +30,8 @@
     color: rgba(255, 255, 255, 1);
     font-size: $small-size;
     height: fit-content !important;
-    position: absolute;
-    top: $base-unit;
+    // position: absolute;
+    // top: $base-unit;
     text-wrap: nowrap;
     width: fit-content !important;
 
@@ -42,7 +42,7 @@
     a {
         color: $background-color !important;
         display: block;
-        padding: 0.25 * $base-unit 0.333 * $base-unit;
+        padding: 0.25 * $base-unit 10px;
 
         @media (prefers-color-scheme: dark) {
             color: $background-color-dm !important;

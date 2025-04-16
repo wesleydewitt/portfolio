@@ -1,0 +1,10 @@
+@import "../../variables.scss";
+
+.moon-icon-svg path {
+    fill: $body-color;
+    stroke-width: 0;
+
+    @media (prefers-color-scheme: dark) {
+        fill: $body-color-dm;
+    }
+}

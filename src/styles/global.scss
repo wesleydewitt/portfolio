@@ -67,6 +67,7 @@ a:hover {
 }
 
 button {
+    align-items: center;
     display: flex;
     background-color: $entry-background;
     border-radius: $border-radius;
@@ -94,6 +95,11 @@ button {
 
     svg {
         display: block;
+        stroke: $body-color;
+
+        @media (prefers-color-scheme: dark) {
+            stroke: $body-color-dm;
+        }
     }
 }
 
@@ -110,14 +116,6 @@ button {
     @media (prefers-color-scheme: dark) {
         background-color: $entry-background-dm;
         // border: 1.5px solid $link-color-dm;
-    }
-}
-
-svg {
-    stroke: $body-color !important;
-
-    @media (prefers-color-scheme: dark) {
-        stroke: $body-color-dm !important;
     }
 }
 
@@ -188,16 +186,16 @@ p {
 }
 
 .index-section {
-    align-items: start;
+    // align-items: start;
     // background-color: pink;
     border-top: 1px solid $gray-line-color;
-    display: grid;
-    gap: 0 1.5 * $base-unit;
-    grid-template-areas:
-        "heading    content content"
-        "subheading content content";
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto 1fr;
+    // display: grid;
+    // gap: 0 1.5 * $base-unit;
+    // grid-template-areas:
+    // "heading    content content"
+    // "subheading content content";
+    // grid-template-columns: repeat(3, 1fr);
+    // grid-template-rows: auto 1fr;
     padding: 3 * $base-unit 0;
     // margin: 3 * $base-unit 0;
 
@@ -207,7 +205,7 @@ p {
     }
 
     @media (max-width: $break-2) {
-        display: block;
+        // display: block;
     }
 }
 
@@ -227,10 +225,11 @@ p {
     // font-family: $serif-heading-font;
     font-size: $heading-size;
     gap: 0.333 * $base-unit;
-    grid-area: heading;
+    // grid-area: heading;
+    justify-content: space-between;
     // letter-spacing: 0.05em;
-    line-height: 1.333;
-    margin-bottom: $base-unit;
+    line-height: 1.5;
+    margin-bottom: 1 * $base-unit;
 
     img {
         width: 12px;
@@ -246,7 +245,7 @@ p {
     font-weight: 300;
     // vertical-align: baseline;
 
-    // display: none;
+    display: none;
 
     @media (prefers-color-scheme: dark) {
         color: $gray-color-dm;
@@ -256,7 +255,7 @@ p {
 .index-section__subheading {
     color: $gray-color;
     font-weight: inherit;
-    grid-area: subheading;
+    // grid-area: subheading;
     // margin-left: $base-unit;
     margin-bottom: 1.5 * $base-unit;
     // padding-right: 1.5 * $base-unit;
@@ -272,8 +271,8 @@ p {
 .index-section__content {
     // background-color: $entry-background;
     // border-radius: $border-radius;
-    grid-area: content;
-    grid-column: span 2;
+    // grid-area: content;
+    // grid-column: span 2;
     // grid-row: span 2;
     // padding: 2 * $base-unit;
 }

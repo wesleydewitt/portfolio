@@ -3,26 +3,31 @@
 // about
 .about {
     display: grid;
-    gap: 1.5 * $base-unit !important;
+    gap: 0 1.5 * $base-unit !important;
+    grid-template-areas:
+        "heading heading photo"
+        "content content photo";
     grid-template-columns: repeat(3, 1fr);
 
+    .index-section__heading {
+        grid-area: heading;
+    }
+
     .index-section__content {
-        grid-column: span 2;
+        grid-area: content;
+        // grid-column: span 2;
         // grid-row: span 2;
     }
 }
 
 .about__photo {
-    // aspect-ratio: 1/1;
+    aspect-ratio: 1/1;
     background-color: $entry-background;
     border-radius: $border-radius;
-    // float: right;
+    grid-area: photo;
+    grid-row: span 2;
     overflow: hidden;
-    // width: 33.333%;
-    // opacity: 0.1;
-    // padding-left: 1 * $base-unit;
-    // margin-left: 0.5 * $base-unit;
-    // margin-bottom: 1.5 * $base-unit;
+    // padding: $base-unit $base-unit 0;
 
     // display: none;
 
@@ -31,9 +36,8 @@
     }
 
     img {
-        // border-radius: $border-radius;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
         width: 100%;
     }
 }

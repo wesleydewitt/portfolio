@@ -1,7 +1,7 @@
 // variables
 
 $base-unit: 24px;
-$column-width: 720px + (8 * $base-unit);
+$column-width: 640px + (8 * $base-unit);
 // $column-width: 840px + (8 * $base-unit);
 $border-radius: 3px;
 $border-radius-big: 12px;
@@ -26,16 +26,14 @@ $serif-heading-size-big: 36px;
 
 $mono-font: "Sohne Mono";
 
-$body-color: rgba(0, 0, 0, 0.8);
+$body-color: #444444;
 $body-color-dm: #aaaaaa;
 
-$heading-color: rgb(0, 0, 0);
-$heading-color-dm: rgb(255, 255, 255);
+$heading-color: #000000;
+$heading-color-dm: #ffffff;
 
-$gray-color: rgba(0, 0, 0, 0.4);
-// $gray-color: $body-color;
+$gray-color: #888888;
 $gray-color-dm: #666666;
-// $gray-color-dm: $body-color-dm;
 
 $link-color: rgb(0, 113, 227);
 // $link-color: $body-color;
@@ -52,8 +50,8 @@ $background-color-dm: rgb(17, 17, 17);
 $header-background: rgba(255, 255, 255, 0.8);
 $header-background-dm: rgba(238, 238, 238, 0.8);
 
-$entry-background: rgba(0, 0, 0, 0.05);
-$entry-background-darker: #e8e8e8;
+$entry-background: #eeeeee;
+$entry-background-darker: #e2e2e2;
 $entry-background-dm: #222222;
 $entry-background-darker-dm: #282828;
 

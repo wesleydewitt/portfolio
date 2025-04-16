@@ -45,7 +45,7 @@ const Header = ({ showNav }) => {
                     </div>
                 </div>
 
-                {/* <Nav /> */}
+                <Nav />
             </header>
 
             {/* {isVisible ? <Menu /> : null} */}

@@ -8,15 +8,15 @@ const Nav = () => {
                 <Link activeClassName="active" to="/">
                     Index
                 </Link>
+
                 <Link activeClassName="active" to="/feed">
                     Feed
                 </Link>
+
                 <Link activeClassName="active" to="/about">
                     Newsletter
                 </Link>
-                <Link activeClassName="active" to="/about">
-                    About
-                </Link>
+
                 <Link activeClassName="active" to="/about">
                     Projects
                 </Link>
@@ -26,7 +26,7 @@ const Nav = () => {
                 </Link>
 
                 <Link activeClassName="active" to="/about">
-                    Travel Writing
+                    Travel
                 </Link>
 
                 <Link activeClassName="active" to="/about">
@@ -38,7 +38,7 @@ const Nav = () => {
                 </Link>
 
                 <Link activeClassName="active" to="/about">
-                    Dailys
+                    About
                 </Link>
             </div>
         </nav>

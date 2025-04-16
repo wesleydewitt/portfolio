@@ -1,26 +1,22 @@
 @import "../../variables.scss";
 
-.index-section.availability {
-    // background-color: $entry-background;
-    // border: 1px solid $gray-line-color;
-    border: none;
-    // border-radius: $border-radius;
-    // display: block;
-    grid-template-areas:
-        "heading heading ."
-        "subheading subheading ."
-        "content content content";
-    grid-template-columns: 1fr 1fr 1fr;
+.availability {
+    border: none !important;
     padding-top: 0;
 
     .index-section__heading {
+        // grid-area: heading;
     }
 
     .index-section__subheading {
+        // box-sizing: content-box;
         color: inherit;
-        grid-column: span 2 !important;
+        // grid-area: subheading;
+        // grid-column: span 2 !important;
         margin: 0;
         text-wrap: auto;
+        padding-right: 0.75 * $base-unit;
+        width: 66.666%;
 
         @media (prefers-color-scheme: dark) {
             // color: $body-color-dm;
@@ -28,6 +24,7 @@
     }
 
     .index-section__content {
-        grid-column: span 3 !important;
+        // grid-area: content;
+        // grid-column: span 3 !important;
     }
 }
