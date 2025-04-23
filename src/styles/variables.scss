@@ -1,7 +1,7 @@
 // variables
 
 $base-unit: 24px;
-$column-width: 640px + (8 * $base-unit);
+$column-width: 640px + (9 * $base-unit);
 // $column-width: 840px + (8 * $base-unit);
 $border-radius: 3px;
 $border-radius-big: 12px;
@@ -50,9 +50,9 @@ $background-color-dm: rgb(17, 17, 17);
 $header-background: rgba(255, 255, 255, 0.8);
 $header-background-dm: rgba(238, 238, 238, 0.8);
 
-$entry-background: #eeeeee;
+$entry-background: rgb(238, 238, 238);
 $entry-background-darker: #e2e2e2;
-$entry-background-dm: #222222;
+$entry-background-dm: rgb(34, 34, 34);
 $entry-background-darker-dm: #282828;
 
 $gray-line-color: rgba(0, 0, 0, 0.1);

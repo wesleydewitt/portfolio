@@ -22,8 +22,8 @@ const WorkHistory = () => {
                         date(formatString: "MMM DD, YYYY")
                         employer
                         jobTitle
-                        startDate(formatString: "MMM YYYY")
-                        endDate(formatString: "MMM YYYY")
+                        startDate(formatString: "YYYY")
+                        endDate(formatString: "YYYY")
                         duties
                     }
                 }
@@ -42,7 +42,7 @@ const WorkHistory = () => {
                 </div>
 
                 <div className="work-history-item__employer">
-                    @ {entry.frontmatter.employer}
+                    {entry.frontmatter.employer}
                 </div>
             </div>
             <div className="work-history-item__dates">

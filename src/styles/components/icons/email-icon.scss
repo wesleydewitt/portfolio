@@ -1,10 +1,9 @@
 @import "../../variables.scss";
 
-.email-icon-svg path {
-    fill: $body-color;
-    stroke: none;
+.email-icon-svg {
+    stroke: $body-color;
 
     @media (prefers-color-scheme: dark) {
-        fill: $body-color-dm;
+        stroke: $body-color-dm;
     }
 }

@@ -13,9 +13,9 @@ const ProjectLink = ({ project, isNew }) => {
             className="project-link"
             to={project.frontmatter.type + project.frontmatter.slug}
         >
-            {/* <div className="project-link__icon">
-				<img src={"/assets/photos/" + project.frontmatter.icon} />
-			</div> */}
+            <div className="project-link__icon">
+                <img src={"/assets/photos/" + project.frontmatter.icon} />
+            </div>
             <h4 className="project-link__title">
                 {project.frontmatter.title}
                 {/* <span className="new-label">New</span> */}

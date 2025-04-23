@@ -52,9 +52,9 @@
 }
 
 .review-link__title {
-    color: $body-color;
-    font-size: $small-size;
-    font-weight: inherit;
+    // color: $body-color;
+    // font-size: $small-size;
+    // font-weight: inherit;
 
     @media (prefers-color-scheme: dark) {
         color: $body-color-dm;
@@ -63,7 +63,7 @@
 
 .review-link__year {
     color: $gray-color;
-    font-size: $small-size;
+    // font-size: $small-size;
 
     @media (prefers-color-scheme: dark) {
         color: $gray-color-dm;

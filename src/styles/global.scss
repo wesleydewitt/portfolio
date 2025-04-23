@@ -29,9 +29,9 @@ body {
     }
 }
 
-img,
-#map img {
-    filter: saturate(00%);
+img {
+    // filter: saturate(00%) sepia(50%) hue-rotate(170deg);
+    filter: saturate(0%);
     // opacity: 0.9;
 }
 
@@ -172,40 +172,16 @@ p {
     }
 }
 
-.page--index {
-    .main {
-        // background-color: pink;
-        // display: grid;
-        // gap: 2 * $base-unit;
-        // grid-template-columns: 1fr 1fr;
-
-        @media screen and (max-width: $break-1) {
-            // display: block;
-        }
-    }
-}
-
 .index-section {
-    // align-items: start;
-    // background-color: pink;
     border-top: 1px solid $gray-line-color;
-    // display: grid;
-    // gap: 0 1.5 * $base-unit;
-    // grid-template-areas:
-    // "heading    content content"
-    // "subheading content content";
-    // grid-template-columns: repeat(3, 1fr);
-    // grid-template-rows: auto 1fr;
     padding: 3 * $base-unit 0;
-    // margin: 3 * $base-unit 0;
 
     @media (prefers-color-scheme: dark) {
-        // background-color: $entry-background-dm;
         border-top: 1px solid $gray-line-color-dm;
     }
 
     @media (max-width: $break-2) {
-        // display: block;
+        display: block !important;
     }
 }
 
@@ -214,22 +190,22 @@ p {
     padding-top: 0;
 }
 
-.availability + .index-section {
-    // border: none;
-}
-
 .index-section__heading {
     align-items: baseline;
     align-self: start;
     display: flex;
-    // font-family: $serif-heading-font;
-    font-size: $heading-size;
+    font-family: $serif-heading-font;
+    font-size: $serif-heading-size;
     gap: 0.333 * $base-unit;
     // grid-area: heading;
     justify-content: space-between;
-    // letter-spacing: 0.05em;
+    letter-spacing: 0.05em;
     line-height: 1.5;
     margin-bottom: 1 * $base-unit;
+
+    @media (max-width: $break-2) {
+        margin-bottom: 1.5 * $base-unit;
+    }
 
     img {
         width: 12px;
@@ -273,6 +249,5 @@ p {
     // border-radius: $border-radius;
     // grid-area: content;
     // grid-column: span 2;
-    // grid-row: span 2;
     // padding: 2 * $base-unit;
 }

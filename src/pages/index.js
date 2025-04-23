@@ -11,6 +11,7 @@ import Dailys from "../components/index-sections/Dailys";
 import Reviews from "../components/index-sections/Reviews";
 import Availability from "../components/index-sections/Availability";
 import WorkHistory from "../components/index-sections/WorkHistory";
+import Education from "../components/index-sections/Education";
 
 const IndexPage = () => {
     return (
@@ -21,9 +22,10 @@ const IndexPage = () => {
             <Essays />
             <Reviews />
             <Travel />
-            {/* <Photos /> */}
+            <Photos />
             {/* <Dailys /> */}
             <WorkHistory />
+            <Education />
         </IndexLayout>
     );
 };

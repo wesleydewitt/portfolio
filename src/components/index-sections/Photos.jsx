@@ -31,9 +31,9 @@ const Photos = () => {
                 Photos
             </h3>
 
-            <h4 className="index-section__subheading">
+            {/* <h4 className="index-section__subheading">
                 Photo albums from various places
-            </h4>
+            </h4> */}
 
             <div className="index-section__content photos-grid">
                 {Photos}

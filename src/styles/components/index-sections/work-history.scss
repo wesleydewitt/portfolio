@@ -2,13 +2,13 @@
 
 .work-history {
     display: grid;
-    gap: 0 1.5 * $base-unit;
+    gap: 0 0.5 * $base-unit;
     grid-template-areas: "heading content content";
     grid-template-columns: 1fr 1fr 1fr;
 
     .index-section__content {
         display: grid;
-        gap: 0.5 * $base-unit;
+        gap: 1.5 * $base-unit;
         grid-area: content;
     }
 }
@@ -19,11 +19,11 @@
     grid-template-columns: 1fr auto;
 
     + .work-history-item {
-        border-top: 1px solid $gray-line-color;
-        padding-top: 0.5 * $base-unit;
+        // border-top: 1px solid $gray-line-color;
+        // padding-top: 0.5 * $base-unit;
 
         @media (prefers-color-scheme: dark) {
-            border-top: 1px solid $gray-line-color-dm;
+            // border-top: 1px solid $gray-line-color-dm;
         }
     }
 }

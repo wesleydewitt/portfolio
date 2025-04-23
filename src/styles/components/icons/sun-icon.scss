@@ -6,14 +6,4 @@
     @media (prefers-color-scheme: dark) {
         stroke: $body-color-dm;
     }
-
-    .sun {
-        stroke-width: 0;
-
-        fill: $body-color;
-
-        @media (prefers-color-scheme: dark) {
-            fill: $body-color-dm;
-        }
-    }
 }

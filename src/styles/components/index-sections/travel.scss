@@ -17,6 +17,10 @@
 .map {
     height: 100%;
     position: relative;
+
+    img {
+        filter: saturate(0%);
+    }
 }
 
 .leaflet-bottom.leaflet-right {

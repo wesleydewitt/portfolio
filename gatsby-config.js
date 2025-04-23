@@ -4,7 +4,7 @@
 module.exports = {
     siteMetadata: {
         title: `Wesley De Witt`,
-        subtitle: `Code & Prose out of Indianapolis`,
+        subtitle: `Code & prose out of Indianapolis`,
         siteUrl: `https://www.wesleydewitt.com`,
     },
     plugins: [
@@ -73,6 +73,14 @@ module.exports = {
                 path: "./src/_work-history/",
             },
             __key: "work-history",
+        },
+        {
+            resolve: "gatsby-source-filesystem",
+            options: {
+                name: "education",
+                path: "./src/_education/",
+            },
+            __key: "education",
         },
     ],
 };

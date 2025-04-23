@@ -1,0 +1,49 @@
+@import "../../variables.scss";
+
+.education {
+    display: grid;
+    gap: 0 0.5 * $base-unit;
+    grid-template-columns: repeat(3, 1fr);
+
+    .index-section__content {
+        display: grid;
+        gap: 1.5 * $base-unit;
+        grid-column: span 2;
+    }
+}
+
+.education-item {
+    align-items: center;
+    display: grid;
+    gap: 0 $base-unit;
+    grid-template-areas:
+        "degree dates"
+        "institution dates";
+    grid-template-columns: 1fr auto;
+
+    + .education-item {
+        // border-top: 1px solid $gray-line-color;
+        // padding-top: 0.5 * $base-unit;
+
+        @media (prefers-color-scheme: dark) {
+            // border-top: 1px solid $gray-line-color-dm;
+        }
+    }
+}
+
+.education-item__degree-sought {
+    // color: $heading-color;
+    // font-weight: 500;
+}
+
+.education-item__institution {
+    color: $gray-color;
+
+    @media (prefers-color-scheme: dark) {
+        color: $gray-color-dm;
+    }
+}
+
+.education-item__dates {
+    grid-area: dates;
+}

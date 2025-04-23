@@ -26,7 +26,7 @@ const MoonIcon = () => {
                 <path d="M1.75737 1.75736L10.2426 10.2426M1.75737 10.2426L10.2426 1.75736" />
                 <path d="M6 0V12M0 6H12" />
             </g>
-            <circle className="sun" cx="6" cy="6" r="2.5" />
+            <circle cx="6" cy="6" r="2" />
         </svg>
     );
 };

@@ -23,7 +23,7 @@
 .about__photo {
     aspect-ratio: 1/1;
     background-color: $entry-background;
-    border-radius: $border-radius;
+    border-radius: 50%;
     grid-area: photo;
     grid-row: span 2;
     overflow: hidden;
