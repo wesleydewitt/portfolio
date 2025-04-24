@@ -16,6 +16,10 @@
 
 .social-links__heading::after {
     content: "\2197";
+    font-family: $sans-font;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1;
     float: right;
 }
 
@@ -26,9 +30,12 @@
     border-radius: $border-radius;
     color: $body-color;
     display: grid;
+    // font-family: $mono-font;
+    // font-size: $small-size;
     gap: 0 0.5 * $base-unit;
     grid-template-columns: auto 1fr;
     grid-template-rows: auto 1fr;
+    // line-height: $base-unit;
     padding: (0.5 * $base-unit) (0.75 * $base-unit);
     text-decoration: none;
     // width: fit-content;
@@ -43,17 +50,9 @@
     }
 }
 
-// .social-link:hover {
-//     background-color: $entry-background;
-//     border-radius: $border-radius;
-//     margin: -0.5 * $base-unit -0.75 * $base-unit;
-//     padding: 1 * $base-unit 1.5 * $base-unit;
-//     text-decoration: none;
-
-//     @media (prefers-color-scheme: dark) {
-//         background-color: $entry-background-dm;
-//     }
-// }
+.social-link:hover {
+    text-decoration: none;
+}
 
 .social-link__icon {
     align-items: center;

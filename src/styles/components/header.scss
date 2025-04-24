@@ -1,7 +1,7 @@
 @import "../variables.scss";
 
 .header__wrapper {
-    // border-bottom: 1px solid $gray-line-color;
+    border-bottom: 1px solid $gray-line-color;
     // position: absolute;
     // top: 0;
     // width: 100%;
@@ -86,13 +86,16 @@
 }
 
 .header__site-title {
+    // font-family: $serif-heading-font;
+    // font-size: 16px;
+    // font-weight: 700;
+    // letter-spacing: 0.075em;
 }
 
 .header__site-subtitle {
     color: $body-color;
-    // display: inline-block;
-    // font-style: italic;
-    font-weight: inherit;
+    font-size: $small-size;
+    font-weight: 300;
 
     @media (prefers-color-scheme: dark) {
         color: $body-color-dm;
@@ -106,33 +109,33 @@
 }
 
 .search-button {
+    padding: 2px 2px 2px 12px !important;
     width: 120px;
 
-    display: none;
-}
+    .button__icon {
+        background-color: $background-color;
+        border-radius: 2px;
+        padding: 5px 12px !important;
+        display: block;
+        width: unset;
+        height: unset;
 
-.theme-button {
-    // background-color: $entry-background;
-    // border-radius: 3px;
-    display: flex;
-    // font-size: $small-size;
-    gap: 0;
-    // justify-self: end;
-    padding: 2px !important;
-
-    // display: none;
-
-    @media (prefers-color-scheme: dark) {
-        // background-color: $entry-background-dm;
+        @media (prefers-color-scheme: dark) {
+            background-color: $background-color-dm;
+        }
     }
 }
 
+.theme-button {
+    display: flex;
+    gap: 0;
+    padding: 2px !important;
+}
+
 .theme-button span {
-    // background-color: pink !important;
     border-radius: 2px;
     display: flex;
     padding: 4px 12px !important;
-    // text-transform: uppercase;
 
     @media (prefers-color-scheme: dark) {
         color: $gray-color-dm;
@@ -157,7 +160,7 @@
 }
 
 .menu-button {
-    // display: none !important;
+    display: none !important;
 
     @media screen and (max-width: $break-1) {
     }

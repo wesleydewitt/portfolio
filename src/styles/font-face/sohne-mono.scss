@@ -1,7 +1,71 @@
 @font-face {
-	font-family: "Sohne Mono";
-	font-weight: 400;
-	font-style: normal;
-	src: local("Sohne Mono"),
-		url("/assets/fonts/sohne-mono/test-soehne-mono-buch.woff2") format("woff");
+    font-family: "Sohne Mono";
+    font-weight: 200;
+    font-style: normal;
+    src: local("Sohne Mono"),
+        url("/assets/fonts/sohne-mono/test-soehne-mono-extraleicht.woff2")
+            format("woff");
+}
+
+@font-face {
+    font-family: "Sohne Mono";
+    font-weight: 200;
+    font-style: oblique;
+    src: local("Sohne Mono"),
+        url("/assets/fonts/sohne-mono/test-soehne-mono-extraleicht-kursiv.woff2")
+            format("woff");
+}
+
+@font-face {
+    font-family: "Sohne Mono";
+    font-weight: 300;
+    font-style: normal;
+    src: local("Sohne Mono"),
+        url("/assets/fonts/sohne-mono/test-soehne-mono-leicht.woff2")
+            format("woff");
+}
+
+@font-face {
+    font-family: "Sohne Mono";
+    font-weight: 300;
+    font-style: oblique;
+    src: local("Sohne Mono"),
+        url("/assets/fonts/sohne-mono/test-soehne-mono-leicht-kursiv.woff2")
+            format("woff");
+}
+
+@font-face {
+    font-family: "Sohne Mono";
+    font-weight: 400;
+    font-style: normal;
+    src: local("Sohne Mono"),
+        url("/assets/fonts/sohne-mono/test-soehne-mono-buch.woff2")
+            format("woff");
+}
+
+@font-face {
+    font-family: "Sohne Mono";
+    font-weight: 400;
+    font-style: oblique;
+    src: local("Sohne Mono"),
+        url("/assets/fonts/sohne-mono/test-soehne-mono-buch-kurisv.woff2")
+            format("woff");
+}
+
+@font-face {
+    font-family: "Sohne Mono";
+    font-weight: 500;
+    font-style: normal;
+    src: local("Sohne Mono"),
+        url("/assets/fonts/sohne-mono/test-soehne-mono-kraftig.woff2")
+            format("woff");
+}
+
+@font-face {
+    font-family: "Sohne Mono";
+    font-weight: 500;
+    font-style: oblique;
+    src: local("Sohne Mono"),
+        url("/assets/fonts/sohne-mono/test-soehne-mono-kraftig-kursiv.woff2")
+            format("woff");
 }

@@ -4,7 +4,7 @@
 
 .projects {
     align-items: start;
-    display: grid;
+    // display: grid;
     gap: 0 0.5 * $base-unit;
     grid-template-areas:
         "heading content content"
@@ -18,7 +18,7 @@
     display: grid;
     gap: 1.5 * $base-unit 1.5 * $base-unit;
     grid-area: content;
-    // grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 
     @media (prefers-color-scheme: dark) {
         // background-color: $entry-background-dm;
@@ -35,9 +35,9 @@
     border-radius: $border-radius;
     gap: 0 0.5 * $base-unit;
     grid-template-areas:
-        "icon title techs"
-        "icon subtitle techs";
-    grid-template-columns: auto 1fr auto;
+        "icon title"
+        "icon subtitle";
+    grid-template-columns: auto 1fr;
     // padding-right: 0.25 * $base-unit;
     position: relative;
     text-decoration: none;
@@ -55,7 +55,7 @@
 
 .project-link:hover {
     background-color: $entry-background;
-    border-radius: $border-radius;
+    border-radius: 20px;
     margin: -0.5 * $base-unit;
     padding: 0.5 * $base-unit;
     text-decoration: none;
@@ -111,7 +111,7 @@
     grid-area: techs;
     margin-left: 14px;
 
-    // display: none;
+    display: none;
 }
 
 .tech {

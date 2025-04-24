@@ -12,7 +12,8 @@ $sans-font: "Inter", -apple-system, BlinkMacSystemFont, avenir next, avenir,
 //     helvetica neue, roboto, noto, helvetica, arial, sans-serif;
 // $sans-font: "American Grotesk", serif;
 // $sans-font: "Untitled Sans", serif;
-$body-size: 12px;
+$sans-font: "Sohne";
+$body-size: 14px;
 $small-size: 10px;
 $heading-size: 18px;
 
@@ -25,14 +26,17 @@ $serif-heading-size: 24px;
 $serif-heading-size-big: 36px;
 
 $mono-font: "Sohne Mono";
+$mono-font-size: 12px;
 
 $body-color: #444444;
+$body-color: rgba(0, 0, 0, 0.8);
 $body-color-dm: #aaaaaa;
 
 $heading-color: #000000;
 $heading-color-dm: #ffffff;
 
 $gray-color: #888888;
+$gray-color: rgba(0, 0, 0, 0.5);
 $gray-color-dm: #666666;
 
 $link-color: rgb(0, 113, 227);
@@ -44,6 +48,7 @@ $new-label-bg: $link-color;
 $new-label-color: rgb(255, 255, 255);
 
 $background-color: rgb(255, 255, 255);
+$background-color: rgb(203, 210, 198);
 $background-color-RGB: 229, 240, 252;
 $background-color-dm: rgb(17, 17, 17);
 
@@ -51,6 +56,7 @@ $header-background: rgba(255, 255, 255, 0.8);
 $header-background-dm: rgba(238, 238, 238, 0.8);
 
 $entry-background: rgb(238, 238, 238);
+$entry-background: rgb(182, 189, 178);
 $entry-background-darker: #e2e2e2;
 $entry-background-dm: rgb(34, 34, 34);
 $entry-background-darker-dm: #282828;

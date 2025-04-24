@@ -9,7 +9,7 @@
 
 .reviews-grid {
     display: grid;
-    gap: 0.5 * $base-unit;
+    gap: 1.5 * $base-unit;
     grid-template-columns: repeat(3, 1fr);
 
     @media (prefers-color-scheme: dark) {

@@ -5,23 +5,19 @@
 // @import "font-face/heldane-text.scss";
 @import "font-face/heldane-display.scss";
 // @import "font-face/untitled-sans.scss";
-// @import "font-face/sohne-mono.scss";
+@import "font-face/sohne-mono.scss";
+@import "font-face/sohne.scss";
 @import "../../static/assets/fonts/inter/inter.css";
 
 // styles
 
 body {
     background-color: $background-color;
-    // background: linear-gradient(rgba(0, 113, 227, 0.1), rgba(255, 255, 255, 1));
-    // border-top: 6px solid $gray-line-color;
     color: $body-color;
-    font-family: $sans-font;
-    font-size: $body-size;
-    // letter-spacing: 0.025em;
-    line-height: 2;
+    font-family: $mono-font;
+    font-size: $mono-font-size;
+    line-height: $base-unit;
     font-weight: 300;
-    // text-align: justify;
-    // text-wrap: balance;
 
     @media (prefers-color-scheme: dark) {
         background-color: $background-color-dm;
@@ -30,9 +26,11 @@ body {
 }
 
 img {
-    // filter: saturate(00%) sepia(50%) hue-rotate(170deg);
-    filter: saturate(0%);
-    // opacity: 0.9;
+    filter: saturate(0%) sepia(20%) hue-rotate(60deg);
+
+    @media (prefers-color-scheme: dark) {
+        filter: saturate(0%);
+    }
 }
 
 h1,
@@ -125,6 +123,10 @@ p {
     }
 }
 
+.uppercase {
+    text-transform: uppercase;
+}
+
 .type-label {
     display: flex;
     gap: 0.5 * $base-unit;
@@ -196,12 +198,14 @@ p {
     display: flex;
     font-family: $serif-heading-font;
     font-size: $serif-heading-size;
+    // font-style: oblique;
+    // font-weight: 300;
     gap: 0.333 * $base-unit;
     // grid-area: heading;
     justify-content: space-between;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.075em;
     line-height: 1.5;
-    margin-bottom: 1 * $base-unit;
+    margin-bottom: 1.5 * $base-unit;
 
     @media (max-width: $break-2) {
         margin-bottom: 1.5 * $base-unit;

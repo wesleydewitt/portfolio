@@ -1,7 +1,7 @@
 @import "../../variables.scss";
 
 .availability {
-    // border: none !important;
+    border: none !important;
     display: grid;
     gap: 0 1.5 * $base-unit;
     grid-template-areas:
@@ -9,10 +9,11 @@
         "content content ."
         "links links links";
     grid-template-columns: 1fr 1fr 1fr;
-    // padding-top: 0;
+    padding-top: 0;
 
     .index-section__heading {
         grid-area: heading;
+        margin-bottom: $base-unit !important;
     }
 
     .index-section__subheading {

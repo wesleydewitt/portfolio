@@ -4,16 +4,39 @@
 
 .essay__cover-image {
     border-radius: $border-radius;
-    margin: 1 * $base-unit 0;
+}
+
+.essay__head {
+    margin: 2 * $base-unit 0;
+    position: relative;
+}
+
+.essay__head__titles {
+    // align-items: center;
+    // color: rgb(255, 255, 255);
+    // display: flex;
+    // flex-direction: column;
+    // position: absolute;
+    // height: 100%;
+    // justify-content: center;
+    // padding: 3 * $base-unit;
+    margin: 2 * $base-unit 0 0.5 * $base-unit;
+    // text-align: center;
+    // text-shadow: 0 0 3px rgb(0, 0, 0);
+    text-wrap: balance;
+    // width: 100%;
+    // z-index: +10;
 }
 
 .essay__title {
+    // color: inherit;
     font-family: $serif-heading-font;
-    font-size: $heading-size;
-    // font-weight: 700;
+    font-size: $serif-heading-size;
+    // font-style: oblique;
+    // font-weight: 300;
     letter-spacing: 0.075em;
     // line-height: 1.5;
-    // margin-bottom: 2 * $base-unit;
+    margin-bottom: 0.5 * $base-unit;
 }
 
 .essay__subtitle {
@@ -22,9 +45,11 @@
     // font-style: oblique;
     font-weight: inherit;
     // line-height: 1.5;
-    margin: 0.5 * $base-unit 0;
+    margin: 0.25 * $base-unit 0 0;
+    text-wrap: balance;
+    // width: min-content;
 
-    display: none;
+    // display: none;
 
     @media (prefers-color-scheme: dark) {
         color: $gray-color-dm;
@@ -35,9 +60,7 @@
     color: $gray-color;
     display: flex;
     gap: 0.5 * $base-unit;
-    // margin-bottom: $base-unit;
-
-    display: none;
+    // justify-content: center;
 
     @media (prefers-color-scheme: dark) {
         color: $gray-color-dm;
@@ -64,12 +87,12 @@
 
 .essay__body p:first-of-type::first-letter {
     color: $heading-color;
-    font-family: $serif-heading-font;
+    font-family: $mono-font;
     float: left;
     font-size: 2 * $base-unit;
     font-weight: 200;
-    line-height: 2 * $base-unit;
-    margin-right: 3px;
+    line-height: 2 * $base-unit - 1;
+    margin: 1px 6px 0 0;
 
     @-moz-document url-prefix() {
         margin-top: 7px;

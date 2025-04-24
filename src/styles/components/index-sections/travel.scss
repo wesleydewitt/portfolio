@@ -7,7 +7,7 @@
 }
 
 .travel .index-section__content {
-    aspect-ratio: 4/3;
+    aspect-ratio: 16/10;
     border-radius: $border-radius;
     -webkit-mask-image: -webkit-radial-gradient(white, black);
     overflow: hidden;
@@ -19,7 +19,11 @@
     position: relative;
 
     img {
-        filter: saturate(0%);
+        filter: saturate(0%) sepia(20%) hue-rotate(60deg);
+
+        @media (prefers-color-scheme: dark) {
+            filter: saturate(0%);
+        }
     }
 }
 
@@ -34,9 +38,11 @@
     color: rgba(255, 255, 255, 1);
     font-size: $small-size;
     height: fit-content !important;
-    // position: absolute;
-    // top: $base-unit;
+    position: absolute;
+    // margin-left: -50%;
+    // top: -50%;
     text-wrap: nowrap;
+    // transform: translate(-50%, -50%);
     width: fit-content !important;
 
     @media (prefers-color-scheme: dark) {

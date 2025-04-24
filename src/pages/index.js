@@ -21,8 +21,8 @@ const IndexPage = () => {
             <Projects />
             <Essays />
             <Reviews />
-            <Travel />
-            <Photos />
+            {/* <Travel /> */}
+            {/* <Photos /> */}
             {/* <Dailys /> */}
             <WorkHistory />
             <Education />

@@ -11,6 +11,7 @@
 
     .index-section__heading {
         grid-area: heading;
+        margin-bottom: 1 * $base-unit !important;
     }
 
     .index-section__content {
@@ -23,7 +24,7 @@
 .about__photo {
     aspect-ratio: 1/1;
     background-color: $entry-background;
-    border-radius: 50%;
+    border-radius: $border-radius;
     grid-area: photo;
     grid-row: span 2;
     overflow: hidden;

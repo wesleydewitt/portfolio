@@ -3,7 +3,7 @@
 // essays
 
 .essays {
-    display: grid;
+    // display: grid;
     gap: 0 0.5 * $base-unit;
     grid-template-areas: "heading content content";
     grid-template-columns: 1fr 1fr 1fr;
@@ -16,6 +16,7 @@
 .essays-grid {
     display: grid;
     gap: 1.5 * $base-unit;
+    grid-template-columns: 1fr 1fr;
 
     @media (prefers-color-scheme: dark) {
         // background-color: $entry-background-dm;
@@ -44,7 +45,7 @@
 
 .essay-link:hover {
     background-color: $entry-background;
-    border-radius: $border-radius;
+    border-radius: 20px;
     margin: -0.5 * $base-unit;
     padding: 0.5 * $base-unit;
     text-decoration: none;
@@ -128,9 +129,9 @@
     content: "";
     background: linear-gradient(
         90deg,
-        rgba(238, 238, 238, 0),
-        rgba(238, 238, 238, 1) 80%,
-        rgba(238, 238, 238, 1)
+        rgba(182, 189, 178, 0),
+        rgba(182, 189, 178, 1) 80%,
+        rgba(182, 189, 178, 1)
     );
     height: $base-unit;
     width: 100%;
@@ -154,9 +155,9 @@
     content: "";
     background: linear-gradient(
         90deg,
-        rgba(255, 255, 255, 0),
-        rgba(255, 255, 255, 1) 80%,
-        rgba(255, 255, 255, 1)
+        rgba(203, 210, 198, 0),
+        rgba(203, 210, 198, 1) 80%,
+        rgba(203, 210, 198, 1)
     );
     height: $base-unit;
     width: 100%;

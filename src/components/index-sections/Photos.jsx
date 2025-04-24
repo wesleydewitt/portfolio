@@ -7,7 +7,11 @@ import photosLink from "../../styles/components/index-sections/photos.scss";
 const Photos = () => {
     const data = useStaticQuery(graphql`
         query {
-            allMdx(sort: { frontmatter: { date: DESC } }) {
+            allMdx(
+                limit: 6
+                filter: { frontmatter: { type: { eq: "photo" } } }
+                sort: { frontmatter: { date: DESC } }
+            ) {
                 nodes {
                     frontmatter {
                         type
@@ -19,10 +23,9 @@ const Photos = () => {
         }
     `);
 
-    const Photos = data.allMdx.nodes
-        .filter((entry) => entry.frontmatter.type === "photo")
-        .map((entry) => <PhotoLink photo={entry} />)
-        .slice(0, 12);
+    const Photos = data.allMdx.nodes.map((entry) => (
+        <PhotoLink photo={entry} />
+    ));
 
     return (
         <section className="index-section photos">

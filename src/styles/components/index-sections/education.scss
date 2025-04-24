@@ -2,7 +2,7 @@
 
 .education {
     display: grid;
-    gap: 0 0.5 * $base-unit;
+    gap: 0 1.5 * $base-unit;
     grid-template-columns: repeat(3, 1fr);
 
     .index-section__content {

@@ -2,7 +2,7 @@
 
 .work-history {
     display: grid;
-    gap: 0 0.5 * $base-unit;
+    gap: 0 1.5 * $base-unit;
     grid-template-areas: "heading content content";
     grid-template-columns: 1fr 1fr 1fr;
 
