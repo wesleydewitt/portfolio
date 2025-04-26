@@ -19,11 +19,7 @@
     position: relative;
 
     img {
-        filter: saturate(0%) sepia(20%) hue-rotate(60deg);
-
-        @media (prefers-color-scheme: dark) {
-            filter: saturate(0%);
-        }
+        filter: saturate(0%);
     }
 }
 

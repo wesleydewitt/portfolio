@@ -18,7 +18,7 @@
     content: "\2197";
     font-family: $sans-font;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 200;
     line-height: 1;
     float: right;
 }
@@ -26,7 +26,6 @@
 .social-link {
     // align-items: center;
     background-color: $entry-background;
-    // border: 1px solid $gray-line-color;
     border-radius: $border-radius;
     color: $body-color;
     display: grid;
@@ -42,7 +41,6 @@
 
     @media (prefers-color-scheme: dark) {
         background-color: $entry-background-dm;
-        // border: 1px solid $gray-line-color-dm;
         color: $body-color-dm;
     }
 

@@ -16,7 +16,7 @@
 .projects-grid {
     align-items: center;
     display: grid;
-    gap: 1.5 * $base-unit 1.5 * $base-unit;
+    gap: 1.5 * $base-unit;
     grid-area: content;
     grid-template-columns: 1fr 1fr;
 
@@ -34,10 +34,12 @@
     display: grid;
     border-radius: $border-radius;
     gap: 0 0.5 * $base-unit;
+    grid-auto-rows: min-content;
     grid-template-areas:
-        "icon title"
-        "icon subtitle";
-    grid-template-columns: auto 1fr;
+        "icon"
+        "title"
+        "subtitle";
+    // grid-template-columns: auto ;
     // padding-right: 0.25 * $base-unit;
     position: relative;
     text-decoration: none;
@@ -54,30 +56,41 @@
 }
 
 .project-link:hover {
-    background-color: $entry-background;
-    border-radius: 20px;
-    margin: -0.5 * $base-unit;
-    padding: 0.5 * $base-unit;
     text-decoration: none;
+}
+
+// .project-link:hover {
+//     background-color: $entry-background;
+//     border-radius: $border-radius;
+//     margin: -0.5 * $base-unit;
+//     padding: 0.5 * $base-unit;
+//     text-decoration: none;
+
+//     @media (prefers-color-scheme: dark) {
+//         background-color: $entry-background-dm;
+//     }
+// }
+
+.project-link__icon {
+    aspect-ratio: 16/10;
+    background-color: $entry-background;
+    border-radius: $border-radius;
+    grid-row: span 2;
+    margin-bottom: 0.5 * $base-unit;
+    padding: 1.5 * $base-unit;
+
+    // display: none;
 
     @media (prefers-color-scheme: dark) {
         background-color: $entry-background-dm;
     }
-}
-
-.project-link__icon {
-    border-radius: $border-radius;
-    grid-row: span 2;
-    height: 2 * $base-unit;
-    overflow: hidden;
-    width: 2 * $base-unit;
-
-    // display: none;
 
     img {
         height: 100%;
-        object-fit: cover;
+        object-fit: scale-down;
         width: 100%;
+
+        display: none;
     }
 }
 

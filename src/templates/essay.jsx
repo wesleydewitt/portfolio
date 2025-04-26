@@ -35,11 +35,6 @@ export default function PageTemplate({ data, children }) {
         <Layout>
             <article className="essay">
                 <div className="essay__head">
-                    <img
-                        className="essay__cover-image"
-                        src={"/assets/photos/" + data.mdx.frontmatter.image}
-                    />
-
                     <div className="essay__head__titles">
                         <h1 className="essay__title">
                             {data.mdx.frontmatter.title}
@@ -50,21 +45,24 @@ export default function PageTemplate({ data, children }) {
                         </h2>
                     </div>
 
-                    <div className="essay__meta">
-                        <div className="type-label type-label--essay">
-                            <img src={essayIcon} /> Essay
-                        </div>
-
-                        <div className="essay__date">
-                            {data.mdx.frontmatter.date}
-                        </div>
-                    </div>
+                    <img
+                        className="essay__cover-image"
+                        src={"/assets/photos/" + data.mdx.frontmatter.image}
+                    />
                 </div>
 
                 <div className="essay__body" id="essay__body">
                     <MDXProvider components={shortcodes}>
                         {children}
                     </MDXProvider>
+                </div>
+
+                <div className="essay__meta">
+                    <div className="type-label type-label--essay">Essay</div>
+
+                    <div className="essay__date">
+                        {data.mdx.frontmatter.date}
+                    </div>
                 </div>
             </article>
         </Layout>

@@ -93,7 +93,7 @@ const Travel = () => {
         <section className="index-section travel">
             <h3 className="index-section__heading">
                 <img className="index-section__icon" src={TravelIcon} />
-                Travel <span className="count">{totalCount}</span>
+                Travel <span className="count">[{totalCount}]</span>
             </h3>
 
             {/* <h4 className="index-section__subheading">
@@ -103,6 +103,8 @@ const Travel = () => {
             <div className="index-section__content">
                 <div className="map" id="map"></div>
             </div>
+
+            <Link className="all-link">All Travel</Link>
         </section>
     );
 };

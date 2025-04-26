@@ -14,8 +14,8 @@
 body {
     background-color: $background-color;
     color: $body-color;
-    font-family: $mono-font;
-    font-size: $mono-font-size;
+    font-family: $sans-font;
+    font-size: $body-size;
     line-height: $base-unit;
     font-weight: 300;
 
@@ -27,6 +27,7 @@ body {
 
 img {
     filter: saturate(0%) sepia(20%) hue-rotate(60deg);
+    filter: saturate(0%);
 
     @media (prefers-color-scheme: dark) {
         filter: saturate(0%);
@@ -103,13 +104,16 @@ button {
 
 .all-link {
     background-color: $entry-background;
-    // border: 1.5px solid $link-color;
+    // border: 1px solid $gray-line-color;
     border-radius: $border-radius;
     color: inherit;
-    grid-column: 1/-1;
+    display: block;
+    // grid-column: 1/-1;
     // margin-top: $base-unit;
     padding: 0.5 * $base-unit;
+    margin: 1.5 * $base-unit auto 0;
     text-align: center;
+    // width: 50%;
 
     @media (prefers-color-scheme: dark) {
         background-color: $entry-background-dm;
@@ -163,9 +167,9 @@ p {
 }
 
 .main {
-    margin: 3 * $base-unit auto 0;
+    margin: 4 * $base-unit auto 0;
     max-width: $column-width;
-    padding: 0 * $base-unit 3 * $base-unit 0;
+    padding: 0 * $base-unit 4 * $base-unit 0;
     // position: relative;
 
     @media (max-width: $break-2) {
@@ -175,11 +179,12 @@ p {
 }
 
 .index-section {
-    border-top: 1px solid $gray-line-color;
-    padding: 3 * $base-unit 0;
+    // border-top: 1px solid $gray-line-color;
+    // padding: 2 * $base-unit 0;
+    margin: 4 * $base-unit 0;
 
     @media (prefers-color-scheme: dark) {
-        border-top: 1px solid $gray-line-color-dm;
+        // border-top: 1px solid $gray-line-color-dm;
     }
 
     @media (max-width: $break-2) {
@@ -188,22 +193,22 @@ p {
 }
 
 .index-section:first-of-type {
-    border: none;
-    padding-top: 0;
+    // border: none;
+    // padding-top: 0;
 }
 
 .index-section__heading {
     align-items: baseline;
     align-self: start;
     display: flex;
-    font-family: $serif-heading-font;
-    font-size: $serif-heading-size;
+    // font-family: $serif-heading-font;
+    font-size: $heading-size;
     // font-style: oblique;
     // font-weight: 300;
     gap: 0.333 * $base-unit;
     // grid-area: heading;
-    justify-content: space-between;
-    letter-spacing: 0.075em;
+    // justify-content: space-between;
+    // letter-spacing: 0.075em;
     line-height: 1.5;
     margin-bottom: 1.5 * $base-unit;
 
@@ -221,8 +226,9 @@ p {
 .count {
     color: $gray-color;
     font-family: $sans-font;
-    font-size: $heading-size;
+    // font-size: 16px;
     font-weight: 300;
+    letter-spacing: none;
     // vertical-align: baseline;
 
     display: none;

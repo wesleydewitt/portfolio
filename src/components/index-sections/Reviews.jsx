@@ -6,7 +6,10 @@ import reviewsStyles from "../../styles/components/index-sections/reviews.scss";
 const Reviews = () => {
     const data = useStaticQuery(graphql`
         query {
-            allMdx(sort: { frontmatter: { date: DESC } }) {
+            allMdx(
+                filter: { frontmatter: { type: { eq: "review" } } }
+                sort: { frontmatter: { date: DESC } }
+            ) {
                 nodes {
                     frontmatter {
                         type
@@ -17,33 +20,34 @@ const Reviews = () => {
                         date(formatString: "YYYY")
                     }
                 }
+                totalCount
             }
         }
     `);
 
-    const Reviews = data.allMdx.nodes
-        .filter((entry) => entry.frontmatter.type === "review")
-        .map((entry) => <ReviewLink review={entry} />);
+    const totalCount = data.allMdx.totalCount;
+
+    const Reviews = data.allMdx.nodes.map((entry) => (
+        <ReviewLink review={entry} />
+    ));
     // .slice(0, 4);
 
     return (
         <section className="index-section reviews">
             <h3 className="index-section__heading">
                 {/* <img className="index-section__icon" src={PhotosIcon} /> */}
-                Reviews
+                Reviews <span className="count">[{totalCount}]</span>
             </h3>
 
             {/* <h4 className="index-section__subheading">
                 Reviews of books, movies, shows, products and places
             </h4> */}
 
-            <div className="index-section__content reviews-grid">
-                {Reviews}
+            <div className="index-section__content reviews-grid">{Reviews}</div>
 
-                {/* <Link className="all-link" to="/reviews">
-                    All Reviews
-                </Link> */}
-            </div>
+            <Link className="all-link" to="/reviews">
+                All Reviews
+            </Link>
         </section>
     );
 };

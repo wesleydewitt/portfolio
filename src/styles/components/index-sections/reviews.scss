@@ -9,7 +9,7 @@
 
 .reviews-grid {
     display: grid;
-    gap: 1.5 * $base-unit;
+    gap: 0.5 * $base-unit;
     grid-template-columns: repeat(3, 1fr);
 
     @media (prefers-color-scheme: dark) {
@@ -31,21 +31,26 @@
     aspect-ratio: 16/10;
     background-color: $entry-background;
     border-radius: $border-radius;
-    display: flex;
+    // display: flex;
     grid-column: span 2;
     justify-content: center;
     margin-bottom: 0.125 * $base-unit;
     overflow: hidden;
-    // padding: $base-unit;
 
     @media (prefers-color-scheme: dark) {
         background-color: $entry-background-dm;
     }
+}
+
+.review-link__cover__content {
+    height: 100%;
+    padding: $base-unit;
+    width: 100%;
 
     img {
-        height: 66.666%;
+        height: 100%;
         object-fit: contain;
-        width: 66.666%;
+        width: 100%;
 
         // display: none;
     }
@@ -57,7 +62,7 @@
     // font-weight: inherit;
 
     @media (prefers-color-scheme: dark) {
-        color: $body-color-dm;
+        // color: $body-color-dm;
     }
 }
 

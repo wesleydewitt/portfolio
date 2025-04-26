@@ -2,30 +2,21 @@
 
 // essay page
 
-.essay__cover-image {
-    border-radius: $border-radius;
+.essay {
+    align-items: start;
+    display: grid;
+    gap: 2 * $base-unit 1.5 * $base-unit;
+    grid-template-columns: $essay-body-width 1fr;
 }
 
 .essay__head {
-    margin: 2 * $base-unit 0;
+    grid-column: span 2;
+    // margin: 2 * $base-unit 0;
     position: relative;
 }
 
 .essay__head__titles {
-    // align-items: center;
-    // color: rgb(255, 255, 255);
-    // display: flex;
-    // flex-direction: column;
-    // position: absolute;
-    // height: 100%;
-    // justify-content: center;
-    // padding: 3 * $base-unit;
-    margin: 2 * $base-unit 0 0.5 * $base-unit;
-    // text-align: center;
-    // text-shadow: 0 0 3px rgb(0, 0, 0);
     text-wrap: balance;
-    // width: 100%;
-    // z-index: +10;
 }
 
 .essay__title {
@@ -35,7 +26,7 @@
     // font-style: oblique;
     // font-weight: 300;
     letter-spacing: 0.075em;
-    // line-height: 1.5;
+    line-height: 1.5;
     margin-bottom: 0.5 * $base-unit;
 }
 
@@ -45,7 +36,7 @@
     // font-style: oblique;
     font-weight: inherit;
     // line-height: 1.5;
-    margin: 0.25 * $base-unit 0 0;
+    margin: 0.5 * $base-unit 0 2 * $base-unit;
     text-wrap: balance;
     // width: min-content;
 
@@ -56,11 +47,18 @@
     }
 }
 
+.essay__cover-image {
+    border-radius: $border-radius;
+}
+
 .essay__meta {
+    background-color: $entry-background;
     color: $gray-color;
-    display: flex;
-    gap: 0.5 * $base-unit;
+    // display: flex;
+    // gap: 0.5 * $base-unit;
     // justify-content: center;
+    // margin-top: 0.5 * $base-unit;
+    padding: 0.5 * $base-unit;
 
     @media (prefers-color-scheme: dark) {
         color: $gray-color-dm;
@@ -76,23 +74,24 @@
     }
 }
 
-.type-label--essay::after {
-    content: "|";
-}
+// .type-label--essay::after {
+//     content: "|";
+// }
 
 .essay__body {
     // font-family: $serif-font;
     // font-size: $serif-size;
+    max-width: $essay-body-width;
 }
 
 .essay__body p:first-of-type::first-letter {
     color: $heading-color;
-    font-family: $mono-font;
+    font-family: $sans-font;
     float: left;
     font-size: 2 * $base-unit;
-    font-weight: 200;
-    line-height: 2 * $base-unit - 1;
-    margin: 1px 6px 0 0;
+    font-weight: 100;
+    line-height: 2 * $base-unit;
+    margin: -1px 3px 0 0;
 
     @-moz-document url-prefix() {
         margin-top: 7px;

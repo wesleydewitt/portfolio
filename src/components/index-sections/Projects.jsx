@@ -10,6 +10,7 @@ const Projects = () => {
             allMdx(
                 filter: { frontmatter: { type: { eq: "project" } } }
                 sort: { frontmatter: { date: DESC } }
+                limit: 2
             ) {
                 nodes {
                     frontmatter {
@@ -32,24 +33,25 @@ const Projects = () => {
     const Projects = data.allMdx.nodes.map((entry) => (
         <ProjectLink project={entry} isNew={true} />
     ));
-    // .slice(0, 6);
 
     return (
         <section className="index-section projects">
             <h3 className="index-section__heading">
                 <img className="index-section__icon" src={ProjectsIcon} />
-                Projects <span className="count">{totalCount}</span>
+                Projects <span className="count">[{totalCount}]</span>
             </h3>
+
             {/* <h4 className="index-section__subheading">
                 Apps and websites designed and written with minimalism in mind
             </h4> */}
+
             <div className="index-section__content projects-grid">
                 {Projects}
-
-                {/* <Link className="all-link" to="/projects">
-                    All Projects
-                </Link> */}
             </div>
+
+            <Link className="all-link" to="/projects">
+                All Projects
+            </Link>
         </section>
     );
 };

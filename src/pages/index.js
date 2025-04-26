@@ -21,8 +21,8 @@ const IndexPage = () => {
             <Projects />
             <Essays />
             <Reviews />
-            {/* <Travel /> */}
-            {/* <Photos /> */}
+            <Travel />
+            <Photos />
             {/* <Dailys /> */}
             <WorkHistory />
             <Education />
@@ -37,11 +37,6 @@ export const Head = () => (
         <title>{siteMetadata.title}</title>
         {/* <meta name="theme-color" content="#ffffff" /> */}
         <link rel="icon" href={favicon} />
-        <link
-            rel="mask-icon"
-            href="{{ base_path }}/images/safari-pinned-tab.svg?v=M44lzPylqQ"
-            color="#000000"
-        ></link>
     </>
 );
 

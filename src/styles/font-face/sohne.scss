@@ -1,5 +1,22 @@
 @font-face {
     font-family: "Sohne";
+    font-weight: 200;
+    font-style: normal;
+    src: local("Sohne"),
+        url("/assets/fonts/sohne/test-soehne-extraleicht.woff2") format("woff");
+}
+
+@font-face {
+    font-family: "Sohne";
+    font-weight: 200;
+    font-style: oblique;
+    src: local("Sohne"),
+        url("/assets/fonts/sohne/test-soehne-extraleicht-kursiv.woff2")
+            format("woff");
+}
+
+@font-face {
+    font-family: "Sohne";
     font-weight: 300;
     font-style: normal;
     src: local("Sohne"),

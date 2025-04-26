@@ -14,14 +14,15 @@ const Photos = () => {
             ) {
                 nodes {
                     frontmatter {
-                        type
-                        slug
                         filename
                     }
                 }
+                totalCount
             }
         }
     `);
+
+    const totalCount = data.allMdx.totalCount;
 
     const Photos = data.allMdx.nodes.map((entry) => (
         <PhotoLink photo={entry} />
@@ -31,19 +32,18 @@ const Photos = () => {
         <section className="index-section photos">
             <h3 className="index-section__heading">
                 <img className="index-section__icon" src={PhotosIcon} />
-                Photos
+                Photos <span className="count">[{totalCount}]</span>
             </h3>
 
             {/* <h4 className="index-section__subheading">
                 Photo albums from various places
             </h4> */}
 
-            <div className="index-section__content photos-grid">
-                {Photos}
-                <Link className="all-link" to="/photos">
-                    All Photos
-                </Link>
-            </div>
+            <div className="index-section__content photos-grid">{Photos}</div>
+
+            <Link className="all-link" to="/photos">
+                All Photos
+            </Link>
         </section>
     );
 };
