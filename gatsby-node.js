@@ -48,9 +48,11 @@ exports.onCreateNode = ({ node, actions }) => {
         const month_spelled_out = `${translateNumberMonthIntoSpelledOutMonth(
             month
         )}`;
+        const month_abbreviated = month_spelled_out.substring(0, 3);
+
         const day = dateFormatted.getDate();
 
-        if (node.frontmatter.type === "daily") {
+        if (node.frontmatter.type === "essay") {
             createNodeField({ node, name: "year", value: year });
             createNodeField({ node, name: "month", value: month });
             createNodeField({ node, name: "year-month", value: year_month });
@@ -58,6 +60,11 @@ exports.onCreateNode = ({ node, actions }) => {
                 node,
                 name: "month-spelled-out",
                 value: month_spelled_out,
+            });
+            createNodeField({
+                node,
+                name: "month-abbreviated",
+                value: month_abbreviated,
             });
             createNodeField({ node, name: "day", value: day });
         }
@@ -139,24 +146,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                 path: node.frontmatter.type + node.frontmatter.slug,
                 // Provide the path to the MDX content file so webpack can pick it up and transform it into JSX
                 component: `${travelTemplate}?__contentFilePath=${node.internal.contentFilePath}`,
-                // You can use the values in this context in
-                // our page layout component
-                context: { id: node.id },
-            });
-        } else if (node.frontmatter.type === "daily") {
-            createPage({
-                // As mentioned above you could also query something else like frontmatter.title above and use a helper function
-                // like slugify to create a slug
-                path:
-                    node.frontmatter.type +
-                    "/" +
-                    node.fields.year +
-                    "/" +
-                    node.fields.month +
-                    "/" +
-                    node.fields.day,
-                // Provide the path to the MDX content file so webpack can pick it up and transform it into JSX
-                component: `${dailyTemplate}?__contentFilePath=${node.internal.contentFilePath}`,
                 // You can use the values in this context in
                 // our page layout component
                 context: { id: node.id },

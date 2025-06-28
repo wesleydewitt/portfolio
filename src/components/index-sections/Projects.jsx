@@ -41,9 +41,9 @@ const Projects = () => {
                 Projects <span className="count">[{totalCount}]</span>
             </h3>
 
-            {/* <h4 className="index-section__subheading">
-                Apps and websites designed and written with minimalism in mind
-            </h4> */}
+            <h4 className="index-section__subheading">
+                Websites and apps designed with minimalism in mind
+            </h4>
 
             <div className="index-section__content projects-grid">
                 {Projects}

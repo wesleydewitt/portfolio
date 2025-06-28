@@ -93,7 +93,7 @@ const Travel = () => {
         <section className="index-section travel">
             <h3 className="index-section__heading">
                 <img className="index-section__icon" src={TravelIcon} />
-                Travel <span className="count">[{totalCount}]</span>
+                Travel Writing <span className="count">[{totalCount}]</span>
             </h3>
 
             {/* <h4 className="index-section__subheading">

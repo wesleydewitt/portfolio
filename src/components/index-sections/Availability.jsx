@@ -9,9 +9,9 @@ const About = () => {
             <h3 className="index-section__heading">Available for hire</h3>
             <div className="index-section__content">
                 <p>
-                    I am currently available for employment as well as freelance
-                    work. If you have an opportunity for which you feel I would
-                    be a good fit, please feel free to reach out.
+                    Wesley is currently available for employment as well as
+                    freelance work. If you have an opportunity for which you
+                    feel he would be a good fit, please feel free to reach out.
                 </p>
             </div>
             <SocialLinks />

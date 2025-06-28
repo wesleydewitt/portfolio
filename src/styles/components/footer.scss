@@ -3,13 +3,13 @@
 // footer
 
 .footer {
-    border: 1px solid $gray-line-color;
+    border-top: 2px solid $gray-line-color;
     border-radius: $border-radius;
     display: flex;
     gap: $base-unit;
     justify-content: space-between;
-    margin-bottom: $base-unit;
-    padding: 1 * $base-unit;
+    margin-bottom: 1.5 * $base-unit;
+    padding-top: 1.5 * $base-unit;
 
     @media (prefers-color-scheme: dark) {
         border-top: 1px solid $gray-line-color-dm;

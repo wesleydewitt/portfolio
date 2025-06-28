@@ -28,11 +28,11 @@
     // border-bottom: 1px solid $gray-line-color;
     display: grid;
     gap: 0 $base-unit;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: auto 1fr auto;
     justify-items: start;
     margin: 0 auto;
     max-width: $column-width;
-    padding: 1 * $base-unit 4 * $base-unit 0;
+    padding: 1.5 * $base-unit 3 * $base-unit 0;
     // width: 100vw;
 
     // background-color: blue;
@@ -45,17 +45,17 @@
 }
 
 .header__site-logo {
-    background-color: $entry-background;
-    border-radius: $border-radius;
-    overflow: hidden;
+    // background-color: $entry-background;
+    // border-radius: $border-radius;
+    // overflow: hidden;
 
-    display: none;
+    // display: none;
 
     @media (prefers-color-scheme: dark) {
-        background-color: $entry-background-dm;
+        // background-color: $entry-background-dm;
     }
 
-    img {
+    svg {
         width: 2 * $base-unit;
     }
 
@@ -67,7 +67,7 @@
 
 .header__titles {
     // align-items: center;
-    display: flex;
+    // display: flex;
     flex-grow: 1;
     // flex-wrap: wrap;
     gap: 0 $base-unit;
@@ -93,12 +93,12 @@
 }
 
 .header__site-subtitle {
-    color: inherit;
+    color: $gray-color;
     // font-size: $small-size;
     font-weight: 300;
 
     @media (prefers-color-scheme: dark) {
-        color: $body-color-dm;
+        color: $gray-color-dm;
     }
 }
 
@@ -112,7 +112,7 @@
     padding: 2px 2px 2px 12px !important;
     width: 120px;
 
-    display: none;
+    // display: none;
 
     .button__icon {
         background-color: $background-color;
@@ -133,7 +133,7 @@
     gap: 0;
     padding: 2px !important;
 
-    display: none;
+    // display: none;
 }
 
 .theme-button span {
@@ -164,7 +164,7 @@
 }
 
 .menu-button {
-    // display: none !important;
+    display: none !important;
 
     @media screen and (max-width: $break-1) {
     }

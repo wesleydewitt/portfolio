@@ -9,7 +9,6 @@ const Essays = () => {
     const data = useStaticQuery(graphql`
         query {
             allMdx(
-                limit: 2
                 filter: { frontmatter: { type: { eq: "essay" } } }
                 sort: { frontmatter: { date: DESC } }
             ) {
@@ -21,6 +20,10 @@ const Essays = () => {
                         subtitle
                         icon
                         date(formatString: "MMMM DD, YYYY")
+                    }
+                    fields {
+                        day
+                        month_abbreviated
                     }
                     excerpt(pruneLength: 500)
                 }
@@ -39,12 +42,12 @@ const Essays = () => {
         <section className="index-section essays">
             <h3 className="index-section__heading">
                 <img className="index-section__icon" src={EssaysIcon} />
-                Essays <span className="count">[{totalCount}]</span>
+                Writing <span className="count">[{totalCount}]</span>
             </h3>
 
-            {/* <h4 className="index-section__subheading">
+            <h4 className="index-section__subheading">
                 Medium- to long-form pieces on topics in culture and technology
-            </h4> */}
+            </h4>
 
             <div className="index-section__content essays-grid">{Essays}</div>
 

@@ -57,12 +57,12 @@
 }
 
 .review-link__title {
-    // color: $body-color;
+    color: $body-color;
     // font-size: $small-size;
-    // font-weight: inherit;
+    font-weight: inherit;
 
     @media (prefers-color-scheme: dark) {
-        // color: $body-color-dm;
+        color: $body-color-dm;
     }
 }
 

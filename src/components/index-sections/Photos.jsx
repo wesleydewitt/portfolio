@@ -8,7 +8,7 @@ const Photos = () => {
     const data = useStaticQuery(graphql`
         query {
             allMdx(
-                limit: 6
+                limit: 9
                 filter: { frontmatter: { type: { eq: "photo" } } }
                 sort: { frontmatter: { date: DESC } }
             ) {
@@ -35,9 +35,9 @@ const Photos = () => {
                 Photos <span className="count">[{totalCount}]</span>
             </h3>
 
-            {/* <h4 className="index-section__subheading">
+            <h4 className="index-section__subheading">
                 Photo albums from various places
-            </h4> */}
+            </h4>
 
             <div className="index-section__content photos-grid">{Photos}</div>
 

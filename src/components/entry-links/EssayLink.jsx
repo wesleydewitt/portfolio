@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "gatsby";
 
 const EssayLink = ({ essay, isNew }) => {
+    console.log(essay);
+
     return (
         <Link
             className="essay-link"
@@ -10,10 +12,18 @@ const EssayLink = ({ essay, isNew }) => {
             <div className="essay-link__icon">
                 <img src={"/assets/photos/" + essay.frontmatter.icon} />
             </div>
-            <div className="essay-link__titles">
-                <h4 className="essay-link__title">{essay.frontmatter.title}</h4>
-                <h5 className="essay-link__excerpt">{essay.excerpt}</h5>
+
+            <div className="essay-link__date">
+                {essay.fields.day}
+                <br />
+                {essay.fields.month_abbreviated}
             </div>
+
+            <h4 className="essay-link__title">{essay.frontmatter.title}</h4>
+
+            <h5 className="essay-link__subtitle">
+                {essay.frontmatter.subtitle}
+            </h5>
         </Link>
     );
 };

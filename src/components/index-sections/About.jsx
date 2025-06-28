@@ -8,21 +8,21 @@ const About = () => {
     const siteDescription = (
         <div className="site-description">
             <p>
-                I'm Wesley De Witt, a designer, writer, and aspiring front-end
-                developer from Indianapolis. I love exciting ideas, good
-                aesthetics, and clear writing. My days are spent working as a
-                forklift operator, while my nights and weekends are devoted to
-                making things &mdash; apps, websites, essays, reviews and travel
-                writing &mdash; that seek to delight, inform, and entertain.
+                Wesley De Witt is a designer, writer, and aspiring front-end
+                developer from Indianapolis. He loves exciting ideas, good
+                aesthetics, and clear writing. His days are spent working as a
+                forklift operator, while his nights and weekends are devoted to
+                making things &mdash; websites, apps, essays, and photos &mdash;
+                that seek to delight, inform, and entertain.
             </p>
 
             <p>
-                This is my web journal, a place that will serve as a reposiotry
-                of creative output that spans multiple domains. It's a space to
-                incubate ideas and content semi-privately, in a way that publicy
-                documents my creative growth but is not immediately plugged into
-                the systematized and socially corrosive content distribution
-                algorithms of most modern social netowrks.
+                This is Wesley's web journal, a place that serves as a
+                reposiotry of creative output. It is anti-social media, a space
+                to incubate ideas and content semi-privately, in a way that
+                documents creative growth but is not immediately funneled into
+                the systematized and socially corrosive algorithms of our modern
+                social netowrks.
             </p>
         </div>
     );

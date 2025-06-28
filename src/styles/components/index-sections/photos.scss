@@ -3,13 +3,23 @@
 // photos
 
 .photos {
-    // display: block;
+    align-items: start;
+    display: grid;
+    gap: 0 1.5 * $base-unit;
+    grid-template-areas:
+        "heading content content"
+        "subheading content content";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr;
 }
 
 .photos-grid {
     display: grid;
     gap: 0.5 * $base-unit;
+    grid-area: content;
+    // grid-column: span 2;
     grid-template-columns: repeat(3, 1fr);
+    // margin-top: 1.5 * $base-unit;
 
     @media (prefers-color-scheme: dark) {
         // background-color: $entry-background-dm;

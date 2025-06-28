@@ -4,8 +4,8 @@
 
 .projects {
     align-items: start;
-    // display: grid;
-    gap: 0 0.5 * $base-unit;
+    display: grid;
+    gap: 0 1.5 * $base-unit;
     grid-template-areas:
         "heading content content"
         "subheading content content";
@@ -18,7 +18,7 @@
     display: grid;
     gap: 1.5 * $base-unit;
     grid-area: content;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
 
     @media (prefers-color-scheme: dark) {
         // background-color: $entry-background-dm;
@@ -36,10 +36,11 @@
     gap: 0 0.5 * $base-unit;
     grid-auto-rows: min-content;
     grid-template-areas:
-        "icon"
-        "title"
-        "subtitle";
-    // grid-template-columns: auto ;
+        "cover cover"
+        "icon title"
+        "icon subtitle"
+        "techs techs";
+    grid-template-columns: auto 1fr;
     // padding-right: 0.25 * $base-unit;
     position: relative;
     text-decoration: none;
@@ -71,11 +72,12 @@
 //     }
 // }
 
-.project-link__icon {
+.project-link__cover {
     aspect-ratio: 16/10;
     background-color: $entry-background;
     border-radius: $border-radius;
-    grid-row: span 2;
+    grid-area: cover;
+    // grid-row: span 2;
     margin-bottom: 0.5 * $base-unit;
     padding: 1.5 * $base-unit;
 
@@ -94,12 +96,26 @@
     }
 }
 
+.project-link__icon {
+    background-color: $entry-background;
+    border-radius: $border-radius;
+    height: 2 * $base-unit;
+    grid-area: icon;
+    width: 2 * $base-unit;
+
+    @media (prefers-color-scheme: dark) {
+        background-color: $entry-background-dm;
+    }
+}
+
 .project-link__title {
-    // color: $link-color;
-    // font-family: $serif-font;
-    // font-size: $serif-size;
-    // font-style: italic;
-    // font-weight: 600;
+    // color: $body-color;
+    // font-weight: inherit;
+    grid-area: title;
+
+    @media (prefers-color-scheme: dark) {
+        // color: $body-color-dm;
+    }
 }
 
 .project-link__title::after {
@@ -112,6 +128,8 @@
 .project-link__subtitle {
     color: $gray-color;
     font-weight: inherit;
+    font-style: oblique;
+    grid-area: subtitle;
 
     @media (prefers-color-scheme: dark) {
         color: $gray-color-dm;
@@ -122,14 +140,14 @@
     display: flex;
     gap: 0.5 * $base-unit;
     grid-area: techs;
-    margin-left: 14px;
+    margin: 0.5 * $base-unit 0 0;
 
-    display: none;
+    // display: none;
 }
 
 .tech {
-    // background-color: $entry-background;
-    // border-radius: $border-radius;
+    background-color: $entry-background;
+    border-radius: $border-radius;
     color: $gray-color;
     display: block;
     // font-family: $mono-font;
@@ -137,11 +155,11 @@
     // gap: 0.25 * $base-unit;
     // letter-spacing: 0.1em;
     line-height: 1;
-    // padding: 0.125 * $base-unit 0.25 * $base-unit;
+    padding: 0.125 * $base-unit 0.25 * $base-unit;
     // text-transform: uppercase;
 
     @media (prefers-color-scheme: dark) {
-        // background-color: $entry-background-dm;
+        background-color: $entry-background-dm;
         color: $gray-color-dm;
     }
 }

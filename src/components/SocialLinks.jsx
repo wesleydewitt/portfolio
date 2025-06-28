@@ -4,6 +4,7 @@ import EmailIcon from "./icons/EmailIcon";
 import GithubIcon from "./icons/GithubIcon";
 import XIcon from "./icons/XIcon";
 import "../styles/components/social-links.scss";
+import ClipboardIcon from "./icons/ClipboardIcon";
 
 const SocialLinks = () => {
     return (
@@ -14,6 +15,9 @@ const SocialLinks = () => {
                         <EmailIcon />
                     </div>
                     <div className="social-links__heading">Email</div>
+                    <div className="social-link__destination-icon">
+                        <ClipboardIcon />
+                    </div>
                     <div className="social-link__text">
                         hello@wesleydewitt.com
                     </div>
@@ -23,17 +27,19 @@ const SocialLinks = () => {
                         <GithubIcon />
                     </div>
                     <div className="social-links__heading">Github</div>
+                    <div className="social-link__destination-icon">&#8599;</div>
                     <div className="social-link__text">
                         github.com/wesleydewitt
                     </div>
                 </Link>
-                {/* <Link className="social-link" to="/">
+                <Link className="social-link" to="/">
                     <div className="social-link__icon">
                         <XIcon />
                     </div>
                     <div className="social-links__heading">Twitter</div>
+                    <div className="social-link__destination-icon">&#8599;</div>
                     <div className="social-link__text">x.com/@wesleydewitt</div>
-                </Link> */}
+                </Link>
             </div>
         </div>
     );

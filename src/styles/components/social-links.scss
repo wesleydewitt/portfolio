@@ -10,17 +10,12 @@
 .social-links__links {
     display: grid;
     gap: 1.5 * $base-unit;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     // justify-content: space-between;
-}
 
-.social-links__heading::after {
-    content: "\2197";
-    font-family: $sans-font;
-    font-size: 16px;
-    font-weight: 200;
-    line-height: 1;
-    float: right;
+    @media (max-width: $break-1) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .social-link {
@@ -32,7 +27,7 @@
     // font-family: $mono-font;
     // font-size: $small-size;
     gap: 0 0.5 * $base-unit;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto 1fr auto;
     grid-template-rows: auto 1fr;
     // line-height: $base-unit;
     padding: (0.5 * $base-unit) (0.75 * $base-unit);
@@ -65,7 +60,15 @@
     }
 }
 
+.social-link__destination-icon {
+    align-items: center;
+    display: flex;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 1.5;
+}
+
 .social-link__text {
-    grid-column: span 2;
+    grid-column: span 3;
     margin-top: 0.25 * $base-unit;
 }

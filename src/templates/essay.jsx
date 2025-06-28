@@ -29,6 +29,16 @@ export default function PageTemplate({ data, children }) {
         const firstChildParagraph = essayBody.querySelector("p");
 
         addSpanToFirstNWords(firstChildParagraph, 3, "uppercase");
+
+        const hrElements = document.querySelectorAll("hr");
+
+        hrElements.forEach((hr) => {
+            let nextSibling = hr.nextElementSibling;
+
+            if (nextSibling && nextSibling.tagName === "P") {
+                addSpanToFirstNWords(nextSibling, 3, "uppercase");
+            }
+        });
     });
 
     return (
@@ -45,6 +55,10 @@ export default function PageTemplate({ data, children }) {
                         </h2>
                     </div>
 
+                    <div className="essay__date">
+                        {data.mdx.frontmatter.date}
+                    </div>
+
                     <img
                         className="essay__cover-image"
                         src={"/assets/photos/" + data.mdx.frontmatter.image}
@@ -55,14 +69,6 @@ export default function PageTemplate({ data, children }) {
                     <MDXProvider components={shortcodes}>
                         {children}
                     </MDXProvider>
-                </div>
-
-                <div className="essay__meta">
-                    <div className="type-label type-label--essay">Essay</div>
-
-                    <div className="essay__date">
-                        {data.mdx.frontmatter.date}
-                    </div>
                 </div>
             </article>
         </Layout>

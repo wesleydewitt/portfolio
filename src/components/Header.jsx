@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
 import { siteMetadata } from "../../gatsby-config";
-import pic from "../images/pic.png";
+import pic from "../images/logo.svg";
 import hamburgerIcon from "../images/hamburger-icon.svg";
 import closeIcon from "../images/close-icon.svg";
 import moonIcon from "../images/moon-icon.svg";
@@ -15,6 +15,7 @@ import SunIcon from "./icons/SunIcon";
 import SearchButton from "./buttons/SearchButton";
 import ThemeButton from "./buttons/ThemeButton";
 import MenuButton from "./buttons/MenuButton";
+import Logo from "./icons/Logo";
 
 const Header = ({ showNav }) => {
     // const showMenuButton = false;
@@ -24,7 +25,7 @@ const Header = ({ showNav }) => {
             <header className="header" id="header">
                 <div className="header__top-line">
                     <Link className="header__site-logo" to="/">
-                        <img src={pic} />
+                        <Logo />
                     </Link>
 
                     <div className="header__titles">

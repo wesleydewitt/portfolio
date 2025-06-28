@@ -1,7 +1,7 @@
 // variables
 
 $base-unit: 24px;
-$column-width: 720px + (8 * $base-unit);
+$column-width: 720px + (6 * $base-unit);
 $essay-body-width: 600px;
 // $column-width: 840px + (8 * $base-unit);
 $border-radius: 3px;
@@ -16,7 +16,7 @@ $sans-font: "Inter", -apple-system, BlinkMacSystemFont, avenir next, avenir,
 // $sans-font: "Sohne";
 $body-size: 12px;
 $small-size: 10px;
-$heading-size: 18px;
+$heading-size: 22px;
 
 $serif-font: "Heldane Text", serif;
 $serif-size: 16px;
@@ -31,9 +31,11 @@ $mono-font-size: 12px;
 
 $body-color: #444444;
 $body-color: rgba(0, 0, 0, 0.8);
+// $body-color: rgba(255, 255, 255, 0.5);
 $body-color-dm: #aaaaaa;
 
 $heading-color: #000000;
+// $heading-color: rgba(255, 255, 255, 0.8);
 $heading-color-dm: #ffffff;
 
 $gray-color: #888888;
@@ -58,12 +60,14 @@ $header-background-dm: rgba(238, 238, 238, 0.8);
 
 $entry-background: #f2f2f2;
 // $entry-background: rgb(182, 189, 178);
+// $entry-background: rgba(255, 255, 255, 0.1);
 $entry-background-darker: #e2e2e2;
-$entry-background-dm: rgb(34, 34, 34);
+// $entry-background-darker: rgba(255, 255, 255, 0.1);
+$entry-background-dm: #222222;
 $entry-background-darker-dm: #282828;
 
-$gray-line-color: rgba(0, 0, 0, 0.1);
-$gray-line-color-dm: rgba(221, 221, 221, 0.1);
+$gray-line-color: #f2f2f2;
+$gray-line-color-dm: #222222;
 
 $break-1: 768px;
 $break-2: 600px;

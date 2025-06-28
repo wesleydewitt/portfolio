@@ -4,7 +4,7 @@
 module.exports = {
     siteMetadata: {
         title: `Wesley De Witt`,
-        subtitle: `Code & prose out of Indianapolis`,
+        subtitle: `Code, photos & prose out of Indianapolis`,
         siteUrl: `https://www.wesleydewitt.com`,
     },
     plugins: [
